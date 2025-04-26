@@ -741,3 +741,54 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 </head>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ImageGallery",
+  "name": "Research Gallery",
+  "description": "Images of Dr. Mehrdad Etemad's immunology research activities",
+  "image": [
+    {
+      "@type": "ImageObject",
+      "url": "https://www.mertimmunology.com/img/mehrdad-etemad-lab.jpg",
+      "caption": "Immunology laboratory research"
+    }
+  ]
+}
+</script>
+<url>
+  <loc>https://www.mertimmunology.com/gallery.html</loc>
+  <image:image>
+    <image:loc>https://www.mertimmunology.com/img/mehrdad-etemad-lab.jpg</image:loc>
+    <image:caption>Dr. Mehrdad Etemad conducting immunology research</image:caption>
+  </image:image>
+</url>
+<section id="gallery" class="container-fluid py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5">Research Gallery</h2>
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="gallery-item">
+          <img src="img/mehrdad-etemad-lab.jpg" 
+               class="img-fluid rounded"
+               alt="Dr. Mehrdad Etemad working with microscopes"
+               title="Laboratory research in immunology">
+          <div class="p-3">
+            <h5>Laboratory Research</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="gallery-item">
+          <img src="img/mehrdad-etemad-conference.jpg"
+               class="img-fluid rounded"
+               alt="Dr. Mehrdad Etemad presenting at international conference"
+               title="Scientific conference presentation">
+          <div class="p-3">
+            <h5>Conference Presentation</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

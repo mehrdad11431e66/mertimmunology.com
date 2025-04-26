@@ -1,6 +1,47 @@
 (function ($) {
     "use strict";
     
+    // ==================== NEW LANGUAGE SYSTEM ====================
+    let currentLang = 'en';
+    const translations = {
+        en: {
+            welcome: "Welcome to Our Hospital",
+            appointment: "Make Appointment",
+            services: "Our Services",
+            // Add more English translations here
+        },
+        tr: {
+            welcome: "Hastanemize Hoş Geldiniz",
+            appointment: "Randevu Al",
+            services: "Hizmetlerimiz",
+            // Add more Turkish translations here
+        },
+        ar: {
+            welcome: "مرحبا بكم في مستشفانا",
+            appointment: "حجز موعد",
+            services: "خدماتنا",
+            // Add more Arabic translations here
+        }
+    };
+
+    function applyLanguage(lang) {
+        // RTL/LTR handling
+        if (lang === 'ar') {
+            $('html').attr('dir', 'rtl').addClass('rtl');
+        } else {
+            $('html').attr('dir', 'ltr').removeClass('rtl');
+        }
+
+        // Apply translations to all marked elements
+        $.each(translations[lang], function(key, value) {
+            $(`[data-translate="${key}"]`).text(value);
+        });
+
+        // Refresh carousels after language change
+        $('.owl-carousel').trigger('refresh.owl.carousel');
+    }
+
+    // ==================== YOUR ORIGINAL CODE ====================
     // Dropdown on mouse hover
     $(document).ready(function () {
         function toggleNavbarMethod() {
@@ -17,75 +58,22 @@
         toggleNavbarMethod();
         $(window).resize(toggleNavbarMethod);
 
-        // Initialize modules
-        initLanguageSwitcher();
-        initGallery();
-        initVideos();
-        initAnimations();
+        // Initialize language switcher
+        $('.language-option').click(function(e) {
+            e.preventDefault();
+            currentLang = $(this).data('lang');
+            applyLanguage(currentLang);
+        });
+
+        // Apply default language
+        applyLanguage(currentLang);
     });
 
-    // Language Switcher (English/Turkish/Arabic)
-    function initLanguageSwitcher() {
-        $('.language-switcher').on('click', 'a', function(e) {
-            e.preventDefault();
-            const lang = $(this).data('lang');
-            switchLanguage(lang);
-        });
-
-        function switchLanguage(lang) {
-            // RTL/LTR handling
-            if (lang === 'ar') {
-                $('html').attr('dir', 'rtl').attr('lang', 'ar');
-            } else {
-                $('html').attr('dir', 'ltr').attr('lang', lang);
-            }
-            
-            // Here you would typically load language JSON files
-            console.log(`Switched to ${lang} - Load your translations here`);
-        }
-    }
-
-    // Gallery System (No image modifications)
-    function initGallery() {
-        $('.gallery-item').magnificPopup({
-            type: 'image',
-            gallery: {
-                enabled: true
-            },
-            callbacks: {
-                beforeOpen: function() {
-                    // Your custom gallery logic
-                }
-            }
-        });
-    }
-
-    // Video Player System
-    function initVideos() {
-        $('.video-player').each(function() {
-            $(this).on('click', function() {
-                const videoSrc = $(this).data('src');
-                $(this).html(`
-                    <iframe src="${videoSrc}?autoplay=1" frameborder="0" allowfullscreen></iframe>
-                `);
-            });
-        });
-    }
-
-    // Animation System
-    function initAnimations() {
-        $('[data-animate]').waypoint(function() {
-            $(this.element).addClass('animated ' + $(this.element).data('animate'));
-        }, {
-            offset: '90%',
-            triggerOnce: true
-        });
-    }
-
-    // Original Carousels and Pickers (Keep all your existing code below)
+    // Date and time picker
     $('.date').datetimepicker({ format: 'L' });
     $('.time').datetimepicker({ format: 'LT' });
 
+    // Back to top button
     $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
             $('.back-to-top').fadeIn('slow');
@@ -93,12 +81,12 @@
             $('.back-to-top').fadeOut('slow');
         }
     });
-    
     $('.back-to-top').click(function () {
         $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
         return false;
     });
 
+    // Price carousel
     $(".price-carousel").owlCarousel({
         autoplay: true,
         smartSpeed: 1000,
@@ -117,6 +105,7 @@
         }
     });
 
+    // Team carousel
     $(".team-carousel, .related-carousel").owlCarousel({
         autoplay: true,
         smartSpeed: 1000,
@@ -134,6 +123,7 @@
         }
     });
 
+    // Testimonials carousel
     $(".testimonial-carousel").owlCarousel({
         autoplay: true,
         smartSpeed: 1000,
@@ -142,4 +132,76 @@
         loop: true
     });
 
+    // ==================== NEW FEATURES ====================
+    // Gallery System
+    $('.gallery-item').magnificPopup({
+        type: 'image',
+        gallery: { enabled: true },
+        callbacks: {
+            beforeOpen: function() {
+                // Handle RTL in gallery if needed
+                if(currentLang === 'ar') {
+                    this.container.addClass('rtl-gallery');
+                }
+            }
+        }
+    });
+
+    // Video System
+    $('.video-container').on('click', function() {
+        const videoSrc = $(this).data('src');
+        $(this).html(`
+            <iframe src="${videoSrc}?autoplay=1&rel=0" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope" 
+                    allowfullscreen></iframe>
+        `);
+    });
+
+    // Animation System
+    $('[data-animate]').waypoint(function() {
+        $(this.element).addClass('animate__animated animate__' + $(this.element).data('animate'));
+    }, { offset: '75%' });
+
 })(jQuery);
+// translations
+const translations = {
+    en: {
+        welcome: "Welcome to Our Site",
+        appointment: "Make an Appointment",
+        contact: "Contact Us"
+    },
+    tr: {
+        welcome: "Sitemize Hoşgeldiniz",
+        appointment: "Randevu Al",
+        contact: "Bize Ulaşın"
+    },
+    ar: {
+        welcome: "مرحبًا بكم في موقعنا",
+        appointment: "حدد موعدًا",
+        contact: "اتصل بنا"
+    }
+};
+
+// function to change language
+function setLanguage(lang) {
+    document.querySelectorAll("[data-translate]").forEach(function(el) {
+        const key = el.getAttribute("data-translate");
+        el.innerText = translations[lang][key] || el.innerText;
+    });
+
+    if (lang === "ar") {
+        document.body.classList.add("rtl");
+    } else {
+        document.body.classList.remove("rtl");
+    }
+}
+
+// event listeners
+document.querySelectorAll(".language-option").forEach(function(link) {
+    link.addEventListener("click", function(e) {
+        e.preventDefault();
+        const lang = this.getAttribute("data-lang");
+        setLanguage(lang);
+    });
+});

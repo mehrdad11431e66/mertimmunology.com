@@ -46,6 +46,20 @@
         .category-filter {
             margin-bottom: 2rem;
         }
+        .media-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+        }
+        .media-container iframe,
+        .media-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
     </style>
 </head>
 <body>
@@ -72,110 +86,164 @@
             <div class="row">
                 <!-- Image 1 -->
                 <div class="col-md-4 col-sm-6 gallery-img" data-category="images">
-                    <a href="img/lab-1.jpg" data-lightbox="gallery" data-title="Mehrdad Etemad working in immunology laboratory - Biotechnology research">
-                        <img src="img/lab-1.jpg" alt="Mehrdad Etemad conducting immunology research in laboratory" class="img-fluid rounded shadow">
-                        <div class="img-caption">Immunology Research by Mert Etemad</div>
+                    <a href="img/lab-1.jpg" data-lightbox="gallery" data-title="Quality control laboratory of ice cream">
+                        <img src="img/lab-1.jpg" alt="Quality control laboratory of ice cream" class="img-fluid rounded shadow">
+                        <div class="img-caption">Quality control laboratory of ice cream</div>
                     </a>
                 </div>
 
                 <!-- Image 2 -->
                 <div class="col-md-4 col-sm-6 gallery-img" data-category="images">
-                    <a href="img/lab-2.jpg" data-lightbox="gallery" data-title="Biotechnology experiment by Mehrdad Etemad">
-                        <img src="img/lab-2.jpg" alt="Mehrdad Etemad performing biotechnology experiment" class="img-fluid rounded shadow">
-                        <div class="img-caption">Biotechnology Experiment</div>
+                    <a href="img/lab-2.jpg" data-lightbox="gallery" data-title="Teaching engineers how to work with inverted microscope">
+                        <img src="img/lab-2.jpg" alt="Teaching engineers how to work with inverted microscope" class="img-fluid rounded shadow">
+                        <div class="img-caption">Teaching inverted microscope techniques</div>
                     </a>
                 </div>
 
                 <!-- Image 3 -->
                 <div class="col-md-4 col-sm-6 gallery-img" data-category="images">
-                    <a href="img/lab-3.jpg" data-lightbox="gallery" data-title="Mert Etemad analyzing immunology samples">
-                        <img src="img/lab-3.jpg" alt="Mert Etemad analyzing immunology research samples" class="img-fluid rounded shadow">
-                        <div class="img-caption">Sample Analysis</div>
+                    <a href="img/lab-3.jpg" data-lightbox="gallery" data-title="Me and my assistant at Star Invest">
+                        <img src="img/lab-3.jpg" alt="Me and my assistant at Star Invest" class="img-fluid rounded shadow">
+                        <div class="img-caption">Me and my assistant at Star Invest</div>
                     </a>
                 </div>
 
                 <!-- Image 4 -->
                 <div class="col-md-4 col-sm-6 gallery-img" data-category="images">
-                    <a href="img/lab-4.jpg" data-lightbox="gallery" data-title="Sample testing by Mert Etemad in laboratory">
-                        <img src="img/lab-4.jpg" alt="Sample testing by Mert Etemad in laboratory" class="img-fluid rounded shadow">
-                        <div class="img-caption">Sample Testing</div>
+                    <a href="img/lab-4.jpg" data-lightbox="gallery" data-title="University laboratory at 19 Mayıs University, Samsun">
+                        <img src="img/lab-4.jpg" alt="University laboratory at 19 Mayıs University, Samsun" class="img-fluid rounded shadow">
+                        <div class="img-caption">19 Mayıs University laboratory</div>
                     </a>
                 </div>
 
                 <!-- Image 5 -->
                 <div class="col-md-4 col-sm-6 gallery-img" data-category="images">
-                    <a href="img/lab-5.jpg" data-lightbox="gallery" data-title="Research on biotechnology project by Mert Etemad">
-                        <img src="img/lab-5.jpg" alt="Biotechnology project research by Mert Etemad" class="img-fluid rounded shadow">
-                        <div class="img-caption">Biotechnology Project</div>
+                    <a href="img/lab-5.jpg" data-lightbox="gallery" data-title="Freeze dryer and drying orthopedic chips">
+                        <img src="img/lab-5.jpg" alt="Freeze dryer and drying orthopedic chips" class="img-fluid rounded shadow">
+                        <div class="img-caption">Freeze dryer for orthopedic chips</div>
                     </a>
                 </div>
 
                 <!-- Image 6 -->
                 <div class="col-md-4 col-sm-6 gallery-img" data-category="images">
-                    <a href="img/lab-6.jpg" data-lightbox="gallery" data-title="Mert Etemad in the immunology laboratory">
-                        <img src="img/lab-6.jpg" alt="Mert Etemad in the immunology laboratory" class="img-fluid rounded shadow">
-                        <div class="img-caption">Immunology Research</div>
+                    <a href="img/lab-6.jpg" data-lightbox="gallery" data-title="My room at Star Invest">
+                        <img src="img/lab-6.jpg" alt="My room at Star Invest" class="img-fluid rounded shadow">
+                        <div class="img-caption">My room at Star Invest</div>
                     </a>
                 </div>
 
                 <!-- Image 7 -->
                 <div class="col-md-4 col-sm-6 gallery-img" data-category="images">
-                    <a href="img/lab-7.jpg" data-lightbox="gallery" data-title="Biotechnology and vaccine research by Mert Etemad">
-                        <img src="img/lab-7.jpg" alt="Biotechnology and vaccine research by Mert Etemad" class="img-fluid rounded shadow">
-                        <div class="img-caption">Vaccine Research</div>
+                    <a href="img/lab-7.jpg" data-lightbox="gallery" data-title="Istanbul Book Fair">
+                        <img src="img/lab-7.jpg" alt="Istanbul Book Fair" class="img-fluid rounded shadow">
+                        <div class="img-caption">Istanbul Book Fair</div>
                     </a>
                 </div>
 
                 <!-- Image 8 -->
                 <div class="col-md-4 col-sm-6 gallery-img" data-category="images">
-                    <a href="img/lab-8.jpg" data-lightbox="gallery" data-title="Immunology testing conducted by Mert Etemad">
-                        <img src="img/lab-8.jpg" alt="Immunology testing by Mert Etemad" class="img-fluid rounded shadow">
-                        <div class="img-caption">Immunology Testing</div>
+                    <a href="img/lab-8.jpg" data-lightbox="gallery" data-title="A busy day">
+                        <img src="img/lab-8.jpg" alt="A busy day" class="img-fluid rounded shadow">
+                        <div class="img-caption">A busy day</div>
                     </a>
                 </div>
 
                 <!-- Image 9 -->
                 <div class="col-md-4 col-sm-6 gallery-img" data-category="images">
-                    <a href="img/lab-9.jpg" data-lightbox="gallery" data-title="Research experiments by Dr. Mert Etemad">
-                        <img src="img/lab-9.jpg" alt="Research experiments by Dr. Mert Etemad" class="img-fluid rounded shadow">
-                        <div class="img-caption">Research Experiments</div>
+                    <a href="img/lab-9.jpg" data-lightbox="gallery" data-title="Drying orthopedic and dental chips">
+                        <img src="img/lab-9.jpg" alt="Drying orthopedic and dental chips" class="img-fluid rounded shadow">
+                        <div class="img-caption">Drying orthopedic and dental chips</div>
                     </a>
                 </div>
 
                 <!-- Image 10 -->
                 <div class="col-md-4 col-sm-6 gallery-img" data-category="images">
-                    <a href="img/lab-10.jpg" data-lightbox="gallery" data-title="Immunology research conducted by Dr. Etemad">
-                        <img src="img/lab-10.jpg" alt="Immunology research conducted by Dr. Etemad" class="img-fluid rounded shadow">
-                        <div class="img-caption">Immunology Research</div>
+                    <a href="img/lab-10.jpg" data-lightbox="gallery" data-title="Visit of the Governor of Salova city to Sandrosse company">
+                        <img src="img/lab-10.jpg" alt="Visit of the Governor of Salova city to Sandrosse company" class="img-fluid rounded shadow">
+                        <div class="img-caption">Governor's visit to Sandrosse</div>
                     </a>
                 </div>
 
                 <!-- Image 11 -->
                 <div class="col-md-4 col-sm-6 gallery-img" data-category="images">
-                    <a href="img/lab-11.jpg" data-lightbox="gallery" data-title="Biotechnology laboratory work by Dr. Mert Etemad">
-                        <img src="img/lab-11.jpg" alt="Biotechnology laboratory work by Dr. Mert Etemad" class="img-fluid rounded shadow">
-                        <div class="img-caption">Biotechnology Work</div>
+                    <a href="img/lab-11.jpg" data-lightbox="gallery" data-title="Visit of the Governor of Salova city to Sandrosse company with delegation">
+                        <img src="img/lab-11.jpg" alt="Visit of the Governor of Salova city to Sandrosse company with delegation" class="img-fluid rounded shadow">
+                        <div class="img-caption">Governor's visit with delegation</div>
                     </a>
                 </div>
 
                 <!-- Image 12 -->
                 <div class="col-md-4 col-sm-6 gallery-img" data-category="images">
-                    <a href="img/lab-12.jpg" data-lightbox="gallery" data-title="Research laboratory environment by Dr. Mert Etemad">
-                        <img src="img/lab-12.jpg" alt="Research laboratory environment by Dr. Mert Etemad" class="img-fluid rounded shadow">
-                        <div class="img-caption">Laboratory Environment</div>
+                    <a href="img/lab-12.jpg" data-lightbox="gallery" data-title="Visit of the Governor of Salova city to Sandrosse company and director of provincial agricultural jihad">
+                        <img src="img/lab-12.jpg" alt="Visit of the Governor of Salova city to Sandrosse company and director of provincial agricultural jihad" class="img-fluid rounded shadow">
+                        <div class="img-caption">Governor and Agricultural Director visit</div>
                     </a>
                 </div>
 
                 <!-- Image 13 -->
                 <div class="col-md-4 col-sm-6 gallery-img" data-category="images">
-                    <a href="img/lab-13.jpg" data-lightbox="gallery" data-title="Scientific research by Dr. Mert Etemad">
-                        <img src="img/lab-13.jpg" alt="Scientific research by Dr. Mert Etemad" class="img-fluid rounded shadow">
-                        <div class="img-caption">Scientific Research</div>
+                    <a href="img/lab-13.jpg" data-lightbox="gallery" data-title="Visit of the Governor of Salova city to Sandrosse company and director of provincial agricultural jihad with delegation">
+                        <img src="img/lab-13.jpg" alt="Visit of the Governor of Salova city to Sandrosse company and director of provincial agricultural jihad with delegation" class="img-fluid rounded shadow">
+                        <div class="img-caption">Governor, Agricultural Director and delegation</div>
                     </a>
+                </div>
+
+                <!-- Animation 1 -->
+                <div class="col-md-4 col-sm-6 gallery-img" data-category="animations">
+                    <div class="media-container">
+                        <video controls class="img-fluid rounded shadow">
+                            <source src="media/animation-2.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="img-caption">Animation of egg release during fertilization</div>
+                </div>
+
+                <!-- Animation 2 -->
+                <div class="col-md-4 col-sm-6 gallery-img" data-category="animations">
+                    <div class="media-container">
+                        <video controls class="img-fluid rounded shadow">
+                            <source src="media/animation-4.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="img-caption">Short animation of mitosis</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Modal for media display (for image/video modal popup) -->
-    <div class="
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2023 Mert Immunology. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+    <script>
+        // Filter functionality
+        $(document).ready(function(){
+            $('[data-filter]').click(function(){
+                const filter = $(this).data('filter');
+                
+                // Update active button
+                $('[data-filter]').removeClass('active');
+                $(this).addClass('active');
+                
+                // Show/hide items
+                if(filter === 'all') {
+                    $('.gallery-img').show();
+                } else {
+                    $('.gallery-img').hide();
+                    $(`.gallery-img[data-category="${filter}"]`).show();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

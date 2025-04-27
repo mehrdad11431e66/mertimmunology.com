@@ -3,185 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research Gallery | Mert Immunology</title>
-    
-    <!-- Use your existing CSS links -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    
-    <!-- Gallery-specific CSS -->
-    <style>
-        .gallery-container {
-            padding: 2rem 0;
-        }
-        .gallery-item {
-            margin-bottom: 30px;
-            transition: transform 0.3s;
-        }
-        .gallery-item:hover {
-            transform: scale(1.02);
-        }
-        .media-thumbnail {
-            position: relative;
-            overflow: hidden;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        .media-thumbnail img, 
-        .media-thumbnail video {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-        }
-        .play-icon {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            font-size: 3rem;
-            opacity: 0.8;
-        }
-        .category-filter {
-            margin-bottom: 2rem;
-        }
-    </style>
-</head>
-<body>
-    <!-- Navigation (same as your other pages) -->
-    <nav class="navbar navbar-expand-lg bg-white shadow-sm py-3">
-        <!-- Your existing navigation code -->
-    </nav>
-
-    <!-- Gallery Section -->
-    <div class="container-fluid gallery-container">
-        <div class="container">
-            <h1 class="text-center mb-5">Research Media Gallery</h1>
-            
-            <!-- Filter Buttons -->
-            <div class="text-center category-filter">
-                <button class="btn btn-outline-primary active" data-filter="all">All Media</button>
-                <button class="btn btn-outline-primary" data-filter="images">Images</button>
-                <button class="btn btn-outline-primary" data-filter="videos">Videos</button>
-                <button class="btn btn-outline-primary" data-filter="animations">Animations</button>
-            </div>
-            
-            <!-- Gallery Grid -->
-            <div class="row" id="gallery-grid">
-                <!-- Images -->
-                <div class="col-lg-4 col-md-6 gallery-item" data-category="images">
-                    <div class="media-thumbnail">
-                        <img src="img/lab-research-1.jpg" alt="Microscopy research" loading="lazy">
-                    </div>
-                    <div class="p-3">
-                        <h5>Cell Analysis</h5>
-                        <p>2023 Immunology Research</p>
-                    </div>
-                </div>
-                
-                <!-- Videos -->
-                <div class="col-lg-4 col-md-6 gallery-item" data-category="videos">
-                    <div class="media-thumbnail">
-                        <video poster="img/video-thumb-1.jpg">
-                            <source src="media/research-video-1.mp4" type="video/mp4">
-                        </video>
-                        <div class="play-icon">
-                            <i class="fas fa-play"></i>
-                        </div>
-                    </div>
-                    <div class="p-3">
-                        <h5>Vaccine Development</h5>
-                        <p>Laboratory Process</p>
-                    </div>
-                </div>
-                
-                <!-- Animations -->
-                <div class="col-lg-4 col-md-6 gallery-item" data-category="animations">
-                    <div class="media-thumbnail">
-                        <img src="img/animation-thumb-1.jpg" alt="Immune system animation" loading="lazy">
-                    </div>
-                    <div class="p-3">
-                        <h5>Immune Response</h5>
-                        <p>3D Animation</p>
-                    </div>
-                </div>
-                
-                <!-- Add more items following the same pattern -->
-            </div>
-        </div>
-    </div>
-
-    <!-- Footer (same as your other pages) -->
-    <footer class="container-fluid bg-dark text-light py-5">
-        <!-- Your existing footer code -->
-    </footer>
-
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    
-    <!-- Gallery-specific JavaScript -->
-    <script>
-        // Initialize gallery filter
-        $(document).ready(function() {
-            $('.category-filter button').click(function() {
-                $('.category-filter button').removeClass('active');
-                $(this).addClass('active');
-                
-                const filter = $(this).data('filter');
-                if (filter === 'all') {
-                    $('.gallery-item').show();
-                } else {
-                    $('.gallery-item').hide();
-                    $(`.gallery-item[data-category="${filter}"]`).show();
-                }
-            });
-            
-            // Initialize lightbox/modal for media
-            $('.media-thumbnail').click(function() {
-                const mediaType = $(this).closest('.gallery-item').data('category');
-                const mediaSrc = $(this).find('img, video').attr('src') || 
-                                $(this).find('source').attr('src');
-                
-                if (mediaType === 'videos') {
-                    // Show video in modal
-                    $('#mediaModal .modal-body').html(`
-                        <video controls autoplay style="width:100%">
-                            <source src="${mediaSrc}" type="video/mp4">
-                        </video>
-                    `);
-                } else {
-                    // Show image/animation in modal
-                    $('#mediaModal .modal-body').html(`
-                        <img src="${mediaSrc}" class="img-fluid">
-                    `);
-                }
-                
-                $('#mediaModal').modal('show');
-            });
-        });
-    </script>
-    
-    <!-- Modal for media display -->
-    <div class="modal fade" id="mediaModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <!-- Media content will be inserted here -->
-                </div>
-            </div>
-        </div>
-    </div>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>Research Gallery - Mehrdad Etemad (Mert) | Immunology & Biotechnology</title>
     <meta name="description" content="Research gallery of Dr. Mehrdad Etemad (Mert) showcasing immunology and biotechnology laboratory work">
     <meta name="keywords" content="Mehrdad Etemad, Mert Immunology, Etemad Research, Immunology Lab, Biotechnology Photos, Laboratory Images, Vaccine Research">
     <meta name="author" content="Dr. Mehrdad Etemad">
@@ -191,8 +12,8 @@
     <meta property="og:url" content="https://www.mertimmunology.com/gallery.html">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <title>Research Gallery | Mert Immunology</title>
+
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
 
@@ -202,7 +23,7 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <!-- Lightbox CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
 
@@ -222,14 +43,16 @@
             bottom: 0;
             width: 100%;
         }
+        .category-filter {
+            margin-bottom: 2rem;
+        }
     </style>
 </head>
 <body>
-    <!-- Navigation (same as your index.html) -->
+    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
             <a class="navbar-brand" href="index.html">Mert Immunology</a>
-            <!-- Add your navigation items here -->
         </div>
     </nav>
 
@@ -237,62 +60,59 @@
     <section class="py-5 bg-light">
         <div class="container">
             <h1 class="text-center mb-5">Research Laboratory Gallery</h1>
+
+            <!-- Filter Buttons -->
+            <div class="text-center category-filter">
+                <button class="btn btn-outline-primary active" data-filter="all">All Media</button>
+                <button class="btn btn-outline-primary" data-filter="images">Images</button>
+                <button class="btn btn-outline-primary" data-filter="videos">Videos</button>
+                <button class="btn btn-outline-primary" data-filter="animations">Animations</button>
+            </div>
+
             <div class="row">
                 <!-- Image 1 -->
-                <div class="col-md-4 col-sm-6 gallery-img">
+                <div class="col-md-4 col-sm-6 gallery-img" data-category="images">
                     <a href="img/lab-1.jpg" data-lightbox="gallery" data-title="Mehrdad Etemad working in immunology laboratory - Biotechnology research">
                         <img src="img/lab-1.jpg" alt="Mehrdad Etemad conducting immunology research in laboratory" class="img-fluid rounded shadow">
                         <div class="img-caption">Immunology Research by Mert Etemad</div>
                     </a>
                 </div>
-                
+
                 <!-- Image 2 -->
-                <div class="col-md-4 col-sm-6 gallery-img">
+                <div class="col-md-4 col-sm-6 gallery-img" data-category="images">
                     <a href="img/lab-2.jpg" data-lightbox="gallery" data-title="Biotechnology experiment by Mehrdad Etemad">
                         <img src="img/lab-2.jpg" alt="Mehrdad Etemad performing biotechnology experiment" class="img-fluid rounded shadow">
                         <div class="img-caption">Biotechnology Experiment</div>
                     </a>
                 </div>
-                
+
                 <!-- Image 3 -->
-                <div class="col-md-4 col-sm-6 gallery-img">
+                <div class="col-md-4 col-sm-6 gallery-img" data-category="images">
                     <a href="img/lab-3.jpg" data-lightbox="gallery" data-title="Mert Etemad analyzing immunology samples">
                         <img src="img/lab-3.jpg" alt="Mert Etemad analyzing immunology research samples" class="img-fluid rounded shadow">
                         <div class="img-caption">Sample Analysis</div>
                     </a>
                 </div>
-                
-                <!-- Continue for all 13 images -->
-                <!-- Image 4 -->
-                <div class="col-md-4 col-sm-6 gallery-img">
-                    <a href="img/lab-4.jpg" data-lightbox="gallery" data-title="Immunology research by Dr. Etemad">
-                        <img src="img/lab-4.jpg" alt="Dr. Etemad working with microscope in immunology lab" class="img-fluid rounded shadow">
-                        <div class="img-caption">Microscopy Work</div>
-                    </a>
-                </div>
-                
-                <!-- Image 5 -->
-                <div class="col-md-4 col-sm-6 gallery-img">
-                    <a href="img/lab-5.jpg" data-lightbox="gallery" data-title="Biotechnology equipment used by Mehrdad Etemad">
-                        <img src="img/lab-5.jpg" alt="Biotechnology equipment in Mert's laboratory" class="img-fluid rounded shadow">
-                        <div class="img-caption">Lab Equipment</div>
-                    </a>
-                </div>
-                
-                <!-- Image 6 -->
-                <div class="col-md-4 col-sm-6 gallery-img">
-                    <a href="img/lab-6.jpg" data-lightbox="gallery" data-title="Immunology research presentation by Mert">
-                        <img src="img/lab-6.jpg" alt="Mert presenting immunology research findings" class="img-fluid rounded shadow">
-                        <div class="img-caption">Research Presentation</div>
-                    </a>
-                </div>
-                
-                <!-- Continue this pattern for all 13 images -->
-                <!-- Add images 7-13 following the same structure -->
-                
+
+                <!-- Add more images following the same pattern -->
+
             </div>
         </div>
     </section>
+
+    <!-- Modal for media display (for image/video modal popup) -->
+    <div class="modal fade" id="mediaModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Media content will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Schema.org markup for Google -->
     <script type="application/ld+json">
@@ -321,28 +141,42 @@
           "description": "Biotechnology research by Mert Etemad",
           "keywords": "Biotechnology, Etemad, Research"
         }
-        // Add similar entries for all images
       ]
     }
     </script>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
-        <div class="container text-center">
-            <p>&copy; 2023 Mert Immunology. All Rights Reserved.</p>
-        </div>
-    </footer>
-
-    <!-- JavaScript -->
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
-    
+
+    <!-- Gallery-specific JavaScript -->
     <script>
-        // Lightbox configuration
-        lightbox.option({
-            'resizeDuration': 200,
-            'wrapAround': true,
-            'albumLabel': "Image %1 of %2 - Mehrdad Etemad Research"
+        // Initialize gallery filter
+        $(document).ready(function() {
+            $('.category-filter button').click(function() {
+                $('.category-filter button').removeClass('active');
+                $(this).addClass('active');
+                
+                const filter = $(this).data('filter');
+                if (filter === 'all') {
+                    $('.gallery-img').show();
+                } else {
+                    $('.gallery-img').hide();
+                    $(`.gallery-img[data-category="${filter}"]`).show();
+                }
+            });
+
+            // Initialize lightbox/modal for media
+            $('.gallery-img').click(function() {
+                const mediaType = $(this).data('category');
+                const mediaSrc = $(this).find('img').attr('src');
+                
+                $('#mediaModal .modal-body').html(`
+                    <img src="${mediaSrc}" class="img-fluid">
+                `);
+                $('#mediaModal').modal('show');
+            });
         });
     </script>
 </body>

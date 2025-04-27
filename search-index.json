@@ -1,0 +1,29 @@
+[
+    {
+        "title": "Immune System Genetics",
+        "content": "Research on genetic factors affecting immune responses and autoimmune diseases",
+        "tags": ["genetics", "immunology", "research"],
+        "url": "research.html",
+        "type": "Article",
+        "date": "2023-05-20",
+        "excerpt": "Exploring HLA genes and their role in autoimmune disorders."
+    },
+    {
+        "title": "Vaccine Development Strategies",
+        "content": "New approaches in mRNA vaccine technology and adjuvant systems",
+        "tags": ["vaccine", "biotechnology", "pharmaceuticals"],
+        "url": "articles.html#vaccines",
+        "type": "Research Paper",
+        "date": "2023-04-15",
+        "excerpt": "Comparative analysis of lipid nanoparticles for mRNA delivery."
+    },
+    {
+        "title": "Agricultural Biotechnology",
+        "content": "Applications of CRISPR in crop improvement and food security",
+        "tags": ["agriculture", "CRISPR", "biotech"],
+        "url": "articles.html#agriculture",
+        "type": "Blog Post",
+        "date": "2023-03-10",
+        "excerpt": "Gene editing solutions for drought-resistant crops."
+    }
+]

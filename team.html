@@ -28,6 +28,38 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    
+    <style>
+    .role-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin-bottom: 30px;
+      transition: transform 0.3s;
+    }
+    .role-card:hover {
+      transform: scale(1.02);
+    }
+    .empty-spot {
+      font-weight: bold;
+      color: #0d6efd;
+    }
+    a.linkedin-btn {
+      display: inline-block;
+      margin-top: 20px;
+      background: #0a66c2;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a.linkedin-btn:hover {
+      background: #084d9b;
+      text-decoration: none;
+    }
+    </style>
 </head>
 
 <body>
@@ -37,9 +69,7 @@
             <div class="row">
                 <div class="col-md-6 text-center text-lg-start mb-2 mb-lg-0">
                     <div class="d-inline-flex align-items-center">
-                        <a class="text-decoration-none text-body pe-3" href=""><i class="bi bi-telephone me-2"></i>+012 345 6789</a>
-                        <span class="text-body">|</span>
-                        <a class="text-decoration-none text-body px-3" href=""><i class="bi bi-envelope me-2"></i>info@example.com</a>
+                        <a class="text-decoration-none text-body pe-3" href=""><i class="bi bi-envelope me-2"></i>info@example.com</a>
                     </div>
                 </div>
                 <div class="col-md-6 text-center text-lg-end">
@@ -110,6 +140,114 @@
                 <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Our Doctors</h5>
                 <h1 class="display-4">Qualified Healthcare Professionals</h1>
             </div>
+            
+            <!-- Your Profile Section -->
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <div class="team-item bg-light rounded overflow-hidden">
+                        <div class="row g-0">
+                            <div class="col-md-5 h-100">
+                                <img class="img-fluid h-100" src="img/mehrdad-etemad.jpg" style="object-fit: cover;" loading="lazy" alt="Mehrdad Etemad">
+                            </div>
+                            <div class="col-md-7 h-100 d-flex flex-column">
+                                <div class="mt-auto p-4">
+                                    <h3>Mehrdad Etemad</h3>
+                                    <h6 class="fw-normal fst-italic text-primary mb-4">Immunology Specialist</h6>
+                                    <p class="m-0">I am an Immunology Specialist, leveraging Bioinformatics, Vaccine Formulation, Pharmaceutical Sciences (Pharmaceutics and Pharmacognosy), Product Analysis, and Medical Solutions Development. I am ready to collaborate with companies, institutes, and healthcare centers, both public and private.</p>
+                                </div>
+                                <div class="d-flex mt-auto border-top p-4">
+                                    <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-3" href="#"><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-3" href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-lg btn-primary btn-lg-square rounded-circle" href="https://www.linkedin.com/in/mehrdad-etemad-713359358?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Collaboration Opportunities -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h2 class="text-center mb-4">Collaboration Opportunities</h2>
+                    
+                    <div class="row">
+                        <!-- Food Industry Engineering -->
+                        <div class="col-md-6">
+                          <div class="role-card">
+                            <h4>Food Industry Engineering</h4>
+                            <p>Specialized in milk, fruit, vegetable technologies, food microbiology, and operation of all related industrial equipment.</p>
+                            <p class="empty-spot">Your Place is Waiting!</p>
+                          </div>
+                        </div>
+
+                        <!-- Molecular and Cellular Biology -->
+                        <div class="col-md-6">
+                          <div class="role-card">
+                            <h4>Cellular and Molecular Biology</h4>
+                            <p>Specialized in cellular mechanisms, molecular diagnostics, and application of cellular biology in biotechnology and medical research.</p>
+                            <p class="empty-spot">Your Place is Waiting!</p>
+                          </div>
+                        </div>
+
+                        <!-- Molecular Genetics -->
+                        <div class="col-md-6">
+                          <div class="role-card">
+                            <h4>Molecular Genetics</h4>
+                            <p>Expertise in genetic modification, gene therapy, genetic mapping, and diagnostic techniques for biomedical projects.</p>
+                            <p class="empty-spot">Your Place is Waiting!</p>
+                          </div>
+                        </div>
+
+                        <!-- Veterinary Medicine -->
+                        <div class="col-md-6">
+                          <div class="role-card">
+                            <h4>Veterinary Medicine</h4>
+                            <p>Diagnosis and treatment of animal diseases, vaccine development for veterinary applications, and contribution to zoonotic disease control projects.</p>
+                            <p class="empty-spot">Your Place is Waiting!</p>
+                          </div>
+                        </div>
+
+                        <!-- Cardiology Specialist -->
+                        <div class="col-md-6">
+                          <div class="role-card">
+                            <h4>Cardiology Specialist</h4>
+                            <p>Expert in cardiovascular health management, diagnostic imaging, and supporting therapeutic and pharmaceutical studies for heart diseases.</p>
+                            <p class="empty-spot">Your Place is Waiting!</p>
+                          </div>
+                        </div>
+
+                        <!-- Endocrinology Specialist -->
+                        <div class="col-md-6">
+                          <div class="role-card">
+                            <h4>Endocrinology Specialist</h4>
+                            <p>Focus on hormonal disorders, metabolic dysfunctions, and participating in projects concerning endocrine diseases like diabetes and thyroid conditions.</p>
+                            <p class="empty-spot">Your Place is Waiting!</p>
+                          </div>
+                        </div>
+
+                        <!-- Hematology Specialist -->
+                        <div class="col-md-6">
+                          <div class="role-card">
+                            <h4>Hematology Specialist</h4>
+                            <p>Expertise in blood diseases, diagnostic analysis of hematological disorders, and supporting research in drug development and disease management.</p>
+                            <p class="empty-spot">Your Place is Waiting!</p>
+                          </div>
+                        </div>
+
+                        <!-- Rheumatology Specialist -->
+                        <div class="col-md-6">
+                          <div class="role-card">
+                            <h4>Rheumatology Specialist</h4>
+                            <p>Specialized in autoimmune disorders and chronic inflammatory diseases, offering insights into new therapeutic approaches.</p>
+                            <p class="empty-spot">Your Place is Waiting!</p>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Original Team Members (Images preserved as requested) -->
             <div class="owl-carousel team-carousel position-relative">
                 <div class="team-item">
                     <div class="row g-0 bg-light rounded overflow-hidden">
@@ -183,7 +321,6 @@
                     <p class="mb-4">No dolore ipsum accusam no lorem. Invidunt sed clita kasd clita et et dolor sed dolor</p>
                     <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>123 Street, New York, USA</p>
                     <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>info@example.com</p>
-                    <p class="mb-0"><i class="fa fa-phone-alt text-primary me-3"></i>+012 345 67890</p>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">Quick Links</h4>
@@ -260,9 +397,3 @@
 </body>
 
 </html>
-<img src="img/mehrdad-etemad.jpg"
-     loading="lazy"
-     width="800"
-     height="600"
-     class="img-fluid"
-     alt="...">

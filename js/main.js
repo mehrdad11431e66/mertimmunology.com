@@ -205,3 +205,63 @@ document.querySelectorAll(".language-option").forEach(function(link) {
         setLanguage(lang);
     });
 });
+$(document).ready(function() {
+    $('#searchForm').on('submit', function(e) {
+        e.preventDefault();
+        const query = $('#searchInput').val().toLowerCase();
+        const searchResults = $('#searchResults');
+        searchResults.html('<div class="col-12 text-center"><div class="spinner-border text-primary" role="status"></div></div>');
+        
+        setTimeout(() => {
+            performSearch(query);
+        }, 500);
+    });
+});
+
+function performSearch(query) {
+    $.getJSON('search-index.json')
+        .done(function(data) {
+            displayResults(filterResults(data, query));
+        })
+        .fail(function(error) {
+            console.error('Error loading search index:', error);
+            $('#searchResults').html(`
+                <div class="col-12 text-center text-danger">
+                    <p>Error loading search results. Please try again later.</p>
+                </div>`);
+        });
+}
+
+function filterResults(data, query) {
+    if (!query) return [];
+    return data.filter(item => {
+        return item.title.toLowerCase().includes(query) || 
+               item.content.toLowerCase().includes(query) ||
+               (item.tags && item.tags.some(tag => tag.toLowerCase().includes(query)));
+    });
+}
+
+function displayResults(results) {
+    const container = $('#searchResults');
+    if (results.length === 0) {
+        container.html(`
+            <div class="col-12 text-center">
+                <h4>No results found</h4>
+                <p>Try different keywords or check our <a href="articles.html">articles</a>.</p>
+            </div>`);
+        return;
+    }
+    
+    container.html(results.map(item => `
+        <div class="col-lg-6">
+            <div class="bg-light rounded overflow-hidden p-4 h-100">
+                <h3><a href="${item.url}">${item.title}</a></h3>
+                <p class="text-muted">${item.type} | ${item.date}</p>
+                <p>${item.excerpt}</p>
+                <div class="mt-auto">
+                    ${item.tags.map(tag => `<span class="badge bg-primary me-1">${tag}</span>`).join('')}
+                </div>
+            </div>
+        </div>
+    `).join(''));
+}

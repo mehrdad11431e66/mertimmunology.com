@@ -264,28 +264,43 @@
                 <a class="btn btn-dark rounded-pill py-3 px-5 me-3" href="">View Research</a>
                 <a class="btn btn-outline-dark rounded-pill py-3 px-5" href="">Contact Me</a>
             </div>
-            <div class="col-lg-6">
-                <div class="bg-white text-center rounded p-5">
-                    <h1 class="mb-4">Get In Touch</h1>
-                    <form action="https://formspree.io/f/xzzrzwzj" method="POST">
-                        <div class="row g-3">
-                            <div class="col-12">
-                                <label>
-                                    <input type="email" name="email" class="form-control bg-light border-0" placeholder="Your Email" style="height: 55px;">
-                                </label>
-                            </div>
-                            <div class="col-12">
-                                <label>
-                                    <textarea name="message" class="form-control bg-light border-0" rows="3" placeholder="Your Message"></textarea>
-                                </label>
-                            </div>
-                            <div class="col-12">
-                                <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
-                            </div>
-                        </div>
-                    </form>
+          <div class="col-lg-6">
+    <div class="bg-white text-center rounded p-5">
+        <h1 class="mb-4">Get In Touch</h1>
+        <form action="https://formspree.io/f/xzzrzwzj" method="POST">
+            <div class="row g-3">
+                <div class="col-12 col-sm-6">
+                    <select class="form-select bg-light border-0" style="height: 55px;">
+                        <option selected>Inquiry Type</option>
+                        <option value="1">Research Collaboration</option>
+                        <option value="2">Speaking Engagement</option>
+                        <option value="3">General Question</option>
+                    </select>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <select class="form-select bg-light border-0" style="height: 55px;">
+                        <option selected>Subject Area</option>
+                        <option value="1">Immunology</option>
+                        <option value="2">Genetics</option>
+                        <option value="3">Vaccine Development</option>
+                    </select>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <input type="text" class="form-control bg-light border-0" placeholder="Your Name" style="height: 55px;">
+                </div>
+                <div class="col-12 col-sm-6">
+                    <input type="email" name="email" class="form-control bg-light border-0" placeholder="Your Email" style="height: 55px;">
+                </div>
+                <div class="col-12">
+                    <textarea name="message" class="form-control bg-light border-0" rows="3" placeholder="Your Message"></textarea>
+                </div>
+                <div class="col-12">
+                    <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
                 </div>
             </div>
+        </form>
+    </div>
+</div>
         </div>
     </div>
 </div>

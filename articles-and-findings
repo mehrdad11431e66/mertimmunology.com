@@ -1,1 +1,32 @@
-
+<!-- Add this to your articles.html page where you want the article listing to appear -->
+<div class="container-fluid py-5">
+    <div class="container">
+        <div class="text-center mx-auto mb-5" style="max-width: 500px;">
+            <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Latest Updates</h5>
+            <h1 class="display-4">Research Articles</h1>
+        </div>
+        <div class="row g-5">
+            <!-- Article 1 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="bg-light rounded overflow-hidden">
+                    <img class="img-fluid w-100" src="img/spring-immunity-thumb.jpg" alt="Spring immunity">
+                    <div class="p-4">
+                        <a class="h3 d-block mb-3" href="articles-and-findings/spring-immune-health.html">Spring's Role in Immune Health</a>
+                        <p class="m-0">Exploring how spring conditions affect children's immune resilience through sunlight, microbes, and seasonal nutrition.</p>
+                    </div>
+                    <div class="d-flex justify-content-between border-top p-4">
+                        <div class="d-flex align-items-center">
+                            <img class="rounded-circle me-2" src="img/user.jpg" width="25" height="25" alt="">
+                            <small>Mehrdad Etemad</small>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <small class="ms-3"><i class="far fa-calendar-alt text-primary me-1"></i>May 8, 2024</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Add more articles here as needed -->
+        </div>
+    </div>
+</div>

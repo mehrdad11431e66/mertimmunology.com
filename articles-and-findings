@@ -30,3 +30,50 @@
         </div>
     </div>
 </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Articles | Mert Immunology</title>
+    <!-- Keep all your existing head content -->
+</head>
+<body>
+    <!-- Keep your existing header/navigation -->
+
+    <!-- Articles Section Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5" style="max-width: 500px;">
+                <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Research</h5>
+                <h1 class="display-4">Articles & Publications</h1>
+            </div>
+            
+            <div class="row g-5">
+                <!-- Article 1 -->
+                <div class="col-lg-6">
+                    <div class="bg-light rounded p-5">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="bg-primary rounded-circle flex-shrink-0" style="width: 60px; height: 60px;">
+                                <i class="fa fa-file-pdf text-white fs-4 p-3"></i>
+                            </div>
+                            <div class="ms-4">
+                                <h3 class="mb-1">Spring's Role in Immune Health</h3>
+                                <p class="mb-0">Sunlight, Microbes, and Seasonal Nutrition for Children's Resilience</p>
+                            </div>
+                        </div>
+                        <p>This article explores how spring conditions affect children's immune resilience through sunlight exposure, microbial diversity, and seasonal nutrition.</p>
+                        <a href="articles/spring-immune-health.pdf" class="btn btn-primary py-2 px-4" target="_blank">
+                            <i class="fa fa-download me-2"></i>Download PDF
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Add more articles as needed -->
+            </div>
+        </div>
+    </div>
+    <!-- Articles Section End -->
+
+    <!-- Keep your existing footer -->
+</body>
+</html>

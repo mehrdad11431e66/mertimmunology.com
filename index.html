@@ -349,7 +349,74 @@
         </div>
     </div>
     <!-- Team End -->
-
+<!-- Appointment Start -->
+<div class="container-fluid bg-primary my-5 py-5">
+    <div class="container py-5">
+        <div class="row gx-5">
+            <div class="col-lg-6 mb-5 mb-lg-0">
+                <div class="mb-4">
+                    <h5 class="d-inline-block text-white text-uppercase border-bottom border-5">Appointment</h5>
+                    <h1 class="display-4 text-white">Book An Appointment</h1>
+                </div>
+                <p class="text-white mb-5">Please fill out the form below to schedule an appointment with our team. We will contact you to confirm your booking.</p>
+                <div class="d-flex">
+                    <i class="fa fa-2x fa-envelope text-white me-3"></i>
+                    <div>
+                        <h5 class="text-white">Email Us</h5>
+                        <p class="m-0 text-white">mehrdad.etemad1988@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="bg-white text-center rounded p-5">
+                    <h1 class="mb-4">Book An Appointment</h1>
+                    <form id="appointmentForm">
+                        <div class="row g-3">
+                            <div class="col-12 col-sm-6">
+                                <select class="form-select bg-light border-0" name="department" style="height: 55px;" required>
+                                    <option value="" selected disabled>Choose Department</option>
+                                    <option value="Immunology">Immunology</option>
+                                    <option value="Genetics">Genetics</option>
+                                    <option value="Vaccine Development">Vaccine Development</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <select class="form-select bg-light border-0" name="doctor" style="height: 55px;" required>
+                                    <option value="" selected disabled>Select Researcher</option>
+                                    <option value="Dr. Mehrdad Etemad">Dr. Mehrdad Etemad</option>
+                                    <option value="Dr. Sarah Johnson">Dr. Sarah Johnson</option>
+                                    <option value="Dr. Michael Chen">Dr. Michael Chen</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <input type="text" class="form-control bg-light border-0" name="name" placeholder="Your Name" style="height: 55px;" required>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <input type="email" class="form-control bg-light border-0" name="email" placeholder="Your Email" style="height: 55px;" required>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="date" id="date" data-target-input="nearest">
+                                    <input type="text" class="form-control bg-light border-0 datetimepicker-input"
+                                        name="date" placeholder="Date" data-target="#date" data-toggle="datetimepicker" style="height: 55px;" required>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="time" id="time" data-target-input="nearest">
+                                    <input type="text" class="form-control bg-light border-0 datetimepicker-input"
+                                        name="time" placeholder="Time" data-target="#time" data-toggle="datetimepicker" style="height: 55px;" required>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary w-100 py-3" type="submit">Book Appointment</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Appointment End -->
     <!-- Testimonial Start -->
     <div class="container-fluid py-5">
         <div class="container">

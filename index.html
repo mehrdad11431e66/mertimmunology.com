@@ -649,6 +649,39 @@
 
     <!-- PDF Viewer Script -->
     <script>
+    $(document).ready(function() {
+        // Initialize datepicker
+        $('#date').datetimepicker({
+            format: 'L', // Date format (e.g., 01/01/2023)
+            minDate: moment() // Disable past dates
+        });
+        
+        // Initialize timepicker
+        $('#time').datetimepicker({
+            format: 'LT', // Time format (e.g., 8:00 PM)
+            stepping: 30 // 30-minute intervals
+        });
+
+        // Form submission handler
+        $('#appointmentForm').on('submit', function(e) {
+            e.preventDefault();
+            var form = $(this);
+            $.ajax({
+                url: form.attr('action'),
+                method: form.attr('method'),
+                data: form.serialize(),
+                dataType: 'json',
+                success: function() {
+                    alert('Your appointment request has been sent successfully! We will contact you soon.');
+                    form.trigger('reset');
+                },
+                error: function() {
+                    alert('There was an error submitting your request. Please try again or contact us directly.');
+                }
+            });
+        });
+    });
+</script>
         // Initialize PDF.js
         pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.min.js';
         

@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Mert Immunology - Research Hub</title>
+    <title>Mehrdad Etemad - Mert Immunology Research Hub</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Immunology Research, Biomedical Science, Vaccine Development, Immunogenetics">
-    <meta name="description" content="Hub for Immunology and Biomedical Research - Advanced research in immunology, vaccine development and biomedical sciences">
+    <meta name="keywords" content="Mehrdad Etemad, Mert Immunology, Etemad Research, Immunology Research, Biomedical Science, Vaccine Development, Immunogenetics">
+    <meta name="description" content="Dr. Mehrdad Etemad's research hub for Mert Immunology - Advanced research in immunology, vaccine development and biomedical sciences">
     <meta name="author" content="Dr. Mehrdad Etemad">
 
     <!-- Google Tag Manager -->
@@ -97,6 +97,53 @@
         .appointment-form select {
             border-radius: 8px !important;
         }
+        .highlight-name {
+            color: #007bff;
+            font-weight: bold;
+        }
+        .research-section {
+            padding: 100px 0;
+            background: #f8f9fa;
+        }
+        .research-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+        }
+        .research-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        .research-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .research-content {
+            padding: 20px;
+        }
+        .research-title {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .research-desc {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        .research-tag {
+            display: inline-block;
+            background: #f0f7ff;
+            color: #007bff;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
         @media (max-width: 768px) {
             .hero-header {
                 text-align: center;
@@ -139,7 +186,7 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0">
                 <a href="index.html" class="navbar-brand">
-                    <h1 class="m-0 text-uppercase text-primary"><i class="fa fa-microscope me-2"></i>Mert Immunology</h1>
+                    <h1 class="m-0 text-uppercase text-primary"><i class="fa fa-microscope me-2"></i><span class="highlight-name">Mert</span> Immunology</h1>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -148,7 +195,15 @@
                     <div class="navbar-nav ms-auto py-0">
                         <a href="index.html" class="nav-item nav-link active">Home</a>
                         <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="research.html" class="nav-item nav-link">Research</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Research</a>
+                            <div class="dropdown-menu m-0">
+                                <a href="research.html" class="dropdown-item">Research Portfolio</a>
+                                <a href="research.html#immunogenetics" class="dropdown-item">Immunogenetics</a>
+                                <a href="research.html#vaccine" class="dropdown-item">Vaccine Development</a>
+                                <a href="research.html#biomedical" class="dropdown-item">Biomedical Research</a>
+                            </div>
+                        </div>
                         <a href="articles.html" class="nav-item nav-link">Articles</a>
                         <a href="gallery.html" class="nav-item nav-link">Gallery</a>
                         <div class="nav-item dropdown">
@@ -172,7 +227,7 @@
         <div class="container py-5">
             <div class="row justify-content-start">
                 <div class="col-lg-8 text-center text-lg-start">
-                    <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5" style="border-color: rgba(256, 256, 256, .3) !important;">Welcome To Mert Immunology</h5>
+                    <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5" style="border-color: rgba(256, 256, 256, .3) !important;">Welcome To <span class="highlight-name">Mert Immunology</span></h5>
                     <h1 class="display-1 text-white mb-md-4">Exploring the Frontiers of Immunology Research</h1>
                     <div class="pt-2">
                         <a href="research.html" class="btn btn-light rounded-pill py-md-3 px-md-5 mx-2">Latest Research</a>
@@ -190,15 +245,15 @@
             <div class="row gx-5">
                 <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 500px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute w-100 h-100 rounded" src="img/about.jpg" alt="Mert Immunology Research Lab" style="object-fit: cover;">
+                        <img class="position-absolute w-100 h-100 rounded" src="img/about.jpg" alt="Dr. Mehrdad Etemad - Mert Immunology Research Lab" style="object-fit: cover;">
                     </div>
                 </div>
                 <div class="col-lg-7">
                     <div class="mb-4">
                         <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">About Us</h5>
-                        <h1 class="display-4">Advanced Immunology Research Center</h1>
+                        <h1 class="display-4"><span class="highlight-name">Mehrdad Etemad's</span> Advanced Immunology Research</h1>
                     </div>
-                    <p>Our research center is dedicated to advancing the understanding of immune system functions and developing innovative solutions for immunological disorders. We combine cutting-edge technology with interdisciplinary approaches to tackle the most pressing challenges in immunology and biomedical science.</p>
+                    <p>Under the leadership of <span class="highlight-name">Dr. Mehrdad Etemad</span>, <span class="highlight-name">Mert Immunology</span> is dedicated to advancing the understanding of immune system functions and developing innovative solutions for immunological disorders. We combine cutting-edge technology with interdisciplinary approaches to tackle the most pressing challenges in immunology and biomedical science.</p>
                     <div class="row g-3 pt-3">
                         <div class="col-sm-3 col-6">
                             <div class="bg-light text-center rounded-circle py-4">
@@ -236,7 +291,7 @@
         <div class="container">
             <div class="text-center mx-auto mb-5" style="max-width: 500px;">
                 <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Research Areas</h5>
-                <h1 class="display-4">Our Specialized Research Domains</h1>
+                <h1 class="display-4"><span class="highlight-name">Etemad's</span> Specialized Research Domains</h1>
             </div>
             <div class="row g-5">
                 <div class="col-lg-4 col-md-6">
@@ -316,6 +371,101 @@
     </div>
     <!-- Services End -->
 
+    <!-- Research Portfolio Section -->
+    <section class="research-section" id="research-portfolio">
+        <div class="container">
+            <div class="text-center mx-auto mb-5" style="max-width: 700px;">
+                <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Research Portfolio</h5>
+                <h1 class="display-4"><span class="highlight-name">Mehrdad Etemad's</span> Immunology Research Projects</h1>
+                <p class="mb-5">Explore the groundbreaking research conducted by <span class="highlight-name">Dr. Mehrdad Etemad</span> and the <span class="highlight-name">Mert Immunology</span> team across various domains of immunological science.</p>
+            </div>
+
+            <div class="row">
+                <!-- Research 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="research-card">
+                        <img src="img/research1.jpg" alt="Blood filter microscopy" class="research-img">
+                        <div class="research-content">
+                            <h3 class="research-title">Development of Blood-Endothelium-Resistant Filters</h3>
+                            <p class="research-desc">Advanced filtration systems resistant to endothelial interference, ensuring pore integrity remains uncompromised during high-pressure blood filtration.</p>
+                            <span class="research-tag">Clinical</span>
+                            <span class="research-tag">Biomedical Engineering</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Research 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="research-card">
+                        <img src="img/research2.jpg" alt="Freeze-dried ice cream" class="research-img">
+                        <div class="research-content">
+                            <h3 class="research-title">Pathogenic Risks in Returned Freeze-Dried Ice Cream</h3>
+                            <p class="research-desc">Freeze-drying returned ice cream can preserve harmful bacteria, posing serious health threats due to insufficient thermal inactivation during processing.</p>
+                            <span class="research-tag">Microbiology</span>
+                            <span class="research-tag">Food Safety</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Research 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="research-card">
+                        <img src="img/research3.jpg" alt="Blood transfusion" class="research-img">
+                        <div class="research-content">
+                            <h3 class="research-title">Autologous Blood Transfusion for Immune Rebalancing</h3>
+                            <p class="research-desc">Documented full psoriasis remission following autologous transfusion, highlighting its potential as a non-pharmacological immune modulator.</p>
+                            <span class="research-tag">Clinical</span>
+                            <span class="research-tag">Autoimmunity</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Research 4 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="research-card">
+                        <img src="img/research4.jpg" alt="Food preservatives" class="research-img">
+                        <div class="research-content">
+                            <h3 class="research-title">Immunomodulatory Effects of Food Preservatives</h3>
+                            <p class="research-desc">Connected widespread preservatives to low-grade inflammation and autoimmune disorders through microbiome disruption.</p>
+                            <span class="research-tag">Microbiology</span>
+                            <span class="research-tag">Nutrition</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Research 5 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="research-card">
+                        <img src="img/research5.jpg" alt="Vaccine hesitancy" class="research-img">
+                        <div class="research-content">
+                            <h3 class="research-title">Immunological Mechanisms of Vaccine Hesitancy</h3>
+                            <p class="research-desc">Explored how cognitive bias, cytokine responses, and interspecies studies shape vaccine perception and immune outcomes.</p>
+                            <span class="research-tag">Immunotherapy</span>
+                            <span class="research-tag">Public Health</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Research 6 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="research-card">
+                        <img src="img/research6.jpg" alt="Gut microbiome" class="research-img">
+                        <div class="research-content">
+                            <h3 class="research-title">Behavioral-Microbial-Neuroendocrine Axis in GI Cancers</h3>
+                            <p class="research-desc">Interpersonal behaviors can modulate gut microbiota and neurohormonal signaling, enhancing PD-1 immunotherapy efficacy.</p>
+                            <span class="research-tag">Immunotherapy</span>
+                            <span class="research-tag">Oncology</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <a href="research.html" class="btn btn-primary py-3 px-5">View Full Research Portfolio</a>
+            </div>
+        </div>
+    </section>
+
     <!-- Appointment Start -->
     <div class="container-fluid bg-primary my-5 py-5">
         <div class="container py-5">
@@ -323,9 +473,9 @@
                 <div class="col-lg-6 mb-5 mb-lg-0">
                     <div class="mb-4">
                         <h5 class="d-inline-block text-white text-uppercase border-bottom border-5">Appointment</h5>
-                        <h1 class="display-4 text-white">Book An Appointment</h1>
+                        <h1 class="display-4 text-white">Book An Appointment With <span class="highlight-name">Dr. Etemad</span></h1>
                     </div>
-                    <p class="text-white mb-5">Please fill out the form below to schedule an appointment with our team. We will contact you to confirm your booking.</p>
+                    <p class="text-white mb-5">Please fill out the form below to schedule an appointment with <span class="highlight-name">Dr. Mehrdad Etemad</span>. We will contact you to confirm your booking.</p>
                     <div class="d-flex">
                         <i class="fa fa-2x fa-envelope text-white me-3" aria-hidden="true"></i>
                         <div>
@@ -391,7 +541,7 @@
         <div class="container">
             <div class="text-center mx-auto mb-5" style="max-width: 500px;">
                 <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Testimonial</h5>
-                <h1 class="display-4">What Colleagues Say About Our Work</h1>
+                <h1 class="display-4">What Colleagues Say About <span class="highlight-name">Dr. Etemad's</span> Work</h1>
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-8">
@@ -403,7 +553,7 @@
                                     <i class="fa fa-quote-left fa-2x text-primary" aria-hidden="true"></i>
                                 </div>
                             </div>
-                            <p class="fs-4 fw-normal">The research conducted by Mert Immunology has significantly advanced our understanding of autoimmune disorders. Their innovative approaches have opened new avenues for therapeutic development.</p>
+                            <p class="fs-4 fw-normal">The research conducted by <span class="highlight-name">Mert Immunology</span> has significantly advanced our understanding of autoimmune disorders. Their innovative approaches have opened new avenues for therapeutic development.</p>
                             <hr class="w-25 mx-auto">
                             <h3>Prof. James Wilson</h3>
                             <h6 class="fw-normal text-primary mb-3">Harvard Medical School</h6>
@@ -415,7 +565,7 @@
                                     <i class="fa fa-quote-left fa-2x text-primary" aria-hidden="true"></i>
                                 </div>
                             </div>
-                            <p class="fs-4 fw-normal">Collaborating with Mert Immunology has been a rewarding experience. Their team combines scientific rigor with creative problem-solving to tackle complex immunological challenges.</p>
+                            <p class="fs-4 fw-normal">Collaborating with <span class="highlight-name">Dr. Mehrdad Etemad</span> has been a rewarding experience. His team combines scientific rigor with creative problem-solving to tackle complex immunological challenges.</p>
                             <hr class="w-25 mx-auto">
                             <h3>Dr. Sarah Johnson</h3>
                             <h6 class="fw-normal text-primary mb-3">Stanford University</h6>
@@ -427,7 +577,7 @@
                                     <i class="fa fa-quote-left fa-2x text-primary" aria-hidden="true"></i>
                                 </div>
                             </div>
-                            <p class="fs-4 fw-normal">The vaccine development research at Mert Immunology is groundbreaking. Their work has the potential to revolutionize how we approach immunization strategies.</p>
+                            <p class="fs-4 fw-normal">The vaccine development research at <span class="highlight-name">Mert Immunology</span> is groundbreaking. Their work has the potential to revolutionize how we approach immunization strategies.</p>
                             <hr class="w-25 mx-auto">
                             <h3>Dr. Michael Brown</h3>
                             <h6 class="fw-normal text-primary mb-3">NIH Research Scientist</h6>
@@ -439,37 +589,12 @@
     </div>
     <!-- Testimonial End -->
 
-    <!-- Search Start -->
-    <div class="container-fluid bg-primary my-5 py-5">
-        <div class="container py-5">
-            <div class="text-center mx-auto mb-5" style="max-width: 500px;">
-                <h5 class="d-inline-block text-white text-uppercase border-bottom border-5">Find A Researcher</h5>
-                <h1 class="display-4 mb-4">Connect With Our Scientific Team</h1>
-                <h5 class="text-white fw-normal">Looking for collaboration or specific expertise? Search our database of researchers and specialists in various immunology domains.</h5>
-            </div>
-            <div class="mx-auto" style="width: 100%; max-width: 600px;">
-                <div class="input-group">
-                    <select class="form-select border-primary w-25" style="height: 60px;">
-                        <option selected>Research Area</option>
-                        <option value="1">Immunogenetics</option>
-                        <option value="2">Vaccine Development</option>
-                        <option value="3">Molecular Immunology</option>
-                        <option value="4">Biomedical Research</option>
-                    </select>
-                    <input type="text" class="form-control border-primary w-50" placeholder="Researcher Name or Keyword">
-                    <button class="btn btn-dark border-0 w-25">Search</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Search End -->
-
     <!-- Blog Start -->
     <div class="container-fluid py-5">
         <div class="container">
             <div class="text-center mx-auto mb-5" style="max-width: 500px;">
                 <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Blog Post</h5>
-                <h1 class="display-4">Our Latest Scientific Blog Posts</h1>
+                <h1 class="display-4">Latest From <span class="highlight-name">Mert Immunology</span> Blog</h1>
             </div>
             <div class="row g-5">
                 <div class="col-xl-4 col-lg-6">
@@ -482,7 +607,7 @@
                         <div class="d-flex justify-content-between border-top p-4">
                             <div class="d-flex align-items-center">
                                 <img class="rounded-circle me-2" src="img/user.jpg" width="25" height="25" alt="Dr. Mehrdad Etemad">
-                                <small>Dr. Mehrdad Etemad</small>
+                                <small><span class="highlight-name">Dr. Mehrdad Etemad</span></small>
                             </div>
                             <div class="d-flex align-items-center">
                                 <small class="ms-3"><i class="far fa-eye text-primary me-1"></i>12345</small>
@@ -501,7 +626,7 @@
                         <div class="d-flex justify-content-between border-top p-4">
                             <div class="d-flex align-items-center">
                                 <img class="rounded-circle me-2" src="img/user.jpg" width="25" height="25" alt="Dr. Mehrdad Etemad">
-                                <small>Dr. Mehrdad Etemad</small>
+                                <small><span class="highlight-name">Dr. Mehrdad Etemad</span></small>
                             </div>
                             <div class="d-flex align-items-center">
                                 <small class="ms-3"><i class="far fa-eye text-primary me-1"></i>12345</small>
@@ -520,7 +645,7 @@
                         <div class="d-flex justify-content-between border-top p-4">
                             <div class="d-flex align-items-center">
                                 <img class="rounded-circle me-2" src="img/user.jpg" width="25" height="25" alt="Dr. Mehrdad Etemad">
-                                <small>Dr. Mehrdad Etemad</small>
+                                <small><span class="highlight-name">Dr. Mehrdad Etemad</span></small>
                             </div>
                             <div class="d-flex align-items-center">
                                 <small class="ms-3"><i class="far fa-eye text-primary me-1"></i>12345</small>
@@ -533,135 +658,6 @@
         </div>
     </div>
     <!-- Blog End -->
-    
-    <!-- Research Section -->
-    <section class="container" id="research">
-        <div class="section-title fade-in">
-            <h2>Research Portfolio</h2>
-        </div>
-
-        <!-- Filter Buttons -->
-        <div class="filter-buttons fade-in delay-1">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="clinical">Clinical</button>
-            <button class="filter-btn" data-filter="microbiology">Microbiology</button>
-            <button class="filter-btn" data-filter="immunotherapy">Immunotherapy</button>
-            <button class="filter-btn" data-filter="genetics">Genetics</button>
-        </div>
-
-        <!-- Research Grid -->
-        <div class="research-grid">
-            <!-- Research 1 -->
-            <div class="research-card fade-in delay-2" data-category="clinical">
-                <img src="research1.jpg" alt="Blood filter microscopy" class="research-img">
-                <div class="research-content">
-                    <h3 class="research-title">Development of Blood-Endothelium-Resistant Filters</h3>
-                    <p class="research-desc">Advanced filtration systems resistant to endothelial interference, ensuring pore integrity remains uncompromised during high-pressure blood filtration.</p>
-                    <span class="research-tag">Clinical</span>
-                    <span class="research-tag">Biomedical Engineering</span>
-                </div>
-            </div>
-
-            <!-- Research 2 -->
-            <div class="research-card fade-in delay-2" data-category="microbiology">
-                <img src="research2.jpg" alt="Freeze-dried ice cream" class="research-img">
-                <div class="research-content">
-                    <h3 class="research-title">Pathogenic Risks in Returned Freeze-Dried Ice Cream</h3>
-                    <p class="research-desc">Freeze-drying returned ice cream can preserve harmful bacteria, posing serious health threats due to insufficient thermal inactivation during processing.</p>
-                    <span class="research-tag">Microbiology</span>
-                    <span class="research-tag">Food Safety</span>
-                </div>
-            </div>
-
-            <!-- Research 3 -->
-            <div class="research-card fade-in delay-2" data-category="clinical">
-                <img src="research3.jpg" alt="Blood transfusion" class="research-img">
-                <div class="research-content">
-                    <h3 class="research-title">Autologous Blood Transfusion for Immune Rebalancing</h3>
-                    <p class="research-desc">Documented full psoriasis remission following autologous transfusion, highlighting its potential as a non-pharmacological immune modulator.</p>
-                    <span class="research-tag">Clinical</span>
-                    <span class="research-tag">Autoimmunity</span>
-                </div>
-            </div>
-
-            <!-- Research 4 -->
-            <div class="research-card fade-in delay-2" data-category="microbiology">
-                <img src="research4.jpg" alt="Food preservatives" class="research-img">
-                <div class="research-content">
-                    <h3 class="research-title">Immunomodulatory Effects of Food Preservatives</h3>
-                    <p class="research-desc">Connected widespread preservatives to low-grade inflammation and autoimmune disorders through microbiome disruption.</p>
-                    <span class="research-tag">Microbiology</span>
-                    <span class="research-tag">Nutrition</span>
-                </div>
-            </div>
-
-            <!-- Research 5 -->
-            <div class="research-card fade-in delay-2" data-category="immunotherapy">
-                <img src="research5.jpg" alt="Vaccine hesitancy" class="research-img">
-                <div class="research-content">
-                    <h3 class="research-title">Immunological Mechanisms of Vaccine Hesitancy</h3>
-                    <p class="research-desc">Explored how cognitive bias, cytokine responses, and interspecies studies shape vaccine perception and immune outcomes.</p>
-                    <span class="research-tag">Immunotherapy</span>
-                    <span class="research-tag">Public Health</span>
-                </div>
-            </div>
-
-            <!-- Research 6 -->
-            <div class="research-card fade-in delay-2" data-category="immunotherapy">
-                <img src="research6.jpg" alt="Gut microbiome" class="research-img">
-                <div class="research-content">
-                    <h3 class="research-title">Behavioral-Microbial-Neuroendocrine Axis in GI Cancers</h3>
-                    <p class="research-desc">Interpersonal behaviors can modulate gut microbiota and neurohormonal signaling, enhancing PD-1 immunotherapy efficacy.</p>
-                    <span class="research-tag">Immunotherapy</span>
-                    <span class="research-tag">Oncology</span>
-                </div>
-            </div>
-
-            <!-- Research 7 -->
-            <div class="research-card fade-in delay-2" data-category="genetics">
-                <img src="research7.jpg" alt="Brain activity" class="research-img">
-                <div class="research-content">
-                    <h3 class="research-title">Psychosexual Factors in Refractory Epilepsy</h3>
-                    <p class="research-desc">Psychosexual experiences in epilepsy patients reduce seizure frequency by affecting BDNF and CREB gene expression.</p>
-                    <span class="research-tag">Genetics</span>
-                    <span class="research-tag">Neuroscience</span>
-                </div>
-            </div>
-
-            <!-- Research 8 -->
-            <div class="research-card fade-in delay-2" data-category="genetics">
-                <img src="research8.jpg" alt="DNA sequencing" class="research-img">
-                <div class="research-content">
-                    <h3 class="research-title">Genetic Polymorphisms in Stress Responses</h3>
-                    <p class="research-desc">Specific SNPs mediate immune and vascular responses to emotional/sexual stimuli, with heritable health impacts.</p>
-                    <span class="research-tag">Genetics</span>
-                    <span class="research-tag">Cardiology</span>
-                </div>
-            </div>
-
-            <!-- Research 9 -->
-            <div class="research-card fade-in delay-2" data-category="clinical">
-                <img src="research9.jpg" alt="Children in spring" class="research-img">
-                <div class="research-content">
-                    <h3 class="research-title">Spring's Role in Pediatric Immune Health</h3>
-                    <p class="research-desc">Spring's unique synergy of UV exposure, microbial diversity, and nutrients is critical to immune development.</p>
-                    <span class="research-tag">Clinical</span>
-                    <span class="research-tag">Pediatrics</span>
-                </div>
-            </div>
-
-            <!-- Research 10 -->
-            <div class="research-card fade-in delay-2" data-category="clinical">
-                <img src="research10.jpg" alt="Sleep habits" class="research-img">
-                <div class="research-content">
-                    <h3 class="research-title">Immunological Effects of Bedtime Habits</h3>
-                    <p class="research-desc">Books promote restorative sleep and immune recovery, while smartphones disrupt both sleep quality and immune homeostasis.</p>
-                    <span class="research-tag">Clinical</span>
-                    <span class="research-tag">Sleep Medicine</span>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light mt-5 py-5">
@@ -669,7 +665,7 @@
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                     <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">Get In Touch</h4>
-                    <p class="mb-4">Connect with me for research collaborations, speaking engagements, or scientific discussions.</p>
+                    <p class="mb-4">Connect with <span class="highlight-name">Dr. Mehrdad Etemad</span> for research collaborations, speaking engagements, or scientific discussions.</p>
                     <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>Research Center, Istanbul, Turkey</p>
                     <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>mehrdad.etemad1988@gmail.com</p>
                     <p class="mb-0"><i class="fa fa-phone-alt text-primary me-3"></i></p>
@@ -704,7 +700,7 @@
                             <button class="btn btn-primary" type="submit">Subscribe</button>
                         </div>
                     </form>
-                    <h6 class="text-primary text-uppercase mt-4 mb-3">Follow Me</h6>
+                    <h6 class="text-primary text-uppercase mt-4 mb-3">Follow <span class="highlight-name">Dr. Etemad</span></h6>
                     <div class="d-flex">
                         <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
@@ -719,10 +715,10 @@
         <div class="container">
             <div class="row g-5">
                 <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-md-0">&copy; <a class="text-primary" href="index.html">Mert Immunology</a>. All Rights Reserved.</p>
+                    <p class="mb-md-0">&copy; <a class="text-primary" href="index.html"><span class="highlight-name">Mert Immunology</span></a>. All Rights Reserved.</p>
                 </div>
                 <div class="col-md-6 text-center text-md-end">
-                    <p class="mb-0">Designed by <a class="text-primary" href="https://www.linkedin.com/in/mehrdad-etemad/">Mehrdad Etemad</a></p>
+                    <p class="mb-0">Designed by <a class="text-primary" href="https://www.linkedin.com/in/mehrdad-etemad/"><span class="highlight-name">Mehrdad Etemad</span></a></p>
                 </div>
             </div>
         </div>

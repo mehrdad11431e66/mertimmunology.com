@@ -61,6 +61,23 @@
         .team-item:hover {
             transform: scale(1.03);
         }
+        /* New styles for research entries */
+        .research-entry {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 5px;
+        }
+        .research-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        .research-date {
+            font-size: 0.9em;
+            color: #6c757d;
+        }
     </style>
 </head>
 
@@ -140,8 +157,8 @@
                     <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5" style="border-color: rgba(256, 256, 256, .3) !important;">Welcome To Mert Immunology</h5>
                     <h1 class="display-1 text-white mb-md-4">Exploring the Frontiers of Immunology Research</h1>
                     <div class="pt-2">
-                        <a href="" class="btn btn-light rounded-pill py-md-3 px-md-5 mx-2">Latest Research</a>
-                        <a href="" class="btn btn-outline-light rounded-pill py-md-3 px-md-5 mx-2">Contact Me</a>
+                        <a href="research.html" class="btn btn-light rounded-pill py-md-3 px-md-5 mx-2">Latest Research</a>
+                        <a href="contact.html" class="btn btn-outline-light rounded-pill py-md-3 px-md-5 mx-2">Contact Me</a>
                     </div>
                 </div>
             </div>
@@ -211,7 +228,7 @@
                         </div>
                         <h4 class="mb-3">Immunogenetics</h4>
                         <p class="m-0">Exploring the genetic basis of immune responses and autoimmune disorders through advanced genomic technologies.</p>
-                        <a class="btn btn-lg btn-primary rounded-pill mt-3" href="">
+                        <a class="btn btn-lg btn-primary rounded-pill mt-3" href="research.html#immunogenetics">
                             <i class="bi bi-arrow-right"></i>
                         </a>
                     </div>
@@ -223,7 +240,7 @@
                         </div>
                         <h4 class="mb-3">Vaccine Development</h4>
                         <p class="m-0">Researching novel vaccine technologies and delivery systems for emerging infectious diseases.</p>
-                        <a class="btn btn-lg btn-primary rounded-pill mt-3" href="">
+                        <a class="btn btn-lg btn-primary rounded-pill mt-3" href="research.html#vaccine">
                             <i class="bi bi-arrow-right"></i>
                         </a>
                     </div>
@@ -235,7 +252,7 @@
                         </div>
                         <h4 class="mb-3">Biomedical Research</h4>
                         <p class="m-0">Investigating molecular mechanisms of disease and immunity at cellular and molecular levels.</p>
-                        <a class="btn btn-lg btn-primary rounded-pill mt-3" href="">
+                        <a class="btn btn-lg btn-primary rounded-pill mt-3" href="research.html#biomedical">
                             <i class="bi bi-arrow-right"></i>
                         </a>
                     </div>
@@ -247,7 +264,7 @@
                         </div>
                         <h4 class="mb-3">Drug Formulation</h4>
                         <p class="m-0">Developing novel drug delivery systems and immunomodulatory compounds for therapeutic applications.</p>
-                        <a class="btn btn-lg btn-primary rounded-pill mt-3" href="">
+                        <a class="btn btn-lg btn-primary rounded-pill mt-3" href="research.html#drug">
                             <i class="bi bi-arrow-right"></i>
                         </a>
                     </div>
@@ -259,7 +276,7 @@
                         </div>
                         <h4 class="mb-3">Agricultural Biotech</h4>
                         <p class="m-0">Applying immunological principles to enhance plant resistance and agricultural productivity.</p>
-                        <a class="btn btn-lg btn-primary rounded-pill mt-3" href="">
+                        <a class="btn btn-lg btn-primary rounded-pill mt-3" href="research.html#agricultural">
                             <i class="bi bi-arrow-right"></i>
                         </a>
                     </div>
@@ -271,7 +288,7 @@
                         </div>
                         <h4 class="mb-3">Scientific Education</h4>
                         <p class="m-0">Providing training and education programs in immunology and biomedical research methodologies.</p>
-                        <a class="btn btn-lg btn-primary rounded-pill mt-3" href="">
+                        <a class="btn btn-lg btn-primary rounded-pill mt-3" href="research.html#education">
                             <i class="bi bi-arrow-right"></i>
                         </a>
                     </div>
@@ -279,79 +296,102 @@
             </div>
         </div>
     </div>
-   <!-- Services End -->
+    <!-- Services End -->
 
-<!-- Appointment Start -->
-<div class="container-fluid bg-primary my-5 py-5">
-    <div class="container py-5">
-        <div class="row gx-5">
-            <div class="col-lg-6 mb-5 mb-lg-0">
-                <div class="mb-4">
-                    <h5 class="d-inline-block text-white text-uppercase border-bottom border-5">Appointment</h5>
-                    <h1 class="display-4 text-white">Book An Appointment</h1>
-                </div>
-                <p class="text-white mb-5">Please fill out the form below to schedule an appointment with our team. We will contact you to confirm your booking.</p>
-                <div class="d-flex">
-                    <i class="fa fa-2x fa-envelope text-white me-3"></i>
-                    <div>
-                        <h5 class="text-white">Email Us</h5>
-                        <p class="m-0 text-white">mehrdad.etemad1988@gmail.com</p>
-                    </div>
-                </div>
+    <!-- Latest Research Section -->
+    <div class="container-fluid py-5 bg-light">
+        <div class="container">
+            <div class="text-center mx-auto mb-5" style="max-width: 500px;">
+                <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Latest Findings</h5>
+                <h1 class="display-4">Recent Research Updates</h1>
             </div>
-            <div class="col-lg-6">
-                <div class="bg-white text-center rounded p-5">
-                    <h1 class="mb-4">Book An Appointment</h1>
-                    <form id="appointmentForm" action="https://formspree.io/f/xzzrzwzj" method="POST">
-                        <input type="hidden" name="_subject" value="New Appointment Request from Mert Immunology">
-                        <input type="hidden" name="_language" value="en">
-                        
-                        <div class="row g-3">
-                            <div class="col-12 col-sm-6">
-                                <select class="form-select bg-light border-0" name="Department" style="height: 55px;" required>
-                                    <option value="" selected disabled>Choose Department</option>
-                                    <option value="Immunology">Immunology</option>
-                                    <option value="Genetics">Genetics</option>
-                                    <option value="Vaccine Development">Vaccine Development</option>
-                                </select>
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <select class="form-select bg-light border-0" name="Researcher" style="height: 55px;" required>
-                                    <option value="" selected disabled>Select Researcher</option>
-                                    <option value="Dr. Mehrdad Etemad">Dr. Mehrdad Etemad</option>
-                                    <option value="Dr. Sarah Johnson">Dr. Sarah Johnson</option>
-                                    <option value="Dr. Michael Chen">Dr. Michael Chen</option>
-                                </select>
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <input type="text" class="form-control bg-light border-0" name="Name" placeholder="Your Name" style="height: 55px;" required>
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <input type="email" class="form-control bg-light border-0" name="Email" placeholder="Your Email" style="height: 55px;" required>
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <div class="date" id="date" data-target-input="nearest">
-                                    <input type="text" class="form-control bg-light border-0 datetimepicker-input"
-                                        name="Date" placeholder="Date" data-target="#date" data-toggle="datetimepicker" style="height: 55px;" required>
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <div class="time" id="time" data-target-input="nearest">
-                                    <input type="text" class="form-control bg-light border-0 datetimepicker-input"
-                                        name="Time" placeholder="Time" data-target="#time" data-toggle="datetimepicker" style="height: 55px;" required>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <button class="btn btn-primary w-100 py-3" type="submit">Book Appointment</button>
-                            </div>
-                        </div>
-                    </form>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="text-center mb-5">
+                        <p>Below are some of our most recent research findings. For complete details, visit our Research page.</p>
+                        <a href="research.html" class="btn btn-primary py-2 px-4">View All Research</a>
+                    </div>
+                    
+                    <!-- This section will be dynamically loaded from research.html -->
+                    <div id="latest-research-preview" class="text-center">
+                        <p>Loading latest research updates...</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- Appointment End -->
+
+    <!-- Appointment Start -->
+    <div class="container-fluid bg-primary my-5 py-5">
+        <div class="container py-5">
+            <div class="row gx-5">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="mb-4">
+                        <h5 class="d-inline-block text-white text-uppercase border-bottom border-5">Appointment</h5>
+                        <h1 class="display-4 text-white">Book An Appointment</h1>
+                    </div>
+                    <p class="text-white mb-5">Please fill out the form below to schedule an appointment with our team. We will contact you to confirm your booking.</p>
+                    <div class="d-flex">
+                        <i class="fa fa-2x fa-envelope text-white me-3"></i>
+                        <div>
+                            <h5 class="text-white">Email Us</h5>
+                            <p class="m-0 text-white">mehrdad.etemad1988@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="bg-white text-center rounded p-5">
+                        <h1 class="mb-4">Book An Appointment</h1>
+                        <form id="appointmentForm" action="https://formspree.io/f/xzzrzwzj" method="POST">
+                            <input type="hidden" name="_subject" value="New Appointment Request from Mert Immunology">
+                            <input type="hidden" name="_language" value="en">
+                            
+                            <div class="row g-3">
+                                <div class="col-12 col-sm-6">
+                                    <select class="form-select bg-light border-0" name="Department" style="height: 55px;" required>
+                                        <option value="" selected disabled>Choose Department</option>
+                                        <option value="Immunology">Immunology</option>
+                                        <option value="Genetics">Genetics</option>
+                                        <option value="Vaccine Development">Vaccine Development</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <select class="form-select bg-light border-0" name="Researcher" style="height: 55px;" required>
+                                        <option value="" selected disabled>Select Researcher</option>
+                                        <option value="Dr. Mehrdad Etemad">Dr. Mehrdad Etemad</option>
+                                        <option value="Dr. Sarah Johnson">Dr. Sarah Johnson</option>
+                                        <option value="Dr. Michael Chen">Dr. Michael Chen</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <input type="text" class="form-control bg-light border-0" name="Name" placeholder="Your Name" style="height: 55px;" required>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <input type="email" class="form-control bg-light border-0" name="Email" placeholder="Your Email" style="height: 55px;" required>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <div class="date" id="date" data-target-input="nearest">
+                                        <input type="text" class="form-control bg-light border-0 datetimepicker-input"
+                                            name="Date" placeholder="Date" data-target="#date" data-toggle="datetimepicker" style="height: 55px;" required>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <div class="time" id="time" data-target-input="nearest">
+                                        <input type="text" class="form-control bg-light border-0 datetimepicker-input"
+                                            name="Time" placeholder="Time" data-target="#time" data-toggle="datetimepicker" style="height: 55px;" required>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-primary w-100 py-3" type="submit">Book Appointment</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Appointment End -->
 
     <!-- Testimonial Start -->
     <div class="container-fluid py-5">
@@ -650,9 +690,43 @@
             });
         }
 
-        // Render PDFs when page loads
-        document.addEventListener('DOMContentLoaded', function() {
-            // Replace these paths with your actual PDF paths
+        // Load latest research preview from research.html
+        function loadLatestResearch() {
+            $.get('research.html', function(data) {
+                var researchContent = $(data).find('#research-content').html();
+                if (researchContent) {
+                    // Extract the first 3 research entries
+                    var tempDiv = $('<div>').html(researchContent);
+                    var latestEntries = tempDiv.find('.research-entry').slice(0, 3);
+                    
+                    if (latestEntries.length > 0) {
+                        $('#latest-research-preview').html(latestEntries);
+                        $('#latest-research-preview').append(
+                            '<a href="research.html" class="btn btn-primary mt-3">View All Research</a>'
+                        );
+                    } else {
+                        $('#latest-research-preview').html(
+                            '<p>No research entries found. Check back soon for updates.</p>' +
+                            '<a href="research.html" class="btn btn-primary mt-3">Research Page</a>'
+                        );
+                    }
+                } else {
+                    $('#latest-research-preview').html(
+                        '<p>Unable to load research updates. Please visit our Research page.</p>' +
+                        '<a href="research.html" class="btn btn-primary mt-3">Go to Research</a>'
+                    );
+                }
+            }).fail(function() {
+                $('#latest-research-preview').html(
+                    '<p>Error loading research updates. Please try again later.</p>' +
+                    '<a href="research.html" class="btn btn-primary mt-3">Research Page</a>'
+                );
+            });
+        }
+
+        // Initialize carousels and load research preview
+        $(function() {
+            // Render PDFs when page loads
             renderPDF('articles/immune-genetics.pdf', 'pdf-viewer-1');
             renderPDF('articles/vaccine-development.pdf', 'pdf-viewer-2');
             renderPDF('articles/biomedical-research.pdf', 'pdf-viewer-3');
@@ -682,6 +756,9 @@
                 margin: 20,
                 nav: true
             });
+
+            // Load latest research preview
+            loadLatestResearch();
         });
     });
     </script>

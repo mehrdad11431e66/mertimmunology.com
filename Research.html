@@ -22,9 +22,9 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-   <link href="css/style.css" rel="stylesheet">
-<img src="img/research1.jpg">
-      <style>
+    <link href="css/style.css" rel="stylesheet">
+    
+    <style>
         :root {
             --primary: #2c3e50;
             --secondary: #e74c3c;
@@ -167,6 +167,27 @@
             border-bottom: 1px solid #eee;
         }
         
+        /* Hero Research Section */
+        .hero-research {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/research-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 8rem 0;
+            text-align: center;
+        }
+        
+        .hero-research h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero-research p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+        
         @media (max-width: 768px) {
             .research-grid {
                 grid-template-columns: 1fr;
@@ -174,6 +195,14 @@
             
             .research-header h1 {
                 font-size: 2.2rem;
+            }
+            
+            .hero-research {
+                padding: 5rem 0;
+            }
+            
+            .hero-research h1 {
+                font-size: 2.5rem;
             }
         }
     </style>
@@ -246,14 +275,14 @@
     </div>
     <!-- Navbar End -->
 
-    <!-- Research Header Start -->
-    <div class="container-fluid research-header">
-        <div class="container text-center">
-            <h1 class="display-4 text-white mb-4">Our Research Portfolio</h1>
-            <p class="fs-5 text-white mb-0">Exploring innovative approaches in immunology through interdisciplinary research and clinical studies</p>
+    <!-- Hero Research Section -->
+    <div class="container-fluid hero-research">
+        <div class="container">
+            <h1 class="display-4 text-white">Cutting-Edge Immunology Research</h1>
+            <p class="lead text-white">Discover our groundbreaking studies in immunology, biomedical engineering, and vaccine development that are shaping the future of healthcare.</p>
+            <a href="#research-content" class="btn btn-primary btn-lg">Explore Our Research</a>
         </div>
     </div>
-    <!-- Research Header End -->
 
     <!-- Research Content Start -->
     <div class="container-fluid py-5" id="research-content">
@@ -352,7 +381,7 @@
             </div>
             
             <!-- Detailed Research Section -->
-            <div class="research-detail">
+            <div class="research-detail" id="blood-filter">
                 <div class="research-detail-meta">
                     <h2>Development of Blood-Endothelium-Resistant Filters</h2>
                     <div>
@@ -401,6 +430,89 @@
                     </ul>
                 </div>
             </div>
+            
+            <div class="research-detail" id="freeze-dried">
+                <div class="research-detail-meta">
+                    <h2>Pathogenic Risks in Returned Freeze-Dried Ice Cream</h2>
+                    <div>
+                        <span class="research-category">Microbiology</span>
+                        <span class="text-muted ms-2"><i class="far fa-calendar-alt me-1"></i> March 2023</span>
+                    </div>
+                </div>
+                
+                <img src="img/research2.jpg" alt="Freeze-dried ice cream research" class="research-detail-img">
+                
+                <div class="research-detail-content">
+                    <h3>Abstract</h3>
+                    <p>This study investigates the potential health risks associated with freeze-drying returned ice cream products. Our findings reveal that certain pathogenic bacteria can survive the freeze-drying process, creating potential health hazards when these products are reintroduced into the food supply chain.</p>
+                    
+                    <h3>Methodology</h3>
+                    <p>We conducted:</p>
+                    <ul>
+                        <li>Microbiological analysis of 120 returned ice cream samples</li>
+                        <li>Simulated freeze-drying processes under various conditions</li>
+                        <li>Viability testing of common foodborne pathogens post-processing</li>
+                    </ul>
+                    
+                    <h3>Results</h3>
+                    <p>Key findings include:</p>
+                    <ol>
+                        <li>15% of samples contained viable pathogens after freeze-drying</li>
+                        <li>Listeria monocytogenes showed particular resistance to the process</li>
+                        <li>Standard quality control measures failed to detect these risks</li>
+                    </ol>
+                    
+                    <h3>Implications</h3>
+                    <p>This research has important implications for:</p>
+                    <ul>
+                        <li>Food safety regulations for returned products</li>
+                        <li>Freeze-drying process optimization</li>
+                        <li>Quality control protocols in the food industry</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="research-detail" id="immunotherapy">
+                <div class="research-detail-meta">
+                    <h2>Novel Immunotherapy Approaches for Autoimmune Disorders</h2>
+                    <div>
+                        <span class="research-category">Immunology</span>
+                        <span class="text-muted ms-2"><i class="far fa-calendar-alt me-1"></i> January 2023</span>
+                    </div>
+                </div>
+                
+                <img src="img/research3.jpg" alt="Immunotherapy research" class="research-detail-img">
+                
+                <div class="research-detail-content">
+                    <h3>Abstract</h3>
+                    <p>Our team has developed innovative immunotherapy techniques that selectively modulate immune responses in autoimmune disorders without causing generalized immunosuppression. This approach represents a significant advancement over current treatments that often compromise overall immune function.</p>
+                    
+                    <h3>Methodology</h3>
+                    <p>The research involved:</p>
+                    <ul>
+                        <li>Identification of disease-specific autoantigens</li>
+                        <li>Development of targeted antigen-presenting cell modulators</li>
+                        <li>Preclinical testing in animal models of autoimmune disease</li>
+                    </ul>
+                    
+                    <h3>Results</h3>
+                    <p>Our approach demonstrated:</p>
+                    <ol>
+                        <li>80% reduction in disease symptoms in test models</li>
+                        <li>No measurable suppression of normal immune responses</li>
+                        <li>Long-lasting effects from a single treatment course</li>
+                    </ol>
+                    
+                    <h3>Potential Applications</h3>
+                    <p>This technology could revolutionize treatment for:</p>
+                    <ul>
+                        <li>Rheumatoid arthritis</li>
+                        <li>Multiple sclerosis</li>
+                        <li>Type 1 diabetes</li>
+                        <li>Other autoimmune conditions</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
     <!-- Research Content End -->
@@ -429,11 +541,11 @@
                 <div class="col-lg-3 col-md-6">
                     <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">Research Areas</h4>
                     <div class="d-flex flex-column justify-content-start">
-                        <a class="text-light mb-2" href="research.html#immunogenetics"><i class="fa fa-angle-right me-2"></i>Immunogenetics</a>
+                        <a class="text-light mb-2" href="research.html#blood-filter"><i class="fa fa-angle-right me-2"></i>Blood Filtration</a>
+                        <a class="text-light mb-2" href="research.html#freeze-dried"><i class="fa fa-angle-right me-2"></i>Food Safety</a>
+                        <a class="text-light mb-2" href="research.html#immunotherapy"><i class="fa fa-angle-right me-2"></i>Immunotherapy</a>
                         <a class="text-light mb-2" href="research.html#vaccine"><i class="fa fa-angle-right me-2"></i>Vaccine Development</a>
                         <a class="text-light mb-2" href="research.html#biomedical"><i class="fa fa-angle-right me-2"></i>Biomedical Research</a>
-                        <a class="text-light mb-2" href="research.html#drug"><i class="fa fa-angle-right me-2"></i>Drug Formulation</a>
-                        <a class="text-light mb-2" href="research.html#agricultural"><i class="fa fa-angle-right me-2"></i>Agricultural Biotech</a>
                         <a class="text-light" href="research.html#education"><i class="fa fa-angle-right me-2"></i>Scientific Education</a>
                     </div>
                 </div>

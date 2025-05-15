@@ -4,134 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scientific Chronicle - Immunology News</title>
-    <style>
-        body {
-            font-family: 'Times New Roman', Times, serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            display: flex;
-            flex-wrap: wrap;
-        }
-        header {
-            width: 100%;
-            border-bottom: 3px double #000;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            text-align: center;
-        }
-        h1 {
-            font-size: 3em;
-            margin: 0;
-            font-weight: normal;
-        }
-        .date {
-            font-style: italic;
-            margin-top: 5px;
-        }
-        .main-content {
-            width: 70%;
-            padding-right: 30px;
-            box-sizing: border-box;
-        }
-        .sidebar {
-            width: 30%;
-            border-left: 1px solid #ddd;
-            padding-left: 20px;
-            box-sizing: border-box;
-        }
-        article {
-            margin-bottom: 40px;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 20px;
-        }
-        article:last-child {
-            border-bottom: none;
-        }
-        h2 {
-            font-size: 1.8em;
-            margin-bottom: 10px;
-            font-weight: normal;
-        }
-        .article-meta {
-            font-style: italic;
-            color: #666;
-            margin-bottom: 15px;
-        }
-        .article-image {
-            width: 100%;
-            margin: 15px 0;
-            text-align: center;
-        }
-        .article-image img {
-            max-width: 100%;
-            height: auto;
-        }
-        .article-image figcaption {
-            font-size: 0.9em;
-            color: #666;
-            margin-top: 5px;
-        }
-        .expand-button {
-            background: none;
-            border: none;
-            color: #0066cc;
-            text-decoration: underline;
-            cursor: pointer;
-            padding: 0;
-            font-family: inherit;
-            font-size: inherit;
-        }
-        .expanded-content {
-            display: none;
-            margin-top: 15px;
-        }
-        .sidebar-section {
-            margin-bottom: 30px;
-        }
-        .sidebar-title {
-            font-size: 1.3em;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 5px;
-            margin-bottom: 10px;
-        }
-        .search-box {
-            margin-bottom: 20px;
-        }
-        .search-box input {
-            width: 100%;
-            padding: 8px;
-            box-sizing: border-box;
-        }
-        footer {
-            width: 100%;
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 3px double #000;
-            font-size: 0.9em;
-            color: #666;
-        }
-        @media (max-width: 768px) {
-            .main-content, .sidebar {
-                width: 100%;
-                padding: 0;
-            }
-            .sidebar {
-                border-left: none;
-                border-top: 1px solid #ddd;
-                padding-top: 20px;
-                margin-top: 20px;
-            }
-        }
-    </style>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q8E8LN58Z4"></script>
     <script>
@@ -140,145 +12,338 @@
         gtag('js', new Date());
         gtag('config', 'G-Q8E8LN58Z4');
     </script>
-
     <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="2c9bf5c7-3353-4e89-945d-fd595ad1e63e" type="text/javascript" async></script>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .newspaper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .header {
+            width: 100%;
+            text-align: center;
+            border-bottom: 3px double #333;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+        }
+        
+        .header h1 {
+            font-size: 3em;
+            margin: 0;
+            font-family: 'Old English Text MT', 'Times New Roman', serif;
+        }
+        
+        .header .date {
+            font-style: italic;
+            font-size: 1.2em;
+        }
+        
+        .left-column {
+            width: 65%;
+            padding-right: 20px;
+            box-sizing: border-box;
+        }
+        
+        .right-column {
+            width: 35%;
+            border-left: 1px solid #ccc;
+            padding-left: 20px;
+            box-sizing: border-box;
+        }
+        
+        .article {
+            margin-bottom: 30px;
+            cursor: pointer;
+        }
+        
+        .article-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+        
+        .article-image {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        
+        .article-summary {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+        
+        .article-content {
+            display: none;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-left: 3px solid #333;
+            margin-top: 10px;
+        }
+        
+        .search-box {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+        
+        .search-box input {
+            width: 70%;
+            padding: 8px;
+            font-size: 1em;
+        }
+        
+        .search-box button {
+            padding: 8px 15px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .ad-space {
+            background-color: #eee;
+            padding: 15px;
+            text-align: center;
+            margin-bottom: 20px;
+            border: 1px dashed #ccc;
+        }
+        
+        .footer {
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            font-size: 0.9em;
+        }
+        
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .pagination button {
+            margin: 0 5px;
+            padding: 5px 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        
+        @media (max-width: 768px) {
+            .left-column, .right-column {
+                width: 100%;
+                padding: 0;
+            }
+            
+            .right-column {
+                border-left: none;
+                border-top: 1px solid #ccc;
+                padding-top: 20px;
+                margin-top: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <header>
+    <div class="newspaper">
+        <div class="header">
             <h1>Scientific Chronicle</h1>
             <div class="date">May 15, 2025</div>
-        </header>
+        </div>
         
-        <main class="main-content">
-            <article>
-                <h2>Treatment of HIV Using mRNA Vaccines</h2>
-                <div class="article-meta">By Science Correspondent | Immunology</div>
-                
-                <div class="article-image">
-                    <img src="Image of mRNA vaccine against HIV.jpg" alt="mRNA vaccine research">
-                    <figcaption>Researchers working on mRNA vaccine development for HIV</figcaption>
+        <div class="left-column">
+            <div class="article">
+                <div class="article-title">Treatment of HIV Using mRNA Vaccines</div>
+                <img src="img/Image of mRNA vaccine against HIV.jpg" alt="mRNA vaccine against HIV" class="article-image">
+                <div class="article-summary">
+                    Global efforts to develop an effective vaccine against HIV have made promising progress. In 2022, the U.S. National Institutes of Health (NIH) initiated a Phase 1 clinical trial for three mRNA-based HIV vaccines...
                 </div>
-                
-                <p>Global efforts to develop an effective vaccine against HIV have made promising progress. In 2022, the U.S. National Institutes of Health (NIH) initiated a Phase 1 clinical trial for three mRNA-based HIV vaccines...</p>
-                
-                <button class="expand-button" onclick="toggleContent('hiv-content')">Read more</button>
-                
-                <div class="expanded-content" id="hiv-content">
-                    <p>These vaccines are specifically designed to stimulate the production of broadly neutralizing antibodies (bnAbs)—a type of antibody capable of targeting and neutralizing a wide range of HIV strains.</p>
+                <div class="article-content">
+                    <p>Global efforts to develop an effective vaccine against HIV have made promising progress. In 2022, the U.S. National Institutes of Health (NIH) initiated a Phase 1 clinical trial for three mRNA-based HIV vaccines. These vaccines are specifically designed to stimulate the production of broadly neutralizing antibodies (bnAbs)—a type of antibody capable of targeting and neutralizing a wide range of HIV strains.</p>
                     <p>In addition to the NIH's efforts, the biotech companies IAVI (International AIDS Vaccine Initiative) and Moderna have been working together to evaluate the effectiveness of delivering HIV antigens using mRNA technology. Their approach aims to activate specific B-cell responses, guiding these immune cells to produce broadly neutralizing antibodies that can effectively combat the virus.</p>
                     <p>The use of mRNA technology in HIV vaccine development is inspired by the success of mRNA vaccines for COVID-19. It offers a flexible and rapid method for designing vaccines that can instruct the body to produce targeted antigens, triggering a strong and precise immune response. If successful, this approach could revolutionize HIV prevention and significantly reduce the global burden of the disease.</p>
                 </div>
-            </article>
+            </div>
             
-            <article>
-                <h2>Personalized mRNA Cancer Vaccines</h2>
-                <div class="article-meta">By Medical Reporter | Oncology</div>
-                
-                <div class="article-image">
-                    <img src="Treatment of HIV Using mRNA Vaccines.jpg" alt="Personalized cancer vaccine">
-                    <figcaption>mRNA technology being used for cancer treatment research</figcaption>
+            <div class="article">
+                <div class="article-title">Personalized mRNA Cancer Vaccines</div>
+                <img src="img/Treatment of HIV Using mRNA Vaccines.jpg" alt="Personalized mRNA Cancer Vaccines" class="article-image">
+                <div class="article-summary">
+                    Personalized mRNA vaccines represent a groundbreaking advancement in cancer treatment, particularly in combating melanoma. These vaccines work by training the immune system to recognize and attack cancer cells based on the unique genetic mutations present in an individual's tumor...
                 </div>
-                
-                <p>Personalized mRNA vaccines represent a groundbreaking advancement in cancer treatment, particularly in combating melanoma. These vaccines work by training the immune system to recognize and attack cancer cells based on the unique genetic mutations present in an individual's tumor...</p>
-                
-                <button class="expand-button" onclick="toggleContent('cancer-content')">Read more</button>
-                
-                <div class="expanded-content" id="cancer-content">
-                    <h3>mRNA-4157/V940: A Promising Personalized Cancer Vaccine</h3>
+                <div class="article-content">
+                    <p>Personalized mRNA vaccines represent a groundbreaking advancement in cancer treatment, particularly in combating melanoma. These vaccines work by training the immune system to recognize and attack cancer cells based on the unique genetic mutations present in an individual's tumor.</p>
                     <p>Developed collaboratively by Moderna and Merck, mRNA-4157/V940 is a personalized mRNA cancer vaccine designed to target specific neoantigens—mutated proteins found on cancer cells unique to each patient. By analyzing a patient's tumor DNA, scientists can identify these neoantigens and create a custom mRNA sequence that instructs the patient's cells to produce these proteins, thereby stimulating a targeted immune response.</p>
                     <p>In the Phase 2b KEYNOTE-942 clinical trial, the combination of mRNA-4157/V940 with pembrolizumab (Keytruda), an existing immunotherapy, demonstrated significant efficacy in patients with high-risk stage III/IV melanoma following complete surgical resection. The combination therapy reduced the risk of cancer recurrence or death by 44% compared to pembrolizumab alone. Further analysis with a median follow-up of approximately three years showed a 49% reduction in recurrence or death and a 62% reduction in the risk of distant metastasis or death.</p>
-                    <h3>Advancements in mRNA Vaccine Delivery</h3>
                     <p>Researchers at Johns Hopkins University have been exploring innovative delivery methods to enhance the efficacy of mRNA vaccines. They have developed nanoparticles designed to improve the delivery of mRNA vaccines directly to the immune system. In preclinical studies involving mouse models of melanoma and colorectal cancer, these nanoparticles have shown promise in increasing survival rates, suggesting a potential for more effective cancer treatments in the future.</p>
                     <p>These developments underscore the transformative potential of personalized mRNA vaccines in oncology, offering hope for more effective and individualized cancer therapies.</p>
                 </div>
-            </article>
+            </div>
             
-            <article>
-                <h2>mRNA Vaccines for Influenza</h2>
-                <div class="article-meta">By Health Correspondent | Infectious Diseases</div>
-                
-                <div class="article-image">
-                    <img src="mRNA vaccine vial for cancer.jpg" alt="Influenza vaccine research">
-                    <figcaption>New mRNA-based influenza vaccines in development</figcaption>
+            <div class="article">
+                <div class="article-title">mRNA vaccines for influenza</div>
+                <img src="img/mRNA vaccine vial for cancer.jpg" alt="mRNA vaccines for influenza" class="article-image">
+                <div class="article-summary">
+                    mRNA-based influenza vaccines represent a significant advancement in immunization technology, aiming to provide broader and more effective protection against various influenza virus strains...
                 </div>
-                
-                <p>mRNA-based influenza vaccines represent a significant advancement in immunization technology, aiming to provide broader and more effective protection against various influenza virus strains...</p>
-                
-                <button class="expand-button" onclick="toggleContent('flu-content')">Read more</button>
-                
-                <div class="expanded-content" id="flu-content">
-                    <h3>NIH's Multivalent mRNA Influenza Vaccine</h3>
-                    <p>Researchers at the U.S. National Institutes of Health (NIH) have developed a multivalent mRNA vaccine designed to target all 20 known subtypes of influenza A and B. In preclinical studies involving mice and ferrets, this vaccine elicited strong immune responses, producing both cross-reactive and subtype-specific antibodies. Notably, it protected the animals from severe illness and death when exposed to both matched and mismatched influenza strains, indicating its potential as a universal flu vaccine.</p>
-                    <h3>Pfizer and BioNTech's mRNA Influenza Vaccine Efforts</h3>
-                    <p>Pfizer, in collaboration with BioNTech, has been actively exploring mRNA technology for influenza vaccines since 2018. Their goal is to develop vaccines that can be produced more rapidly and match circulating flu strains more accurately than traditional methods.</p>
+                <div class="article-content">
+                    <p>mRNA-based influenza vaccines represent a significant advancement in immunization technology, aiming to provide broader and more effective protection against various influenza virus strains. Here's an updated overview based on recent global developments:</p>
+                    <p>NIH's Multivalent mRNA Influenza Vaccine<br>
+                    Researchers at the U.S. National Institutes of Health (NIH) have developed a multivalent mRNA vaccine designed to target all 20 known subtypes of influenza A and B. In preclinical studies involving mice and ferrets, this vaccine elicited strong immune responses, producing both cross-reactive and subtype-specific antibodies. Notably, it protected the animals from severe illness and death when exposed to both matched and mismatched influenza strains, indicating its potential as a universal flu vaccine.</p>
+                    <p>Pfizer and BioNTech's mRNA Influenza Vaccine Efforts<br>
+                    Pfizer, in collaboration with BioNTech, has been actively exploring mRNA technology for influenza vaccines since 2018. Their goal is to develop vaccines that can be produced more rapidly and match circulating flu strains more accurately than traditional methods.</p>
                     <p>In September 2022, Pfizer initiated a Phase 3 clinical trial for its quadrivalent mRNA flu vaccine candidate. Preliminary results indicated that the vaccine met primary efficacy endpoints, demonstrating non-inferiority and even superiority to existing licensed flu vaccines in certain aspects.</p>
                     <p>Additionally, Pfizer and BioNTech have been working on a combination mRNA vaccine targeting both influenza and COVID-19. While the vaccine showed robust immune responses against influenza A and SARS-CoV-2, it exhibited weaker responses to influenza B strains. The companies are currently evaluating adjustments to enhance its efficacy against all targeted strains.</p>
-                    <h3>Advantages of mRNA Vaccine Technology</h3>
-                    <p>mRNA vaccines offer several benefits over traditional flu vaccines:</p>
-                    <ul>
-                        <li><strong>Rapid Development:</strong> They can be designed and produced more quickly, allowing for faster responses to emerging flu strains.</li>
-                        <li><strong>Precision:</strong> mRNA vaccines can be tailored to match circulating virus strains more accurately, potentially increasing their effectiveness.</li>
-                        <li><strong>Manufacturing Efficiency:</strong> Unlike traditional vaccines that often rely on egg-based production, mRNA vaccines can be manufactured in laboratory settings, reducing the risk of egg-adapted changes that might affect vaccine efficacy.</li>
-                    </ul>
+                    <p>Advantages of mRNA Vaccine Technology<br>
+                    mRNA vaccines offer several benefits over traditional flu vaccines:<br>
+                    • Rapid Development: They can be designed and produced more quickly, allowing for faster responses to emerging flu strains.<br>
+                    • Precision: mRNA vaccines can be tailored to match circulating virus strains more accurately, potentially increasing their effectiveness.<br>
+                    • Manufacturing Efficiency: Unlike traditional vaccines that often rely on egg-based production, mRNA vaccines can be manufactured in laboratory settings, reducing the risk of egg-adapted changes that might affect vaccine efficacy.</p>
                     <p>In summary, the development of mRNA-based influenza vaccines by institutions like the NIH and companies such as Pfizer and BioNTech holds promise for more effective and adaptable flu prevention strategies. These advancements could lead to vaccines that offer broader protection and can be updated more swiftly in response to evolving influenza viruses.</p>
                 </div>
-            </article>
-        </main>
+            </div>
+            
+            <div class="pagination">
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+            </div>
+        </div>
         
-        <aside class="sidebar">
-            <div class="sidebar-section search-box">
-                <div class="sidebar-title">Search</div>
-                <input type="text" placeholder="Search articles...">
+        <div class="right-column">
+            <div class="search-box">
+                <input type="text" placeholder="Search articles..." id="searchInput">
+                <button onclick="searchArticles()">Search</button>
             </div>
             
-            <div class="sidebar-section">
-                <div class="sidebar-title">Latest Headlines</div>
-                <ul>
-                    <li>Inverse Vaccines Show Promise for Autoimmune Diseases</li>
-                    <li>CAR-T Cell Therapy Advances in Cancer Treatment</li>
-                    <li>Needle-Free Vaccines Enter Clinical Trials</li>
-                    <li>Genetic Factors in Immune Response Gain Attention</li>
-                    <li>Plant Immunology Offers Sustainable Agriculture Solutions</li>
-                </ul>
+            <div class="ad-space">
+                <h3>Advertisement</h3>
+                <p>Your ad could be here</p>
             </div>
             
-            <div class="sidebar-section">
-                <div class="sidebar-title">Categories</div>
-                <ul>
-                    <li>Immunology</li>
-                    <li>Vaccine Research</li>
-                    <li>Cancer Treatment</li>
-                    <li>Infectious Diseases</li>
-                    <li>Genetic Research</li>
-                </ul>
+            <div class="article">
+                <div class="article-title">How Our Genes Shape the Immune System</div>
+                <div class="article-summary">
+                    Have you ever wondered why some people catch every cold going around, while others rarely get sick? Or why some individuals have severe reactions to viruses like COVID-19, while others barely notice symptoms? The answer lies largely in our DNA...
+                </div>
+                <div class="article-content">
+                    <p>Have you ever wondered why some people catch every cold going around, while others rarely get sick? Or why some individuals have severe reactions to viruses like COVID-19, while others barely notice symptoms? The answer lies largely in our DNA. Recent global research has made it increasingly clear that our genetic makeup plays a crucial role in determining how our immune system responds to infections, vaccines, and even our own body tissues. This article aims to explain, in simple terms, how genes influence immunity—and why that matters more than ever in today's world.</p>
+                    <p>Understanding the Basics: What Are Genes and the Immune System?</p>
+                    <p>Genes are small segments of DNA that provide instructions for building and regulating every part of our body—including our immune system. The immune system is a complex network of cells and proteins that protects us from harmful invaders like bacteria, viruses, and fungi. It also helps destroy abnormal cells, like those that could become cancer.</p>
+                    <p>But not everyone's immune system works the same way. Differences in our genes explain much of this variation.</p>
+                    <p>Real-World Examples of Genetics and Immunity</p>
+                    <p>COVID-19 and Genetic Differences<br>
+                    One of the most dramatic examples of gene-immune interaction was seen during the COVID-19 pandemic. While some people were hospitalized with life-threatening symptoms, others with the same exposure showed no signs of illness.<br>
+                    Why? Research revealed that certain genes, such as those in the HLA (Human Leukocyte Antigen) family, made a difference. These genes help the body "see" viruses and mount a response. Some variants of HLA were more efficient at recognizing SARS-CoV-2 (the virus that causes COVID-19), leading to a faster and more effective immune attack.</p>
+                    <p>Why Vaccines Work Better for Some People<br>
+                    Vaccines train your immune system to recognize and fight off specific pathogens. However, genetic variations can affect how strong that training is. For example, people with specific genetic variants in T cell receptors or cytokine genes may produce a more robust antibody response, making vaccines more effective for them.</p>
+                    <p>Autoimmune Diseases: When Genes Misguide the Immune System<br>
+                    Sometimes, genetic changes can cause the immune system to mistake the body's own cells as threats—a phenomenon known as autoimmunity. Diseases like type 1 diabetes, multiple sclerosis, and lupus are linked to gene mutations that interfere with immune regulation. These genes may trigger immune attacks on the pancreas, nerves, or other organs.</p>
+                    <p>Personalized Medicine: A New Frontier in Health<br>
+                    Thanks to advances in genetic testing, doctors are beginning to use genetic information to tailor treatments to individuals. This is called personalized or precision medicine. For example, some cancer patients now receive immune therapies that are matched to their genetic profile—boosting treatment effectiveness and reducing side effects.</p>
+                    <p>The Role of Ancestry and Evolution<br>
+                    Genetic diversity across populations also impacts immunity. People of African descent, for instance, may carry gene variants that offer resistance to malaria, while certain Scandinavian populations may have stronger responses to respiratory infections due to their ancestral environment. Understanding this diversity helps create more inclusive and effective healthcare.</p>
+                    <p>Conclusion: Your Genes, Your Immune Destiny?</p>
+                    <p>While lifestyle, nutrition, and environment all influence how healthy your immune system is, your genes set the foundation. The good news? As science advances, we are learning how to use genetic knowledge to predict, prevent, and treat disease more effectively.</p>
+                    <p>By understanding how our genetic blueprint shapes our immune system, we open the door to more personalized, equitable, and powerful healthcare solutions for everyone—today and into the future.</p>
+                </div>
             </div>
             
-            <div class="sidebar-section">
-                <div class="sidebar-title">Subscribe</div>
-                <p>Stay updated with our latest scientific discoveries. Enter your email:</p>
-                <input type="email" placeholder="your@email.com">
-                <button style="margin-top: 10px;">Subscribe</button>
+            <div class="article">
+                <div class="article-title">Practical and Experimental Guide</div>
+                <div class="article-summary">
+                    How to Design a Vaccine: From Concept to Clinical Trials...
+                </div>
+                <div class="article-content">
+                    <p>How to Design a Vaccine: From Concept to Clinical Trials</p>
+                    <p>1. Discovery and Antigen Selection<br>
+                    The vaccine development process begins with identifying the pathogen and selecting an appropriate antigen—typically a protein or molecular structure that can elicit a protective immune response. Modern technologies, such as mRNA platforms, have expedited this phase, as demonstrated during the COVID-19 pandemic.</p>
+                    <p>2. Preclinical Testing<br>
+                    Before human trials, vaccine candidates undergo laboratory and animal testing to assess safety and immunogenicity. These studies help determine appropriate dosages and identify potential side effects.</p>
+                    <p>3. Clinical Trials<br>
+                    • Phase I: Involves a small group of healthy volunteers to evaluate safety and immune response.<br>
+                    • Phase II: Expands the participant pool to assess efficacy and optimal dosing.<br>
+                    • Phase III: Encompasses a large population to confirm effectiveness and monitor adverse reactions.<br>
+                    • Phase IV: Post-marketing surveillance to track long-term effects and rare side effects.</p>
+                    <p>4. Regulatory Approval and Manufacturing<br>
+                    Upon successful trials, vaccine developers submit data to regulatory bodies (e.g., FDA, EMA) for approval. Manufacturing processes must adhere to stringent quality control standards to ensure consistency and safety.</p>
+                    <p>Additional Insights: Underreported Aspects<br>
+                    • Rapid Development Technologies: The success of mRNA vaccines has paved the way for their application in other diseases, including personalized cancer vaccines.<br>
+                    • Global Collaboration: Initiatives like Operation Warp Speed facilitated unprecedented collaboration between governments, academia, and industry, accelerating vaccine development timelines.<br>
+                    • Equity in Distribution: Ensuring equitable access to vaccines remains a challenge, with disparities observed between high-income and low-income countries.</p>
+                    <p>Comprehensive Guide to Cell Culture for Immunological Testing<br>
+                    Cell culture is a fundamental technique in immunology, allowing researchers to study cellular responses in a controlled environment.</p>
+                    <p>Key Components:<br>
+                    • Culture Media: Provides essential nutrients for cell growth.<br>
+                    • Aseptic Techniques: Prevent contamination and ensure experimental integrity.<br>
+                    • Incubation Conditions: Maintain optimal temperature, humidity, and CO₂ levels.</p>
+                    <p>Applications in Immunology:<br>
+                    • Vaccine Development: Assessing immune responses to vaccine candidates.<br>
+                    • Monoclonal Antibody Production: Generating specific antibodies for therapeutic use.<br>
+                    • Cytotoxicity Assays: Evaluating the toxicity of substances on immune cells.</p>
+                    <p>For a detailed protocol and best practices, refer to resources like the Thermo Fisher Scientific Cell Culture Basics Handbook.</p>
+                </div>
             </div>
-        </aside>
+        </div>
         
-        <footer>
+        <div class="footer">
             <p>© 2025 Scientific Chronicle. All rights reserved.</p>
-            <p>Contact: editor@scientificchronicle.com | Follow us on Twitter @SciChronicle</p>
-        </footer>
+        </div>
     </div>
-
+    
     <script>
-        function toggleContent(id) {
-            const content = document.getElementById(id);
-            const button = content.previousElementSibling;
+        // Toggle article content when clicking on articles
+        const articles = document.querySelectorAll('.article');
+        articles.forEach(article => {
+            article.addEventListener('click', () => {
+                const content = article.querySelector('.article-content');
+                content.style.display = content.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+        
+        // Search function
+        function searchArticles() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const articles = document.querySelectorAll('.article');
             
-            if (content.style.display === 'block') {
-                content.style.display = 'none';
-                button.textContent = 'Read more';
-            } else {
-                content.style.display = 'block';
-                button.textContent = 'Read less';
+            articles.forEach(article => {
+                const title = article.querySelector('.article-title').textContent.toLowerCase();
+                const summary = article.querySelector('.article-summary').textContent.toLowerCase();
+                
+                if (title.includes(input) || summary.includes(input)) {
+                    article.style.display = 'block';
+                } else {
+                    article.style.display = 'none';
+                }
+            });
+        }
+        
+        // Google search redirect
+        function googleSearch() {
+            const query = document.getElementById('searchInput').value;
+            if (query.trim() !== '') {
+                window.open(`https://www.google.com/search?q=${encodeURIComponent(query)}`, '_blank');
             }
         }
     </script>

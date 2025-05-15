@@ -1,286 +1,807 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scientific Chronicle - Immunology News</title>
+    <meta charset="utf-8">
+    <title>Mert Immunology - Research Hub</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Immunology Research, Biomedical Science" name="keywords">
+    <meta content="Hub for Immunology and Biomedical Research" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">  
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    
+    <!-- PDF.js for displaying PDF articles -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
     <style>
-        body {
-            font-family: 'Times New Roman', Times, serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
+        <style>
+    /* Existing styles... */
+    
+    /* Research Section Styles */
+    .research-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 30px;
+        margin: 3rem 0;
+    }
+    
+    .research-card {
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: none;
+    }
+    
+    .research-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+    
+    .research-img-container {
+        height: 220px;
+        overflow: hidden;
+    }
+    
+    .research-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+    
+    .research-card:hover .research-img {
+        transform: scale(1.05);
+    }
+    
+    .research-content {
+        padding: 1.5rem;
+    }
+    
+    .research-title {
+        color: #2c3e50;
+        margin: 0 0 1rem 0;
+        font-size: 1.3rem;
+        font-weight: 600;
+    }
+    
+    .research-desc {
+        color: #1a252f;
+        margin-bottom: 1.5rem;
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+    
+    .research-meta {
+        display: flex;
+        justify-content: space-between;
+        color: #95a5a6;
+        font-size: 0.85rem;
+    }
+    
+    .research-category {
+        display: inline-block;
+        padding: 0.25rem 0.75rem;
+        background-color: #3498db;
+        color: white;
+        border-radius: 50px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        margin-right: 0.5rem;
+    }
+    
+    @media (max-width: 768px) {
+        .research-grid {
+            grid-template-columns: 1fr;
         }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            display: flex;
-            flex-wrap: wrap;
-        }
-        header {
-            width: 100%;
-            border-bottom: 3px double #000;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            text-align: center;
-        }
-        h1 {
-            font-size: 3em;
-            margin: 0;
-            font-weight: normal;
-        }
-        .date {
-            font-style: italic;
-            margin-top: 5px;
-        }
-        .main-content {
-            width: 70%;
-            padding-right: 30px;
-            box-sizing: border-box;
-        }
-        .sidebar {
-            width: 30%;
-            border-left: 1px solid #ddd;
-            padding-left: 20px;
-            box-sizing: border-box;
-        }
-        article {
-            margin-bottom: 40px;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 20px;
-        }
-        article:last-child {
-            border-bottom: none;
-        }
-        h2 {
-            font-size: 1.8em;
-            margin-bottom: 10px;
-            font-weight: normal;
-        }
-        .article-meta {
-            font-style: italic;
-            color: #666;
-            margin-bottom: 15px;
-        }
-        .article-image {
-            width: 100%;
-            margin: 15px 0;
-            text-align: center;
-        }
-        .article-image img {
-            max-width: 100%;
-            height: auto;
-        }
-        .article-image figcaption {
-            font-size: 0.9em;
-            color: #666;
-            margin-top: 5px;
-        }
-        .expand-button {
-            background: none;
-            border: none;
-            color: #0066cc;
-            text-decoration: underline;
-            cursor: pointer;
-            padding: 0;
-            font-family: inherit;
-            font-size: inherit;
-        }
-        .expanded-content {
-            display: none;
-            margin-top: 15px;
-        }
-        .sidebar-section {
-            margin-bottom: 30px;
-        }
-        .sidebar-title {
-            font-size: 1.3em;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 5px;
-            margin-bottom: 10px;
-        }
-        .search-box {
-            margin-bottom: 20px;
-        }
-        .search-box input {
-            width: 100%;
-            padding: 8px;
-            box-sizing: border-box;
-        }
-        footer {
-            width: 100%;
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 3px double #000;
-            font-size: 0.9em;
-            color: #666;
-        }
-        @media (max-width: 768px) {
-            .main-content, .sidebar {
-                width: 100%;
-                padding: 0;
-            }
-            .sidebar {
-                border-left: none;
-                border-top: 1px solid #ddd;
-                padding-top: 20px;
-                margin-top: 20px;
-            }
-        }
+    }
+</style>
+    
     </style>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q8E8LN58Z4"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-Q8E8LN58Z4');
-    </script>
-
-    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="2c9bf5c7-3353-4e89-945d-fd595ad1e63e" type="text/javascript" async></script>
 </head>
-<body>
-    <div class="container">
-        <header>
-            <h1>Scientific Chronicle</h1>
-            <div class="date">May 15, 2025</div>
-        </header>
-        
-        <main class="main-content">
-            <article>
-                <h2>Treatment of HIV Using mRNA Vaccines</h2>
-                <div class="article-meta">By Science Correspondent | Immunology</div>
-                
-                <div class="article-image">
-                    <img src="Image of mRNA vaccine against HIV.jpg" alt="mRNA vaccine research">
-                    <figcaption>Researchers working on mRNA vaccine development for HIV</figcaption>
-                </div>
-                
-                <p>Global efforts to develop an effective vaccine against HIV have made promising progress. In 2022, the U.S. National Institutes of Health (NIH) initiated a Phase 1 clinical trial for three mRNA-based HIV vaccines...</p>
-                
-                <button class="expand-button" onclick="toggleContent('hiv-content')">Read more</button>
-                
-                <div class="expanded-content" id="hiv-content">
-                    <p>These vaccines are specifically designed to stimulate the production of broadly neutralizing antibodies (bnAbs)—a type of antibody capable of targeting and neutralizing a wide range of HIV strains.</p>
-                    <p>In addition to the NIH's efforts, the biotech companies IAVI (International AIDS Vaccine Initiative) and Moderna have been working together to evaluate the effectiveness of delivering HIV antigens using mRNA technology. Their approach aims to activate specific B-cell responses, guiding these immune cells to produce broadly neutralizing antibodies that can effectively combat the virus.</p>
-                    <p>The use of mRNA technology in HIV vaccine development is inspired by the success of mRNA vaccines for COVID-19. It offers a flexible and rapid method for designing vaccines that can instruct the body to produce targeted antigens, triggering a strong and precise immune response. If successful, this approach could revolutionize HIV prevention and significantly reduce the global burden of the disease.</p>
-                </div>
-            </article>
-            
-            <article>
-                <h2>Personalized mRNA Cancer Vaccines</h2>
-                <div class="article-meta">By Medical Reporter | Oncology</div>
-                
-                <div class="article-image">
-                    <img src="Treatment of HIV Using mRNA Vaccines.jpg" alt="Personalized cancer vaccine">
-                    <figcaption>mRNA technology being used for cancer treatment research</figcaption>
-                </div>
-                
-                <p>Personalized mRNA vaccines represent a groundbreaking advancement in cancer treatment, particularly in combating melanoma. These vaccines work by training the immune system to recognize and attack cancer cells based on the unique genetic mutations present in an individual's tumor...</p>
-                
-                <button class="expand-button" onclick="toggleContent('cancer-content')">Read more</button>
-                
-                <div class="expanded-content" id="cancer-content">
-                    <h3>mRNA-4157/V940: A Promising Personalized Cancer Vaccine</h3>
-                    <p>Developed collaboratively by Moderna and Merck, mRNA-4157/V940 is a personalized mRNA cancer vaccine designed to target specific neoantigens—mutated proteins found on cancer cells unique to each patient. By analyzing a patient's tumor DNA, scientists can identify these neoantigens and create a custom mRNA sequence that instructs the patient's cells to produce these proteins, thereby stimulating a targeted immune response.</p>
-                    <p>In the Phase 2b KEYNOTE-942 clinical trial, the combination of mRNA-4157/V940 with pembrolizumab (Keytruda), an existing immunotherapy, demonstrated significant efficacy in patients with high-risk stage III/IV melanoma following complete surgical resection. The combination therapy reduced the risk of cancer recurrence or death by 44% compared to pembrolizumab alone. Further analysis with a median follow-up of approximately three years showed a 49% reduction in recurrence or death and a 62% reduction in the risk of distant metastasis or death.</p>
-                    <h3>Advancements in mRNA Vaccine Delivery</h3>
-                    <p>Researchers at Johns Hopkins University have been exploring innovative delivery methods to enhance the efficacy of mRNA vaccines. They have developed nanoparticles designed to improve the delivery of mRNA vaccines directly to the immune system. In preclinical studies involving mouse models of melanoma and colorectal cancer, these nanoparticles have shown promise in increasing survival rates, suggesting a potential for more effective cancer treatments in the future.</p>
-                    <p>These developments underscore the transformative potential of personalized mRNA vaccines in oncology, offering hope for more effective and individualized cancer therapies.</p>
-                </div>
-            </article>
-            
-            <article>
-                <h2>mRNA Vaccines for Influenza</h2>
-                <div class="article-meta">By Health Correspondent | Infectious Diseases</div>
-                
-                <div class="article-image">
-                    <img src="mRNA vaccine vial for cancer.jpg" alt="Influenza vaccine research">
-                    <figcaption>New mRNA-based influenza vaccines in development</figcaption>
-                </div>
-                
-                <p>mRNA-based influenza vaccines represent a significant advancement in immunization technology, aiming to provide broader and more effective protection against various influenza virus strains...</p>
-                
-                <button class="expand-button" onclick="toggleContent('flu-content')">Read more</button>
-                
-                <div class="expanded-content" id="flu-content">
-                    <h3>NIH's Multivalent mRNA Influenza Vaccine</h3>
-                    <p>Researchers at the U.S. National Institutes of Health (NIH) have developed a multivalent mRNA vaccine designed to target all 20 known subtypes of influenza A and B. In preclinical studies involving mice and ferrets, this vaccine elicited strong immune responses, producing both cross-reactive and subtype-specific antibodies. Notably, it protected the animals from severe illness and death when exposed to both matched and mismatched influenza strains, indicating its potential as a universal flu vaccine.</p>
-                    <h3>Pfizer and BioNTech's mRNA Influenza Vaccine Efforts</h3>
-                    <p>Pfizer, in collaboration with BioNTech, has been actively exploring mRNA technology for influenza vaccines since 2018. Their goal is to develop vaccines that can be produced more rapidly and match circulating flu strains more accurately than traditional methods.</p>
-                    <p>In September 2022, Pfizer initiated a Phase 3 clinical trial for its quadrivalent mRNA flu vaccine candidate. Preliminary results indicated that the vaccine met primary efficacy endpoints, demonstrating non-inferiority and even superiority to existing licensed flu vaccines in certain aspects.</p>
-                    <p>Additionally, Pfizer and BioNTech have been working on a combination mRNA vaccine targeting both influenza and COVID-19. While the vaccine showed robust immune responses against influenza A and SARS-CoV-2, it exhibited weaker responses to influenza B strains. The companies are currently evaluating adjustments to enhance its efficacy against all targeted strains.</p>
-                    <h3>Advantages of mRNA Vaccine Technology</h3>
-                    <p>mRNA vaccines offer several benefits over traditional flu vaccines:</p>
-                    <ul>
-                        <li><strong>Rapid Development:</strong> They can be designed and produced more quickly, allowing for faster responses to emerging flu strains.</li>
-                        <li><strong>Precision:</strong> mRNA vaccines can be tailored to match circulating virus strains more accurately, potentially increasing their effectiveness.</li>
-                        <li><strong>Manufacturing Efficiency:</strong> Unlike traditional vaccines that often rely on egg-based production, mRNA vaccines can be manufactured in laboratory settings, reducing the risk of egg-adapted changes that might affect vaccine efficacy.</li>
-                    </ul>
-                    <p>In summary, the development of mRNA-based influenza vaccines by institutions like the NIH and companies such as Pfizer and BioNTech holds promise for more effective and adaptable flu prevention strategies. These advancements could lead to vaccines that offer broader protection and can be updated more swiftly in response to evolving influenza viruses.</p>
-                </div>
-            </article>
-        </main>
-        
-        <aside class="sidebar">
-            <div class="sidebar-section search-box">
-                <div class="sidebar-title">Search</div>
-                <input type="text" placeholder="Search articles...">
-            </div>
-            
-            <div class="sidebar-section">
-                <div class="sidebar-title">Latest Headlines</div>
-                <ul>
-                    <li>Inverse Vaccines Show Promise for Autoimmune Diseases</li>
-                    <li>CAR-T Cell Therapy Advances in Cancer Treatment</li>
-                    <li>Needle-Free Vaccines Enter Clinical Trials</li>
-                    <li>Genetic Factors in Immune Response Gain Attention</li>
-                    <li>Plant Immunology Offers Sustainable Agriculture Solutions</li>
-                </ul>
-            </div>
-            
-            <div class="sidebar-section">
-                <div class="sidebar-title">Categories</div>
-                <ul>
-                    <li>Immunology</li>
-                    <li>Vaccine Research</li>
-                    <li>Cancer Treatment</li>
-                    <li>Infectious Diseases</li>
-                    <li>Genetic Research</li>
-                </ul>
-            </div>
-            
-            <div class="sidebar-section">
-                <div class="sidebar-title">Subscribe</div>
-                <p>Stay updated with our latest scientific discoveries. Enter your email:</p>
-                <input type="email" placeholder="your@email.com">
-                <button style="margin-top: 10px;">Subscribe</button>
-            </div>
-        </aside>
-        
-        <footer>
-            <p>© 2025 Scientific Chronicle. All rights reserved.</p>
-            <p>Contact: editor@scientificchronicle.com | Follow us on Twitter @SciChronicle</p>
-        </footer>
-    </div>
 
-    <script>
-        function toggleContent(id) {
-            const content = document.getElementById(id);
-            const button = content.previousElementSibling;
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid py-2 border-bottom d-none d-lg-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-lg-start mb-2 mb-lg-0">
+                    <div class="d-inline-flex align-items-center">
+                        <span class="text-body">|</span>
+                        <a class="text-decoration-none text-body px-3" href=""><i class="bi bi-envelope me-2"></i>mehrdad.etemad1988@gmail.com</a>
+                    </div>
+                </div>
+                <div class="col-md-6 text-center text-lg-end">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="text-body px-2" href="">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a class="text-body px-2" href="">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a class="text-body px-2" href="">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a class="text-body px-2" href="">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a class="text-body ps-2" href="">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid sticky-top bg-white shadow-sm">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0">
+                <a href="index.html" class="navbar-brand">
+                    <h1 class="m-0 text-uppercase text-primary"><i class="fa fa-microscope me-2"></i>Mert Immunology</h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="Research.html" class="nav-item nav-link">Research</a>
+                        <a href="articles.html" class="nav-item nav-link">Articles</a>
+                        <a href="gallery.html" class="nav-item nav-link">Gallery</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Resources</a>
+                            <div class="dropdown-menu m-0">
+                                <a href="blog.html" class="dropdown-item">Blog</a>
+                                <a href="publications.html" class="dropdown-item">Publications</a>
+                                <a href="videos.html" class="dropdown-item">Videos</a>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Hero Start -->
+    <div class="container-fluid bg-primary py-5 mb-5 hero-header">
+        <div class="container py-5">
+            <div class="row justify-content-start">
+                <div class="col-lg-8 text-center text-lg-start">
+                    <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5" style="border-color: rgba(256, 256, 256, .3) !important;">Welcome To Mert Immunology</h5>
+                    <h1 class="display-1 text-white mb-md-4">Exploring the Frontiers of Immunology Research</h1>
+                    <div class="pt-2">
+                        <a href="" class="btn btn-light rounded-pill py-md-3 px-md-5 mx-2">Latest Research</a>
+                        <a href="" class="btn btn-outline-light rounded-pill py-md-3 px-md-5 mx-2">Contact Me</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+
+    <!-- About Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row gx-5">
+                <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 500px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute w-100 h-100 rounded" src="img/about.jpg" style="object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="mb-4">
+                        <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">About Us</h5>
+                        <h1 class="display-4">Advanced Immunology Research Center</h1>
+                    </div>
+                    <p>Our research center is dedicated to advancing the understanding of immune system functions and developing innovative solutions for immunological disorders. We combine cutting-edge technology with interdisciplinary approaches to tackle the most pressing challenges in immunology and biomedical science.</p>
+                    <div class="row g-3 pt-3">
+                        <div class="col-sm-3 col-6">
+                            <div class="bg-light text-center rounded-circle py-4">
+                                <i class="fa fa-3x fa-microscope text-primary mb-3"></i>
+                                <h6 class="mb-0">Advanced<small class="d-block text-primary">Research</small></h6>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-6">
+                            <div class="bg-light text-center rounded-circle py-4">
+                                <i class="fa fa-3x fa-flask text-primary mb-3"></i>
+                                <h6 class="mb-0">Laboratory<small class="d-block text-primary">Facilities</small></h6>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-6">
+                            <div class="bg-light text-center rounded-circle py-4">
+                                <i class="fa fa-3x fa-book text-primary mb-3"></i>
+                                <h6 class="mb-0">Scientific<small class="d-block text-primary">Publications</small></h6>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-6">
+                            <div class="bg-light text-center rounded-circle py-4">
+                                <i class="fa fa-3x fa-users text-primary mb-3"></i>
+                                <h6 class="mb-0">Expert<small class="d-block text-primary">Team</small></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+    <!-- Services Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5" style="max-width: 500px;">
+                <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Research Areas</h5>
+                <h1 class="display-4">Our Specialized Research Domains</h1>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="service-icon mb-4">
+                            <i class="fa fa-2x fa-dna text-white"></i>
+                        </div>
+                        <h4 class="mb-3">Immunogenetics</h4>
+                        <p class="m-0">Exploring the genetic basis of immune responses and autoimmune disorders through advanced genomic technologies.</p>
+                        <a class="btn btn-lg btn-primary rounded-pill mt-3" href="">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="service-icon mb-4">
+                            <i class="fa fa-2x fa-syringe text-white"></i>
+                        </div>
+                        <h4 class="mb-3">Vaccine Development</h4>
+                        <p class="m-0">Researching novel vaccine technologies and delivery systems for emerging infectious diseases.</p>
+                        <a class="btn btn-lg btn-primary rounded-pill mt-3" href="">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="service-icon mb-4">
+                            <i class="fa fa-2x fa-vial text-white"></i>
+                        </div>
+                        <h4 class="mb-3">Biomedical Research</h4>
+                        <p class="m-0">Investigating molecular mechanisms of disease and immunity at cellular and molecular levels.</p>
+                        <a class="btn btn-lg btn-primary rounded-pill mt-3" href="">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="service-icon mb-4">
+                            <i class="fa fa-2x fa-pills text-white"></i>
+                        </div>
+                        <h4 class="mb-3">Drug Formulation</h4>
+                        <p class="m-0">Developing novel drug delivery systems and immunomodulatory compounds for therapeutic applications.</p>
+                        <a class="btn btn-lg btn-primary rounded-pill mt-3" href="">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="service-icon mb-4">
+                            <i class="fa fa-2x fa-seedling text-white"></i>
+                        </div>
+                        <h4 class="mb-3">Agricultural Biotech</h4>
+                        <p class="m-0">Applying immunological principles to enhance plant resistance and agricultural productivity.</p>
+                        <a class="btn btn-lg btn-primary rounded-pill mt-3" href="">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="service-icon mb-4">
+                            <i class="fa fa-2x fa-graduation-cap text-white"></i>
+                        </div>
+                        <h4 class="mb-3">Scientific Education</h4>
+                        <p class="m-0">Providing training and education programs in immunology and biomedical research methodologies.</p>
+                        <a class="btn btn-lg btn-primary rounded-pill mt-3" href="">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   <!-- Services End -->
+
+<!-- Appointment Start -->
+<div class="container-fluid bg-primary my-5 py-5">
+    <div class="container py-5">
+        <div class="row gx-5">
+            <div class="col-lg-6 mb-5 mb-lg-0">
+                <div class="mb-4">
+                    <h5 class="d-inline-block text-white text-uppercase border-bottom border-5">Appointment</h5>
+                    <h1 class="display-4 text-white">Book An Appointment</h1>
+                </div>
+                <p class="text-white mb-5">Please fill out the form below to schedule an appointment with our team. We will contact you to confirm your booking.</p>
+                <div class="d-flex">
+                    <i class="fa fa-2x fa-envelope text-white me-3"></i>
+                    <div>
+                        <h5 class="text-white">Email Us</h5>
+                        <p class="m-0 text-white">mehrdad.etemad1988@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="bg-white text-center rounded p-5">
+                    <h1 class="mb-4">Book An Appointment</h1>
+                    <form id="appointmentForm" action="https://formspree.io/f/xzzrzwzj" method="POST">
+                        <input type="hidden" name="_subject" value="New Appointment Request from Mert Immunology">
+                        <input type="hidden" name="_language" value="en">
+                        
+                        <div class="row g-3">
+                            <div class="col-12 col-sm-6">
+                                <select class="form-select bg-light border-0" name="Department" style="height: 55px;" required>
+                                    <option value="" selected disabled>Choose Department</option>
+                                    <option value="Immunology">Immunology</option>
+                                    <option value="Genetics">Genetics</option>
+                                    <option value="Vaccine Development">Vaccine Development</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <select class="form-select bg-light border-0" name="Researcher" style="height: 55px;" required>
+                                    <option value="" selected disabled>Select Researcher</option>
+                                    <option value="Dr. Mehrdad Etemad">Dr. Mehrdad Etemad</option>
+                                    <option value="Dr. Sarah Johnson">Dr. Sarah Johnson</option>
+                                    <option value="Dr. Michael Chen">Dr. Michael Chen</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <input type="text" class="form-control bg-light border-0" name="Name" placeholder="Your Name" style="height: 55px;" required>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <input type="email" class="form-control bg-light border-0" name="Email" placeholder="Your Email" style="height: 55px;" required>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="date" id="date" data-target-input="nearest">
+                                    <input type="text" class="form-control bg-light border-0 datetimepicker-input"
+                                        name="Date" placeholder="Date" data-target="#date" data-toggle="datetimepicker" style="height: 55px;" required>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="time" id="time" data-target-input="nearest">
+                                    <input type="text" class="form-control bg-light border-0 datetimepicker-input"
+                                        name="Time" placeholder="Time" data-target="#time" data-toggle="datetimepicker" style="height: 55px;" required>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary w-100 py-3" type="submit">Book Appointment</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Appointment End -->
+
+    <!-- Testimonial Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5" style="max-width: 500px;">
+                <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Testimonial</h5>
+                <h1 class="display-4">What Colleagues Say About Our Work</h1>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="owl-carousel testimonial-carousel">
+                        <div class="testimonial-item text-center">
+                            <div class="position-relative mb-5">
+                                <img class="img-fluid rounded-circle mx-auto" src="img/testimonial-1.jpg" alt="">
+                                <div class="position-absolute top-100 start-50 translate-middle d-flex align-items-center justify-content-center bg-white rounded-circle" style="width: 60px; height: 60px;">
+                                    <i class="fa fa-quote-left fa-2x text-primary"></i>
+                                </div>
+                            </div>
+                            <p class="fs-4 fw-normal">The research conducted by Mert Immunology has significantly advanced our understanding of autoimmune disorders. Their innovative approaches have opened new avenues for therapeutic development.</p>
+                            <hr class="w-25 mx-auto">
+                            <h3>Prof. James Wilson</h3>
+                            <h6 class="fw-normal text-primary mb-3">Harvard Medical School</h6>
+                        </div>
+                        <div class="testimonial-item text-center">
+                            <div class="position-relative mb-5">
+                                <img class="img-fluid rounded-circle mx-auto" src="img/testimonial-2.jpg" alt="">
+                                <div class="position-absolute top-100 start-50 translate-middle d-flex align-items-center justify-content-center bg-white rounded-circle" style="width: 60px; height: 60px;">
+                                    <i class="fa fa-quote-left fa-2x text-primary"></i>
+                                </div>
+                            </div>
+                            <p class="fs-4 fw-normal">Collaborating with Mert Immunology has been a rewarding experience. Their team combines scientific rigor with creative problem-solving to tackle complex immunological challenges.</p>
+                            <hr class="w-25 mx-auto">
+                            <h3>Dr. Emily Rodriguez</h3>
+                            <h6 class="fw-normal text-primary mb-3">Stanford University</h6>
+                        </div>
+                        <div class="testimonial-item text-center">
+                            <div class="position-relative mb-5">
+                                <img class="img-fluid rounded-circle mx-auto" src="img/testimonial-3.jpg" alt="">
+                                <div class="position-absolute top-100 start-50 translate-middle d-flex align-items-center justify-content-center bg-white rounded-circle" style="width: 60px; height: 60px;">
+                                    <i class="fa fa-quote-left fa-2x text-primary"></i>
+                                </div>
+                            </div>
+                            <p class="fs-4 fw-normal">The vaccine development research at Mert Immunology is groundbreaking. Their work has the potential to revolutionize how we approach immunization strategies.</p>
+                            <hr class="w-25 mx-auto">
+                            <h3>Dr. Robert Zhang</h3>
+                            <h6 class="fw-normal text-primary mb-3">NIH Research Scientist</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+    <!-- Search Start -->
+    <div class="container-fluid bg-primary my-5 py-5">
+        <div class="container py-5">
+            <div class="text-center mx-auto mb-5" style="max-width: 500px;">
+                <h5 class="d-inline-block text-white text-uppercase border-bottom border-5">Find A Researcher</h5>
+                <h1 class="display-4 mb-4">Connect With Our Scientific Team</h1>
+                <h5 class="text-white fw-normal">Looking for collaboration or specific expertise? Search our database of researchers and specialists in various immunology domains.</h5>
+            </div>
+            <div class="mx-auto" style="width: 100%; max-width: 600px;">
+                <div class="input-group">
+                    <select class="form-select border-primary w-25" style="height: 60px;">
+                        <option selected>Research Area</option>
+                        <option value="1">Immunogenetics</option>
+                        <option value="2">Vaccine Development</option>
+                        <option value="3">Molecular Immunology</option>
+                        <option value="4">Biomedical Research</option>
+                    </select>
+                    <input type="text" class="form-control border-primary w-50" placeholder="Researcher Name or Keyword">
+                    <button class="btn btn-dark border-0 w-25">Search</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Search End -->
+
+    <!-- Blog Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5" style="max-width: 500px;">
+                <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Blog Post</h5>
+                <h1 class="display-4">Our Latest Scientific Blog Posts</h1>
+            </div>
+            <div class="row g-5">
+                <div class="col-xl-4 col-lg-6">
+                    <div class="bg-light rounded overflow-hidden">
+                        <img class="img-fluid w-100" src="img/blog-1.jpg" alt="">
+                        <div class="p-4">
+                            <a class="h3 d-block mb-3" href="">Advances in Immunotherapy Research</a>
+                            <p class="m-0">Exploring the latest developments in cancer immunotherapy and immune checkpoint inhibitors.</p>
+                        </div>
+                        <div class="d-flex justify-content-between border-top p-4">
+                            <div class="d-flex align-items-center">
+                                <img class="rounded-circle me-2" src="img/user.jpg" width="25" height="25" alt="">
+                                <small>Dr. Mehrdad Etemad</small>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <small class="ms-3"><i class="far fa-eye text-primary me-1"></i>12345</small>
+                                <small class="ms-3"><i class="far fa-comment text-primary me-1"></i>123</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-6">
+                    <div class="bg-light rounded overflow-hidden">
+                        <img class="img-fluid w-100" src="img/blog-2.jpg" alt="">
+                        <div class="p-4">
+                            <a class="h3 d-block mb-3" href="">Genomic Approaches to Immunology</a>
+                            <p class="m-0">How next-generation sequencing is revolutionizing our understanding of immune system diversity.</p>
+                        </div>
+                        <div class="d-flex justify-content-between border-top p-4">
+                            <div class="d-flex align-items-center">
+                                <img class="rounded-circle me-2" src="img/user.jpg" width="25" height="25" alt="">
+                                <small>Dr. Sarah Johnson</small>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <small class="ms-3"><i class="far fa-eye text-primary me-1"></i>12345</small>
+                                <small class="ms-3"><i class="far fa-comment text-primary me-1"></i>123</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-6">
+                    <div class="bg-light rounded overflow-hidden">
+                        <img class="img-fluid w-100" src="img/blog-3.jpg" alt="">
+                        <div class="p-4">
+                            <a class="h3 d-block mb-3" href="">Emerging Infectious Diseases</a>
+                            <p class="m-0">Strategies for rapid vaccine development in response to emerging viral threats.</p>
+                        </div>
+                        <div class="d-flex justify-content-between border-top p-4">
+                            <div class="d-flex align-items-center">
+                                <img class="rounded-circle me-2" src="img/user.jpg" width="25" height="25" alt="">
+                                <small>Dr. Michael Chen</small>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <small class="ms-3"><i class="far fa-eye text-primary me-1"></i>12345</small>
+                                <small class="ms-3"><i class="far fa-comment text-primary me-1"></i>123</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Blog End -->
+        <!-- Research Start -->
+    <div class="container-fluid py-5" id="research-content">
+        <div class="container">
+            <div class="text-center mx-auto mb-5" style="max-width: 800px;">
+                <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Our Research</h5>
+                <h1 class="display-4">Cutting-Edge Immunology Research Projects</h1>
+                <p class="lead">Discover our groundbreaking studies in immunology, biomedical engineering, and vaccine development that are shaping the future of healthcare.</p>
+            </div>
             
-            if (content.style.display === 'block') {
-                content.style.display = 'none';
-                button.textContent = 'Read more';
-            } else {
-                content.style.display = 'block';
-                button.textContent = 'Read less';
-            }
+            <!-- Research Grid View -->
+            <div class="research-grid">
+                <!-- Research Item 1 -->
+                <div class="card research-card">
+                    <div class="research-img-container">
+                        <img src="img/filter-design.jpg" alt="Blood filter microscopy" class="research-img">
+                    </div>
+                    <div class="research-content">
+                        <h3 class="research-title">Development of Blood-Endothelium-Resistant Filters</h3>
+                        <p class="research-desc">Advanced filtration systems resistant to endothelial interference, ensuring pore integrity remains uncompromised during high-pressure blood filtration.</p>
+                        <div class="research-meta">
+                            <span><i class="far fa-calendar-alt me-1"></i> June 2023</span>
+                            <span><span class="research-category">Biomedical</span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Research Item 2 -->
+                <div class="card research-card">
+                    <div class="research-img-container">
+                        <img src="img/icecream-storage-conditions.png" alt="Freeze-dried ice cream" class="research-img">
+                    </div>
+                    <div class="research-content">
+                        <h3 class="research-title">Pathogenic Risks in Returned Freeze-Dried Ice Cream</h3>
+                        <p class="research-desc">Freeze-drying returned ice cream can preserve harmful bacteria, posing serious health threats due to insufficient thermal inactivation during processing.</p>
+                        <div class="research-meta">
+                            <span><i class="far fa-calendar-alt me-1"></i> March 2023</span>
+                            <span><span class="research-category">Microbiology</span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Research Item 3 -->
+                <div class="card research-card">
+                    <div class="research-img-container">
+                        <img src="img/immune-targeting-strategy.jpg" alt="Immunotherapy" class="research-img">
+                    </div>
+                    <div class="research-content">
+                        <h3 class="research-title">Novel Immunotherapy Approaches for Autoimmune Disorders</h3>
+                        <p class="research-desc">Exploring targeted immunomodulation techniques to treat autoimmune conditions without compromising overall immune function.</p>
+                        <div class="research-meta">
+                            <span><i class="far fa-calendar-alt me-1"></i> January 2023</span>
+                            <span><span class="research-category">Immunology</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- View More Button -->
+            <div class="text-center mt-5">
+                <a href="Research.html" class="btn btn-primary py-3 px-5">View All Research Projects</a>
+            </div>
+        </div>
+    </div>
+    <!-- Research End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light mt-5 py-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">Get In Touch</h4>
+                    <p class="mb-4">Connect with me for research collaborations, speaking engagements, or scientific discussions.</p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>Research Center, istanbul, turkey</p>
+                    <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>mehrdad.etemad1988@gmail.com</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">Quick Links</h4>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-light mb-2" href="index.html"><i class="fa fa-angle-right me-2"></i>Home</a>
+                        <a class="text-light mb-2" href="about.html"><i class="fa fa-angle-right me-2"></i>About</a>
+                        <a class="text-light mb-2" href="Research.html"><i class="fa fa-angle-right me-2"></i>Research</a>
+                        <a class="text-light mb-2" href="articles.html"><i class="fa fa-angle-right me-2"></i>Articles</a>
+                        <a class="text-light mb-2" href="gallery.html"><i class="fa fa-angle-right me-2"></i>Gallery</a>
+                        <a class="text-light" href="contact.html"><i class="fa fa-angle-right me-2"></i>Contact</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">Research Areas</h4>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Immunology</a>
+                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Medical Genetics</a>
+                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Vaccine Development</a>
+                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Drug Formulation</a>
+                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Agricultural Biotech</a>
+                        <a class="text-light" href="#"><i class="fa fa-angle-right me-2"></i>Scientific Education</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">Newsletter</h4>
+                    <form action="">
+                        <div class="input-group">
+                            <input type="text" class="form-control p-3 border-0" placeholder="Your Email Address">
+                            <button class="btn btn-primary">Subscribe</button>
+                        </div>
+                    </form>
+                    <h6 class="text-primary text-uppercase mt-4 mb-3">Follow Me</h6>
+                    <div class="d-flex">
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="#"><i class="fab fa-researchgate"></i></a>
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded-circle" href="#"><i class="fab fa-google-scholar"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark text-light border-top border-secondary py-4">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-md-0">&copy; <a class="text-primary" href="#">Mert Immunology</a>. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Designed by <a class="text-primary" href="#">Mehrdad Etemad</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    
+    <script>
+    $(document).ready(function() {
+        // Initialize datepicker
+        $('#date').datetimepicker({
+            format: 'L', // Date format (e.g., 01/01/2023)
+            minDate: moment() // Disable past dates
+        });
+        
+        // Initialize timepicker
+        $('#time').datetimepicker({
+            format: 'LT', // Time format (e.g., 8:00 PM)
+            stepping: 30 // 30-minute intervals
+        });
+
+        // Form submission handler
+        $('#appointmentForm').on('submit', function(e) {
+            e.preventDefault();
+            var form = $(this);
+            $.ajax({
+                url: form.attr('action'),
+                method: form.attr('method'),
+                data: form.serialize(),
+                dataType: 'json',
+                success: function() {
+                    alert('Your appointment request has been sent successfully! We will contact you soon.');
+                    form.trigger('reset');
+                },
+                error: function() {
+                    alert('There was an error submitting your request. Please try again or contact us directly.');
+                }
+            });
+        });
+
+        // Initialize PDF.js
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.min.js';
+        
+        // Function to render PDF
+        function renderPDF(pdfPath, canvasContainer) {
+            pdfjsLib.getDocument(pdfPath).promise.then(function(pdf) {
+                // Fetch the first page
+                pdf.getPage(1).then(function(page) {
+                    var scale = 1.5;
+                    var viewport = page.getViewport({ scale: scale });
+
+                    // Prepare canvas
+                    var canvas = document.createElement('canvas');
+                    var context = canvas.getContext('2d');
+                    canvas.height = viewport.height;
+                    canvas.width = viewport.width;
+
+                    // Append canvas to container
+                    var container = document.getElementById(canvasContainer);
+                    container.innerHTML = '';
+                    container.appendChild(canvas);
+
+                    // Render PDF page into canvas context
+                    page.render({
+                        canvasContext: context,
+                        viewport: viewport
+                    });
+                });
+            }).catch(function(error) {
+                console.error('Error loading PDF:', error);
+                document.getElementById(canvasContainer).innerHTML = 
+                    '<div class="alert alert-danger">Error loading PDF preview. Please download the full article.</div>';
+            });
         }
+
+        // Render PDFs when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            // Replace these paths with your actual PDF paths
+            renderPDF('articles/immune-genetics.pdf', 'pdf-viewer-1');
+            renderPDF('articles/vaccine-development.pdf', 'pdf-viewer-2');
+            renderPDF('articles/biomedical-research.pdf', 'pdf-viewer-3');
+            
+            // Initialize carousels
+            $('.team-carousel').owlCarousel({
+                items: 1,
+                loop: true,
+                margin: 20,
+                nav: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    768: {
+                        items: 2
+                    },
+                    992: {
+                        items: 3
+                    }
+                }
+            });
+            
+            $('.testimonial-carousel').owlCarousel({
+                items: 1,
+                loop: true,
+                margin: 20,
+                nav: true
+            });
+        });
+    });
     </script>
 </body>
 </html>

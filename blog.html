@@ -82,6 +82,11 @@
             margin-bottom: 40px;
             padding-bottom: 20px;
             border-bottom: 1px solid #eee;
+            display: none;
+        }
+        
+        .article.active {
+            display: block;
         }
         
         .article:last-child {
@@ -231,7 +236,8 @@
         
         <div class="main-content">
             <div class="articles-column" id="articlesColumn">
-                <div class="article" id="article1">
+                <!-- Article 1 -->
+                <div class="article active" id="article1">
                     <h2 class="article-title">Treatment of HIV Using mRNA Vaccines</h2>
                     <img src="img/Image of mRNA vaccine against HIV.jpg" alt="mRNA vaccine against HIV" class="article-image">
                     <div class="article-content">
@@ -241,6 +247,7 @@
                     </div>
                 </div>
                 
+                <!-- Article 2 -->
                 <div class="article" id="article2">
                     <h2 class="article-title">Personalized mRNA Cancer Vaccines</h2>
                     <img src="img/Treatment of HIV Using mRNA Vaccines.jpg" alt="Personalized mRNA Cancer Vaccines" class="article-image">
@@ -253,6 +260,7 @@
                     </div>
                 </div>
                 
+                <!-- Article 3 -->
                 <div class="article" id="article3">
                     <h2 class="article-title">mRNA vaccines for influenza</h2>
                     <img src="img/mRNA vaccine vial for cancer.jpg" alt="mRNA vaccines for influenza" class="article-image">
@@ -273,12 +281,7 @@
                     </div>
                 </div>
                 
-                <div class="ad-banner">
-                    <h3>Advertisement</h3>
-                    <p>This space available for your promotional content</p>
-                    <p>Contact us at: ads@scientificchronicle.com</p>
-                </div>
-                
+                <!-- Article 4 -->
                 <div class="article" id="article4">
                     <h2 class="article-title">How Our Genes Shape the Immune System</h2>
                     <div class="article-content">
@@ -304,6 +307,7 @@
                     </div>
                 </div>
                 
+                <!-- Article 5 -->
                 <div class="article" id="article5">
                     <h2 class="article-title">Practical and Experimental Guide</h2>
                     <div class="article-content">
@@ -337,13 +341,152 @@
                     </div>
                 </div>
                 
+                <!-- New Article 6 -->
+                <div class="article" id="article6">
+                    <h2 class="article-title">Activating Plant Immune Systems: Innovative Strategies</h2>
+                    <img src="img/Innovative Strategies.jpg" alt="Plant Immune Systems" class="article-image">
+                    <div class="article-content">
+                        <p>Plants possess innate immune systems capable of recognizing and responding to pathogenic threats. Two primary defense mechanisms are:</p>
+                        <p>• Pattern-Triggered Immunity (PTI): Initiated upon recognition of pathogen-associated molecular patterns (PAMPs) by pattern recognition receptors (PRRs) on the plant cell surface. For instance, the EF-Tu receptor (EFR) in Arabidopsis thaliana detects bacterial elongation factor Tu, activating defense responses.</p>
+                        <p>• Effector-Triggered Immunity (ETI): Activated when intracellular receptors identify specific pathogen effectors, often leading to a robust defense response.</p>
+                        <p>Additionally, plants can be primed for enhanced defense through:</p>
+                        <p>• Induced Systemic Resistance (ISR): Triggered by beneficial microbes like plant growth-promoting rhizobacteria (PGPR), leading to a heightened state of alertness against a broad spectrum of pathogens.</p>
+                        <p>• Systemic Acquired Resistance (SAR): Activated following localized exposure to a pathogen, resulting in the accumulation of salicylic acid and expression of pathogenesis-related proteins throughout the plant.</p>
+                        <h3>Plant Vaccines and Crop Immunity: Recent Developments</h3>
+                        <p>The concept of 'vaccinating' plants involves priming their immune systems to respond more effectively to future pathogen attacks. Recent research has focused on:</p>
+                        <p>• RNA-Based Agents: Scientists at Martin Luther University Halle-Wittenberg have developed RNA molecules that bolster plant defenses against viruses like the Cucumber mosaic virus (CMV), one of the most prevalent in agriculture.</p>
+                        <p>• Trained Immunity-Based Vaccines (TIbV): These vaccines aim to induce a long-lasting, enhanced immune response in plants, providing broad-spectrum protection against various pathogens.</p>
+                        <p>Implementing such strategies can lead to reduced pesticide usage, promoting sustainable agriculture and mitigating environmental impacts.</p>
+                        <h3>Implications for Sustainable Agriculture</h3>
+                        <p>Harnessing plant immunology offers several benefits:</p>
+                        <p>• Enhanced Crop Resilience: Primed plants can better withstand pathogen attacks, leading to improved yields.</p>
+                        <p>• Reduced Chemical Inputs: By activating natural defenses, the reliance on chemical pesticides diminishes, lessening environmental contamination.</p>
+                        <p>• Sustainable Farming Practices: Integrating immunological approaches aligns with eco-friendly agricultural methods, ensuring long-term food security.</p>
+                        <p>As research progresses, the integration of plant immunology into mainstream agriculture holds promise for a more resilient and sustainable food production system.</p>
+                    </div>
+                </div>
+                
+                <!-- New Article 7 -->
+                <div class="article" id="article7">
+                    <h2 class="article-title">Introduction to Tools and Technologies</h2>
+                    <img src="img/Immunology Laboratory Technology.jpg" alt="Immunology Tools" class="article-image">
+                    <div class="article-content">
+                        <h3>Top Genetic Databases for Immunologists</h3>
+                        <p>1. IMGT (International ImMunoGeneTics Information System)<br>
+                        IMGT is a comprehensive resource for immunogenetics, offering detailed data on immunoglobulins, T cell receptors, and major histocompatibility complex (MHC) molecules. It includes 2D and 3D structural databases and tools for analyzing adaptive immune proteins.</p>
+                        <p>2. IEDB (Immune Epitope Database)<br>
+                        IEDB provides a repository of web-based tools for the prediction and analysis of immune epitopes, along with experimental datasets. It supports research in vaccine development and immune response analysis.</p>
+                        <p>3. iReceptor<br>
+                        iReceptor is a platform that federates community repositories containing Adaptive Immune Receptor Repertoire (AIRR) data, facilitating the sharing and analysis of TCR and BCR sequencing data.</p>
+                        <p>4. TCRdb<br>
+                        TCRdb is a database that catalogs T cell receptor sequences across various tissues, diseases, and cell types, aiding in the study of TCR diversity and specificity.</p>
+                        <p>5. McPAS-TCR<br>
+                        McPAS-TCR is a curated database of pathology-associated T cell receptor sequences, linking specific TCRs to diseases and conditions.</p>
+                        <h3>Online Tools for Immunogenetic Analysis</h3>
+                        <p>1. IgBLAST (NCBI)<br>
+                        IgBLAST is a tool for analyzing immunoglobulin (IG) and T cell receptor (TR) variable domain sequences, facilitating the identification and characterization of V(D)J recombinations.</p>
+                        <p>2. IGoR (Inference and Generation of Repertoires)<br>
+                        IGoR is a comprehensive tool that analyzes B or T-cell receptor sequences, characterizing the statistics of receptor generation and providing insights into hypermutation patterns.</p>
+                        <p>3. OLGA (Optimized Likelihood estimate of immunoGlobulin Amino-acid sequences)<br>
+                        OLGA computes the generation probabilities of B- and T-cell receptor amino acid sequences and motifs, aiding in the assessment of immune repertoire diversity.</p>
+                        <p>4. SOS (Simple OLGA & SONIA)<br>
+                        SOS is a web-based interface that allows users to estimate generation and selection probabilities of T and B cell receptors without requiring coding skills, making it accessible for broader audiences.</p>
+                        <p>5. Ensembl Variant Effect Predictor (VEP)<br>
+                        VEP is a tool that predicts the functional effects of genomic variants, including SNPs, CNVs, and indels, on genes, transcripts, and protein sequences.</p>
+                        <p>6. MutationTaster<br>
+                        MutationTaster evaluates DNA sequence variants for their disease-causing potential, integrating data from multiple sources to predict the impact of mutations on protein function.</p>
+                        <p>7. GeneTalk<br>
+                        GeneTalk is a web-based platform for filtering, reducing, and prioritizing human sequence variants from next-generation sequencing data, facilitating expert exchange and annotation of clinically relevant variants.</p>
+                        <p>8. UCSC Genome Browser<br>
+                        The UCSC Genome Browser offers a wide range of genomic data visualization tools, including tracks for gene predictions, variation, regulation, and comparative genomics, supporting comprehensive genomic analyses.</p>
+                        <p>These databases and tools are instrumental for immunologists aiming to analyze genetic data related to immune responses, receptor diversity, and disease associations. They provide platforms for data storage, analysis, and visualization, facilitating advancements in immunogenetics and personalized medicine.</p>
+                    </div>
+                </div>
+                
+                <!-- New Article 8 -->
+                <div class="article" id="article8">
+                    <h2 class="article-title">Education and Skill Development</h2>
+                    <img src="img/Education and Skill Development.jpg" alt="Immunology Education" class="article-image">
+                    <div class="article-content">
+                        <h3>5 Essential Techniques Every Immunology Laboratory Should Master</h3>
+                        <p>For aspiring immunologists and laboratory professionals, mastering fundamental techniques is crucial. These core methods form the backbone of both research and diagnostic applications in immunology:</p>
+                        <p>1. Flow Cytometry<br>
+                        A powerful technique for analyzing the physical and chemical characteristics of cells or particles. It's widely used for immunophenotyping and assessing cell health.</p>
+                        <p>2. Enzyme-Linked Immunosorbent Assay (ELISA)<br>
+                        A sensitive method for detecting and quantifying soluble substances such as proteins, peptides, antibodies, and hormones. ELISA is a staple in both research and clinical diagnostics.</p>
+                        <p>3. Cell Culture Techniques<br>
+                        Cultivating cells under controlled conditions is fundamental for studying cellular responses, vaccine development, and therapeutic testing.</p>
+                        <p>4. Magnetic-Activated Cell Sorting (MACS)<br>
+                        A method for separating specific cell populations using magnetic beads, essential for isolating particular cell types for further analysis.</p>
+                        <p>5. Polymerase Chain Reaction (PCR)<br>
+                        A technique to amplify DNA sequences, PCR is indispensable for genetic analysis, pathogen detection, and various molecular biology applications.</p>
+                        <h3>Crafting a Strong Vaccine Research Proposal</h3>
+                        <p>Developing a compelling research proposal in vaccine development involves several key components:</p>
+                        <p>• Clear Objectives and Hypotheses<br>
+                        Define specific, measurable goals and formulate testable hypotheses to guide your research.</p>
+                        <p>• Comprehensive Literature Review<br>
+                        Demonstrate awareness of current research, identify gaps, and justify the need for your study.</p>
+                        <p>• Detailed Methodology<br>
+                        Outline the experimental design, including sample selection, procedures, and data analysis plans.</p>
+                        <p>• Significance and Impact<br>
+                        Explain how your research will advance knowledge, contribute to public health, or inform policy.</p>
+                        <p>• Feasibility and Resources<br>
+                        Provide a realistic timeline, budget, and description of available resources and expertise.</p>
+                        <h3>International Internships and Opportunities for Emerging Immunology Researchers</h3>
+                        <p>Engaging in international internships can significantly enhance the skills and perspectives of young researchers. Here are some notable programs:</p>
+                        <p>• La Jolla Institute for Immunology (USA)<br>
+                        Offers hands-on research experiences for undergraduate and graduate students in cutting-edge immunology projects.</p>
+                        <p>• RIKEN Institute (Japan)<br>
+                        Provides internships for students and postdocs, including lodging and travel support, focusing on integrative medical sciences.</p>
+                        <p>• World Health Organization (Global)<br>
+                        The WHO Internship Programme offers opportunities to gain insight into global health policies and programs.</p>
+                        <p>• Leiden University Medical Center (Netherlands)<br>
+                        Hosts international students for laboratory research internships across various immunology research lines.</p>
+                        <p>• BioMedizone Virtual Internship<br>
+                        A free, virtual program offering clinical lab experience, lectures, and research projects in immunology.</p>
+                        <p>• National Institute of Immunology (India)<br>
+                        Offers short-term training opportunities for outstanding students to conduct project work under expert supervision.</p>
+                        <p>These educational and professional development opportunities are pivotal for those aiming to contribute to the field of immunology, particularly in vaccine research and development. Engaging with these programs can provide valuable experience, networking, and a deeper understanding of global health challenges.</p>
+                    </div>
+                </div>
+                
+                <!-- New Article 9 -->
+                <div class="article" id="article9">
+                    <h2 class="article-title">Major Advances in Immunology (as of May 2025)</h2>
+                    <img src="img/Major Advances in Immunology.jpg" alt="Immunology Advances" class="article-image">
+                    <div class="article-content">
+                        <h3>1. Inverse Vaccines: A New Hope for Autoimmune Diseases</h3>
+                        <p>Researchers have developed "inverse vaccines" that train the immune system to ignore specific molecules, potentially preventing autoimmune attacks. This approach has shown promise in treating conditions like multiple sclerosis and type 1 diabetes, as well as allergies. By coupling disease-related proteins with molecules resembling naturally dying cells, the immune system learns to recognize them as non-threatening, offering long-term immune tolerance.</p>
+                        <h3>2. Advancements in Cancer Immunotherapy</h3>
+                        <p>Significant progress has been made in cancer immunotherapy, including the development of personalized treatments like CAR T-cell and CAR-NK cell therapies. These therapies re-engineer a patient's own immune cells to target cancer cells. Clinical trials have demonstrated the potential to "cure" advanced melanoma using combinations of immunotherapy drugs, marking a transformative era in cancer treatment.</p>
+                        <h3>3. Needle-Free Vaccines: The Future of Immunization</h3>
+                        <p>To address needle phobia and improve vaccine uptake, researchers are developing nasal spray vaccines. These needle-free options not only ease administration but also offer rapid and effective immunity by targeting the primary entry points of respiratory viruses like COVID-19 and influenza. However, challenges remain in funding, research, and distribution, especially in low-income countries.</p>
+                        <h3>4. Antibodies and Aging: Slowing the Clock</h3>
+                        <p>Innovative research is exploring the use of antibodies to slow the aging process. By targeting senescent cells and specific signaling pathways, scientists aim to rejuvenate tissues and extend lifespans. This approach could lead to treatments that replace multiple medications with a single antibody injection, potentially available as soon as 2025.</p>
+                        <h3>5. AI in Allergy and Immunology Research</h3>
+                        <p>Artificial intelligence (AI) is revolutionizing allergy and immunology research. The number of AI-related publications in this field has surged, with the USA and China leading in research output. AI applications range from analyzing immune responses to developing personalized treatments, highlighting the growing importance of interdisciplinary collaboration.</p>
+                        <h3>Expert Perspectives</h3>
+                        <p>Dr. Yasmine Belkaid: Advocating for Science<br>
+                        Dr. Yasmine Belkaid, president of the Pasteur Institute, emphasizes the importance of science in society. She highlights challenges such as reduced funding and declining public trust, advocating for effective scientific communication and ethical considerations in research.</p>
+                        <h3>Recent Highlights from Nature Immunology</h3>
+                        <p>• CAR-T 'Memory Cells': Discovery of CAR-T cells that retain memory of past encounters, potentially enhancing cancer therapy effectiveness.</p>
+                        <p>• Predicting Vaccine Immunity Duration: Development of blood tests that can predict how long vaccine-induced immunity will last, aiding in personalized vaccination strategies.</p>
+                        <p>• Understanding Allergic Asthma: New insights into how house dust mites trigger allergic asthma by activating the immune system, paving the way for targeted treatments.</p>
+                    </div>
+                </div>
+                
+                <div class="ad-banner">
+                    <h3>Advertisement</h3>
+                    <p>This space available for your promotional content</p>
+                    <p>Contact us at: ads@scientificchronicle.com</p>
+                </div>
+                
                 <div class="pagination">
-                    <div class="page-number active">1</div>
-                    <div class="page-number">2</div>
-                    <div class="page-number">3</div>
-                    <div class="page-number">4</div>
-                    <div class="page-number">5</div>
-                    <div class="page-number">Next →</div>
+                    <div class="page-number active" data-page="1">1</div>
+                    <div class="page-number" data-page="2">2</div>
+                    <div class="page-number" data-page="3">3</div>
+                    <div class="page-number" data-page="4">4</div>
+                    <div class="page-number" data-page="5">5</div>
                 </div>
             </div>
             
@@ -360,6 +503,10 @@
                     <li class="title-item" data-article="article3">mRNA vaccines for influenza</li>
                     <li class="title-item" data-article="article4">How Our Genes Shape the Immune System</li>
                     <li class="title-item" data-article="article5">Practical and Experimental Guide</li>
+                    <li class="title-item" data-article="article6">Activating Plant Immune Systems</li>
+                    <li class="title-item" data-article="article7">Tools and Technologies</li>
+                    <li class="title-item" data-article="article8">Education and Skill Development</li>
+                    <li class="title-item" data-article="article9">Major Advances in Immunology</li>
                 </ul>
                 
                 <div class="ad-banner">
@@ -385,10 +532,20 @@
     </div>
     
     <script>
+        // Current page state
+        let currentPage = 1;
+        const articlesPerPage = 2;
+        const allArticles = document.querySelectorAll('.article');
+        const totalPages = Math.ceil(allArticles.length / articlesPerPage);
+        
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', () => {
+            updatePagination();
+            showPage(1);
+        });
+        
         // Navigation between articles using the title list
         const titleItems = document.querySelectorAll('.title-item');
-        const articles = document.querySelectorAll('.article');
-        
         titleItems.forEach(item => {
             item.addEventListener('click', () => {
                 // Remove active class from all items
@@ -402,17 +559,22 @@
                 
                 if (articleId) {
                     // Hide all articles
-                    articles.forEach(article => {
-                        article.style.display = 'none';
+                    allArticles.forEach(article => {
+                        article.classList.remove('active');
                     });
                     
                     // Show the selected article
-                    document.getElementById(articleId).style.display = 'block';
+                    document.getElementById(articleId).classList.add('active');
                     
                     // Scroll to the article
                     document.getElementById(articleId).scrollIntoView({
                         behavior: 'smooth'
                     });
+                    
+                    // Update the page number to reflect where this article is
+                    const articleIndex = Array.from(allArticles).findIndex(a => a.id === articleId) + 1;
+                    currentPage = Math.ceil(articleIndex / articlesPerPage);
+                    updatePagination();
                 }
             });
         });
@@ -420,17 +582,14 @@
         // Search function
         function searchArticles() {
             const input = document.getElementById('searchInput').value.toLowerCase();
-            const articles = document.querySelectorAll('.article');
-            const titleItems = document.querySelectorAll('.title-item');
-            
             let foundAny = false;
             
-            articles.forEach(article => {
+            allArticles.forEach(article => {
                 const title = article.querySelector('.article-title').textContent.toLowerCase();
                 const content = article.querySelector('.article-content').textContent.toLowerCase();
                 
                 if (title.includes(input) || content.includes(input)) {
-                    article.style.display = 'block';
+                    article.classList.add('active');
                     foundAny = true;
                     
                     // Highlight the corresponding title in the right column
@@ -442,16 +601,14 @@
                         }
                     });
                 } else {
-                    article.style.display = 'none';
+                    article.classList.remove('active');
                 }
             });
             
             if (!foundAny) {
                 alert('No articles found matching your search.');
                 // Show all articles again
-                articles.forEach(article => {
-                    article.style.display = 'block';
-                });
+                showPage(currentPage);
                 titleItems.forEach(item => {
                     item.style.fontWeight = '';
                     item.style.backgroundColor = '';
@@ -460,23 +617,39 @@
         }
         
         // Pagination functionality
-        const pageNumbers = document.querySelectorAll('.page-number');
-        pageNumbers.forEach(number => {
-            number.addEventListener('click', () => {
-                pageNumbers.forEach(n => n.classList.remove('active'));
-                number.classList.add('active');
-                
-                // In a real implementation, this would load the corresponding page
-                alert('Loading page ' + number.textContent);
-            });
-        });
-        
-        // Initialize - show first article by default
-        document.addEventListener('DOMContentLoaded', () => {
-            articles.forEach((article, index) => {
-                if (index !== 0) {
-                    article.style.display = 'none';
+        function updatePagination() {
+            const pageNumbers = document.querySelectorAll('.page-number');
+            pageNumbers.forEach(number => {
+                number.classList.remove('active');
+                const page = parseInt(number.getAttribute('data-page'));
+                if (page === currentPage) {
+                    number.classList.add('active');
                 }
+            });
+        }
+        
+        function showPage(page) {
+            currentPage = page;
+            const startIndex = (page - 1) * articlesPerPage;
+            const endIndex = startIndex + articlesPerPage;
+            
+            allArticles.forEach((article, index) => {
+                if (index >= startIndex && index < endIndex) {
+                    article.classList.add('active');
+                } else {
+                    article.classList.remove('active');
+                }
+            });
+            
+            updatePagination();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        
+        // Add click event to page numbers
+        document.querySelectorAll('.page-number').forEach(number => {
+            number.addEventListener('click', () => {
+                const page = parseInt(number.getAttribute('data-page'));
+                showPage(page);
             });
         });
     </script>

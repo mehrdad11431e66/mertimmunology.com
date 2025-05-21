@@ -31,90 +31,126 @@
     <!-- PDF.js for displaying PDF articles -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
     <style>
-        <style>
-    /* Existing styles... */
-    
-    /* Research Section Styles */
-    .research-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-        gap: 30px;
-        margin: 3rem 0;
-    }
-    
-    .research-card {
-        background: white;
-        border-radius: 8px;
-        overflow: hidden;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        border: none;
-    }
-    
-    .research-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-    }
-    
-    .research-img-container {
-        height: 220px;
-        overflow: hidden;
-    }
-    
-    .research-img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.5s ease;
-    }
-    
-    .research-card:hover .research-img {
-        transform: scale(1.05);
-    }
-    
-    .research-content {
-        padding: 1.5rem;
-    }
-    
-    .research-title {
-        color: #2c3e50;
-        margin: 0 0 1rem 0;
-        font-size: 1.3rem;
-        font-weight: 600;
-    }
-    
-    .research-desc {
-        color: #1a252f;
-        margin-bottom: 1.5rem;
-        font-size: 0.95rem;
-        line-height: 1.7;
-    }
-    
-    .research-meta {
-        display: flex;
-        justify-content: space-between;
-        color: #95a5a6;
-        font-size: 0.85rem;
-    }
-    
-    .research-category {
-        display: inline-block;
-        padding: 0.25rem 0.75rem;
-        background-color: #3498db;
-        color: white;
-        border-radius: 50px;
-        font-size: 0.75rem;
-        font-weight: 600;
-        margin-right: 0.5rem;
-    }
-    
-    @media (max-width: 768px) {
+        /* Existing styles... */
+        
+        /* Research Section Styles */
         .research-grid {
-            grid-template-columns: 1fr;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin: 3rem 0;
         }
-    }
-</style>
-    
+        
+        .research-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+        }
+        
+        .research-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .research-img-container {
+            height: 220px;
+            overflow: hidden;
+        }
+        
+        .research-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .research-card:hover .research-img {
+            transform: scale(1.05);
+        }
+        
+        .research-content {
+            padding: 1.5rem;
+        }
+        
+        .research-title {
+            color: #2c3e50;
+            margin: 0 0 1rem 0;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        
+        .research-desc {
+            color: #1a252f;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+        
+        .research-meta {
+            display: flex;
+            justify-content: space-between;
+            color: #95a5a6;
+            font-size: 0.85rem;
+        }
+        
+        .research-category {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background-color: #3498db;
+            color: white;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-right: 0.5rem;
+        }
+
+        /* Subscription Section Styles */
+        .subscription-container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .subscription-title {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .subscription-text {
+            color: #1a252f;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+        
+        .subscription-form .form-control {
+            height: 50px;
+            border-radius: 25px;
+            padding-left: 20px;
+            border: 1px solid #ddd;
+        }
+        
+        .subscription-form .btn {
+            height: 50px;
+            border-radius: 25px;
+            padding: 0 30px;
+        }
+        
+        @media (max-width: 768px) {
+            .research-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .subscription-container {
+                margin-top: 1rem;
+                padding: 1.5rem;
+            }
+        }
     </style>
 </head>
 
@@ -197,12 +233,28 @@
                         <a href="" class="btn btn-light rounded-pill py-md-3 px-md-5 mx-2">Latest Research</a>
                         <a href="" class="btn btn-outline-light rounded-pill py-md-3 px-md-5 mx-2">Contact Me</a>
                     </div>
+                    
+                    <!-- Subscription Section Added Here -->
+                    <div class="subscription-container">
+                        <h3 class="subscription-title">Stay Updated With Our Research</h3>
+                        <p class="subscription-text">Subscribe to receive email notifications when we publish new research articles, blog posts, and updates. This subscription is for awareness of new content publications.</p>
+                        <form class="subscription-form" action="https://formspree.io/f/xzzrzwzj" method="POST">
+                            <input type="hidden" name="_subject" value="New Subscription from Mert Immunology">
+                            <input type="hidden" name="_language" value="en">
+                            <div class="input-group">
+                                <input type="email" class="form-control" name="email" placeholder="Your Email Address" required>
+                                <button class="btn btn-primary" type="submit">Subscribe</button>
+                            </div>
+                            <div class="form-text mt-2">We'll never share your email with anyone else.</div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- Hero End -->
 
+    <!-- Rest of your HTML content remains exactly the same -->
     <!-- About Start -->
     <div class="container-fluid py-5">
         <div class="container">
@@ -728,6 +780,25 @@
                 },
                 error: function() {
                     alert('There was an error submitting your request. Please try again or contact us directly.');
+                }
+            });
+        });
+
+        // Subscription form handler
+        $('.subscription-form').on('submit', function(e) {
+            e.preventDefault();
+            var form = $(this);
+            $.ajax({
+                url: form.attr('action'),
+                method: form.attr('method'),
+                data: form.serialize(),
+                dataType: 'json',
+                success: function() {
+                    alert('Thank you for subscribing! You will now receive notifications about new content publications.');
+                    form.trigger('reset');
+                },
+                error: function() {
+                    alert('There was an error processing your subscription. Please try again.');
                 }
             });
         });

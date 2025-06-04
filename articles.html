@@ -12,7 +12,7 @@
     <meta property="og:description" content="Scientific publications and research findings by Mehrdad Etemad">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.mehrdadetemad.com/articles.html">
-    <meta property="og:image" content="https://www.mehrdadetemad.com/img/immunological-and-sociological-analysis-of-vaccine-hesitancy.jpg">
+    <meta property="og:image" content="https://www.mehrdadetemad.com/img/Immunological and Sociological Analysis of Vaccine Hesitancy.png">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://www.mehrdadetemad.com/articles.html">
@@ -174,13 +174,13 @@
                     <div class="article-card card h-100">
                         <div class="article-image-container">
                             <img id="article1-img" class="article-image" 
-                                 src="img/Immunological-and-Sociological-Analysis-of-Vaccine-Hesitancy.jpg" 
+                                 src="img/Immunological and Sociological Analysis of Vaccine Hesitancy.png" 
                                  alt="Immunological and Sociological Analysis of Vaccine Hesitancy"
                                  onerror="handleImageError(this)">
                         </div>
                         <div class="card-body">
                             <h2 class="h4 card-title">
-                                <a id="article1-link" href="articles/Immunological-and-Sociological-Analysis-of-Vaccine-Hesitancy.pdf" 
+                                <a id="article1-link" href="articles/Immunological and Sociological Analysis of Vaccine Hesitancy.pdf" 
                                    target="_blank"
                                    rel="noopener noreferrer">
                                     Immunological and Sociological Analysis of Vaccine Hesitancy
@@ -214,7 +214,7 @@
                     <div class="article-card card h-100">
                         <div class="article-image-container">
                             <img id="article2-img" class="article-image" 
-                                 src="img/spring-immunity-thumb.jpg" 
+                                 src="img/spring-immunity-thumb.jpg.png" 
                                  alt="Spring season and immune health research"
                                  onerror="handleImageError(this)">
                         </div>
@@ -254,13 +254,13 @@
                     <div class="article-card card h-100">
                         <div class="article-image-container">
                             <img id="article3-img" class="article-image" 
-                                 src="img/Comparison-of-the-Immunological-and-Neuroimmunological-Effects-of-Sedative-Drugs.jpg" 
+                                 src="img/Comparison of the Immunological and Neuroimmunological Effects of Sedative Drugs.jpg" 
                                  alt="Sedative drugs immunological effects research"
                                  onerror="handleImageError(this)">
                         </div>
                         <div class="card-body">
                             <h2 class="h4 card-title">
-                                <a id="article3-link" href="articles/Comparison-of-the-Immunological-and-Neuroimmunological-Effects-of-Sedative-Drugs.pdf" 
+                                <a id="article3-link" href="articles/Comparison of the Immunological and Neuroimmunological Effects of Sedative Drugs.pdf" 
                                    target="_blank"
                                    rel="noopener noreferrer">
                                     Comparison of the Immunological and Neuroimmunological Effects of Sedative Drugs
@@ -319,12 +319,25 @@
         // Check if PDF files exist
         document.addEventListener('DOMContentLoaded', function() {
             const articles = [
-                { id: 'article1', pdf: 'articles/Immunological-and-Sociological-Analysis-of-Vaccine-Hesitancy.pdf' },
-                { id: 'article2', pdf: 'articles/Spring_Immune_Health.pdf' },
-                { id: 'article3', pdf: 'articles/Comparison-of-the-Immunological-and-Neuroimmunological-Effects-of-Sedative-Drugs.pdf' }
+                { 
+                    id: 'article1', 
+                    pdf: 'articles/Immunological and Sociological Analysis of Vaccine Hesitancy.pdf',
+                    img: 'img/Immunological and Sociological Analysis of Vaccine Hesitancy.png'
+                },
+                { 
+                    id: 'article2', 
+                    pdf: 'articles/Spring_Immune_Health.pdf',
+                    img: 'img/spring-immunity-thumb.jpg.png'
+                },
+                { 
+                    id: 'article3', 
+                    pdf: 'articles/Comparison of the Immunological and Neuroimmunological Effects of Sedative Drugs.pdf',
+                    img: 'img/Comparison of the Immunological and Neuroimmunological Effects of Sedative Drugs.jpg'
+                }
             ];
             
             articles.forEach(article => {
+                // Check PDF
                 fetch(article.pdf, { method: 'HEAD' })
                     .then(response => {
                         if (!response.ok) {
@@ -332,18 +345,37 @@
                         }
                     })
                     .catch(error => {
-                        console.error('Error:', error);
+                        console.error('Error loading PDF:', article.pdf, error);
                         const errorElement = document.getElementById(`${article.id}-error`);
                         errorElement.textContent = 'PDF file could not be found. Please check the file path.';
                         errorElement.style.display = 'block';
                         
-                        // Disable the download link
                         const linkElement = document.getElementById(`${article.id}-link`);
                         linkElement.href = '#';
                         linkElement.onclick = function(e) {
                             e.preventDefault();
                             alert('The PDF file is not available at the moment. Please try again later.');
                         };
+                    });
+                
+                // Check Image
+                fetch(article.img, { method: 'HEAD' })
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Image not found');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error loading image:', article.img, error);
+                        const imgElement = document.getElementById(`${article.id}-img`);
+                        imgElement.src = 'img/default-article.jpg';
+                        imgElement.alt = 'Default article image';
+                        
+                        const errorElement = document.getElementById(`${article.id}-error`);
+                        if (errorElement.textContent === '') {
+                            errorElement.textContent = 'Article image could not be loaded. Using default image instead.';
+                            errorElement.style.display = 'block';
+                        }
                     });
             });
         });
@@ -361,7 +393,7 @@
           "item": {
             "@type": "ScholarlyArticle",
             "name": "Immunological and Sociological Analysis of Vaccine Hesitancy",
-            "url": "https://www.mehrdadetemad.com/articles/Immunological-and-Sociological-Analysis-of-Vaccine-Hesitancy.pdf",
+            "url": "https://www.mehrdadetemad.com/articles/Immunological and Sociological Analysis of Vaccine Hesitancy.pdf",
             "author": {
               "@type": "Person",
               "name": "Mehrdad Etemad"
@@ -389,7 +421,7 @@
           "item": {
             "@type": "ScholarlyArticle",
             "name": "Comparison of the Immunological and Neuroimmunological Effects of Sedative Drugs",
-            "url": "https://www.mehrdadetemad.com/articles/Comparison-of-the-Immunological-and-Neuroimmunological-Effects-of-Sedative-Drugs.pdf",
+            "url": "https://www.mehrdadetemad.com/articles/Comparison of the Immunological and Neuroimmunological Effects of Sedative Drugs.pdf",
             "author": {
               "@type": "Person",
               "name": "Mehrdad Etemad"

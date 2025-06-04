@@ -28,20 +28,22 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
 
     <style>
-        .gallery-img {
+        .gallery-item {
             margin-bottom: 30px;
             transition: transform 0.3s;
+            position: relative;
         }
-        .gallery-img:hover {
+        .gallery-item:hover {
             transform: scale(1.02);
         }
-        .img-caption {
+        .media-caption {
             background-color: rgba(0,0,0,0.7);
             color: white;
             padding: 10px;
-            position: absolute;
-            bottom: 0;
             width: 100%;
+            text-align: center;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
         }
         .category-filter {
             margin-bottom: 2rem;
@@ -51,9 +53,40 @@
             padding-bottom: 56.25%; /* 16:9 aspect ratio */
             height: 0;
             overflow: hidden;
+            margin-bottom: 0;
         }
         .media-container iframe,
         .media-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+        .image-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .gallery-img {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 5px;
+        }
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+        .video-wrapper video {
             position: absolute;
             top: 0;
             left: 0;
@@ -94,219 +127,289 @@
 
             <div class="row">
                 <!-- Image 1 -->
-                <div class="col-md-4 col-sm-6 gallery-img" data-category="images">
-                    <a href="img/lab-1.jpg" data-lightbox="gallery" data-title="Quality control laboratory of ice cream">
-                        <img src="img/lab-1.jpg" alt="Quality control laboratory of ice cream" class="img-fluid rounded shadow">
-                        <div class="img-caption">Quality control laboratory of ice cream</div>
-                    </a>
+                <div class="col-md-4 col-sm-6 gallery-item" data-category="images">
+                    <div class="gallery-img">
+                        <div class="image-container">
+                            <a href="img/lab-1.jpg" data-lightbox="gallery" data-title="Quality control laboratory of ice cream">
+                                <img src="img/lab-1.jpg" alt="Quality control laboratory of ice cream">
+                            </a>
+                        </div>
+                        <div class="media-caption">Quality control laboratory of ice cream</div>
+                    </div>
                 </div>
 
                 <!-- Image 2 -->
-                <div class="col-md-4 col-sm-6 gallery-img" data-category="images">
-                    <a href="img/lab-2.jpg" data-lightbox="gallery" data-title="Teaching engineers how to work with inverted microscope">
-                        <img src="img/lab-2.jpg" alt="Teaching engineers how to work with inverted microscope" class="img-fluid rounded shadow">
-                        <div class="img-caption">Teaching inverted microscope techniques</div>
-                    </a>
+                <div class="col-md-4 col-sm-6 gallery-item" data-category="images">
+                    <div class="gallery-img">
+                        <div class="image-container">
+                            <a href="img/lab-2.jpg" data-lightbox="gallery" data-title="Teaching engineers how to work with inverted microscope">
+                                <img src="img/lab-2.jpg" alt="Teaching engineers how to work with inverted microscope">
+                            </a>
+                        </div>
+                        <div class="media-caption">Teaching inverted microscope techniques</div>
+                    </div>
                 </div>
 
                 <!-- Image 3 -->
-                <div class="col-md-4 col-sm-6 gallery-img" data-category="images">
-                    <a href="img/lab-3.jpg" data-lightbox="gallery" data-title="Me and my assistant at Star Invest">
-                        <img src="img/lab-3.jpg" alt="Me and my assistant at Star Invest" class="img-fluid rounded shadow">
-                        <div class="img-caption">Me and my assistant at Star Invest</div>
-                    </a>
+                <div class="col-md-4 col-sm-6 gallery-item" data-category="images">
+                    <div class="gallery-img">
+                        <div class="image-container">
+                            <a href="img/lab-3.jpg" data-lightbox="gallery" data-title="Me and my assistant at Star Invest">
+                                <img src="img/lab-3.jpg" alt="Me and my assistant at Star Invest">
+                            </a>
+                        </div>
+                        <div class="media-caption">Me and my assistant at Star Invest</div>
+                    </div>
                 </div>
 
                 <!-- Image 4 -->
-                <div class="col-md-4 col-sm-6 gallery-img" data-category="images">
-                    <a href="img/lab-4.jpg" data-lightbox="gallery" data-title="University laboratory at 19 Mayıs University, Samsun">
-                        <img src="img/lab-4.jpg" alt="University laboratory at 19 Mayıs University, Samsun" class="img-fluid rounded shadow">
-                        <div class="img-caption">19 Mayıs University laboratory</div>
-                    </a>
+                <div class="col-md-4 col-sm-6 gallery-item" data-category="images">
+                    <div class="gallery-img">
+                        <div class="image-container">
+                            <a href="img/lab-4.jpg" data-lightbox="gallery" data-title="University laboratory at 19 Mayıs University, Samsun">
+                                <img src="img/lab-4.jpg" alt="University laboratory at 19 Mayıs University, Samsun">
+                            </a>
+                        </div>
+                        <div class="media-caption">19 Mayıs University laboratory</div>
+                    </div>
                 </div>
 
                 <!-- Image 5 -->
-                <div class="col-md-4 col-sm-6 gallery-img" data-category="images">
-                    <a href="img/lab-5.jpg" data-lightbox="gallery" data-title="Freeze dryer and drying orthopedic chips">
-                        <img src="img/lab-5.jpg" alt="Freeze dryer and drying orthopedic chips" class="img-fluid rounded shadow">
-                        <div class="img-caption">Freeze dryer for orthopedic chips</div>
-                    </a>
+                <div class="col-md-4 col-sm-6 gallery-item" data-category="images">
+                    <div class="gallery-img">
+                        <div class="image-container">
+                            <a href="img/lab-5.jpg" data-lightbox="gallery" data-title="Freeze dryer and drying orthopedic chips">
+                                <img src="img/lab-5.jpg" alt="Freeze dryer and drying orthopedic chips">
+                            </a>
+                        </div>
+                        <div class="media-caption">Freeze dryer for orthopedic chips</div>
+                    </div>
                 </div>
 
                 <!-- Image 6 -->
-                <div class="col-md-4 col-sm-6 gallery-img" data-category="images">
-                    <a href="img/lab-6.jpg" data-lightbox="gallery" data-title="My room at Star Invest">
-                        <img src="img/lab-6.jpg" alt="My room at Star Invest" class="img-fluid rounded shadow">
-                        <div class="img-caption">My room at Star Invest</div>
-                    </a>
+                <div class="col-md-4 col-sm-6 gallery-item" data-category="images">
+                    <div class="gallery-img">
+                        <div class="image-container">
+                            <a href="img/lab-6.jpg" data-lightbox="gallery" data-title="My room at Star Invest">
+                                <img src="img/lab-6.jpg" alt="My room at Star Invest">
+                            </a>
+                        </div>
+                        <div class="media-caption">My room at Star Invest</div>
+                    </div>
                 </div>
 
                 <!-- Image 7 -->
-                <div class="col-md-4 col-sm-6 gallery-img" data-category="images">
-                    <a href="img/lab-7.jpg" data-lightbox="gallery" data-title="Istanbul Book Fair">
-                        <img src="img/lab-7.jpg" alt="Istanbul Book Fair" class="img-fluid rounded shadow">
-                        <div class="img-caption">Istanbul Book Fair</div>
-                    </a>
+                <div class="col-md-4 col-sm-6 gallery-item" data-category="images">
+                    <div class="gallery-img">
+                        <div class="image-container">
+                            <a href="img/lab-7.jpg" data-lightbox="gallery" data-title="Istanbul Book Fair">
+                                <img src="img/lab-7.jpg" alt="Istanbul Book Fair">
+                            </a>
+                        </div>
+                        <div class="media-caption">Istanbul Book Fair</div>
+                    </div>
                 </div>
 
                 <!-- Image 8 -->
-                <div class="col-md-4 col-sm-6 gallery-img" data-category="images">
-                    <a href="img/lab-8.jpg" data-lightbox="gallery" data-title="A busy day">
-                        <img src="img/lab-8.jpg" alt="A busy day" class="img-fluid rounded shadow">
-                        <div class="img-caption">A busy day</div>
-                    </a>
+                <div class="col-md-4 col-sm-6 gallery-item" data-category="images">
+                    <div class="gallery-img">
+                        <div class="image-container">
+                            <a href="img/lab-8.jpg" data-lightbox="gallery" data-title="A busy day">
+                                <img src="img/lab-8.jpg" alt="A busy day">
+                            </a>
+                        </div>
+                        <div class="media-caption">A busy day</div>
+                    </div>
                 </div>
 
                 <!-- Image 9 -->
-                <div class="col-md-4 col-sm-6 gallery-img" data-category="images">
-                    <a href="img/lab-9.jpg" data-lightbox="gallery" data-title="Drying orthopedic and dental chips">
-                        <img src="img/lab-9.jpg" alt="Drying orthopedic and dental chips" class="img-fluid rounded shadow">
-                        <div class="img-caption">Drying orthopedic and dental chips</div>
-                    </a>
+                <div class="col-md-4 col-sm-6 gallery-item" data-category="images">
+                    <div class="gallery-img">
+                        <div class="image-container">
+                            <a href="img/lab-9.jpg" data-lightbox="gallery" data-title="Drying orthopedic and dental chips">
+                                <img src="img/lab-9.jpg" alt="Drying orthopedic and dental chips">
+                            </a>
+                        </div>
+                        <div class="media-caption">Drying orthopedic and dental chips</div>
+                    </div>
                 </div>
 
                 <!-- Image 10 -->
-                <div class="col-md-4 col-sm-6 gallery-img" data-category="images">
-                    <a href="img/lab-10.jpg" data-lightbox="gallery" data-title="Visit of the Governor of Salova city to Sandrosse company">
-                        <img src="img/lab-10.jpg" alt="Visit of the Governor of Salova city to Sandrosse company" class="img-fluid rounded shadow">
-                        <div class="img-caption">Governor's visit to Sandrosse</div>
-                    </a>
+                <div class="col-md-4 col-sm-6 gallery-item" data-category="images">
+                    <div class="gallery-img">
+                        <div class="image-container">
+                            <a href="img/lab-10.jpg" data-lightbox="gallery" data-title="Visit of the Governor of Salova city to Sandrosse company">
+                                <img src="img/lab-10.jpg" alt="Visit of the Governor of Salova city to Sandrosse company">
+                            </a>
+                        </div>
+                        <div class="media-caption">Governor's visit to Sandrosse</div>
+                    </div>
                 </div>
 
                 <!-- Image 11 -->
-                <div class="col-md-4 col-sm-6 gallery-img" data-category="images">
-                    <a href="img/lab-11.jpg" data-lightbox="gallery" data-title="Visit of the Governor of Salova city to Sandrosse company with delegation">
-                        <img src="img/lab-11.jpg" alt="Visit of the Governor of Salova city to Sandrosse company with delegation" class="img-fluid rounded shadow">
-                        <div class="img-caption">Governor's visit with delegation</div>
-                    </a>
+                <div class="col-md-4 col-sm-6 gallery-item" data-category="images">
+                    <div class="gallery-img">
+                        <div class="image-container">
+                            <a href="img/lab-11.jpg" data-lightbox="gallery" data-title="Visit of the Governor of Salova city to Sandrosse company with delegation">
+                                <img src="img/lab-11.jpg" alt="Visit of the Governor of Salova city to Sandrosse company with delegation">
+                            </a>
+                        </div>
+                        <div class="media-caption">Governor's visit with delegation</div>
+                    </div>
                 </div>
 
                 <!-- Image 12 -->
-                <div class="col-md-4 col-sm-6 gallery-img" data-category="images">
-                    <a href="img/lab-12.jpg" data-lightbox="gallery" data-title="Visit of the Governor of Salova city to Sandrosse company and director of provincial agricultural jihad">
-                        <img src="img/lab-12.jpg" alt="Visit of the Governor of Salova city to Sandrosse company and director of provincial agricultural jihad" class="img-fluid rounded shadow">
-                        <div class="img-caption">Governor and Agricultural Director visit</div>
-                    </a>
+                <div class="col-md-4 col-sm-6 gallery-item" data-category="images">
+                    <div class="gallery-img">
+                        <div class="image-container">
+                            <a href="img/lab-12.jpg" data-lightbox="gallery" data-title="Visit of the Governor of Salova city to Sandrosse company and director of provincial agricultural jihad">
+                                <img src="img/lab-12.jpg" alt="Visit of the Governor of Salova city to Sandrosse company and director of provincial agricultural jihad">
+                            </a>
+                        </div>
+                        <div class="media-caption">Governor and Agricultural Director visit</div>
+                    </div>
                 </div>
 
                 <!-- Image 13 -->
-                <div class="col-md-4 col-sm-6 gallery-img" data-category="images">
-                    <a href="img/lab-13.jpg" data-lightbox="gallery" data-title="Visit of the Governor of Salova city to Sandrosse company and director of provincial agricultural jihad with delegation">
-                        <img src="img/lab-13.jpg" alt="Visit of the Governor of Salova city to Sandrosse company and director of provincial agricultural jihad with delegation" class="img-fluid rounded shadow">
-                        <div class="img-caption">Governor, Agricultural Director and delegation</div>
-                    </a>
+                <div class="col-md-4 col-sm-6 gallery-item" data-category="images">
+                    <div class="gallery-img">
+                        <div class="image-container">
+                            <a href="img/lab-13.jpg" data-lightbox="gallery" data-title="Visit of the Governor of Salova city to Sandrosse company and director of provincial agricultural jihad with delegation">
+                                <img src="img/lab-13.jpg" alt="Visit of the Governor of Salova city to Sandrosse company and director of provincial agricultural jihad with delegation">
+                            </a>
+                        </div>
+                        <div class="media-caption">Governor, Agricultural Director and delegation</div>
+                    </div>
                 </div>
 
                 <!-- Animation 1 -->
-                <div class="col-md-4 col-sm-6 gallery-img" data-category="animations">
-                    <div class="media-container">
-                        <video controls class="img-fluid rounded shadow">
-                            <source src="media/animation-2.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                <div class="col-md-4 col-sm-6 gallery-item" data-category="animations">
+                    <div class="gallery-img">
+                        <div class="media-container">
+                            <video controls>
+                                <source src="media/animation-2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="media-caption">Animation of egg release during fertilization</div>
                     </div>
-                    <div class="img-caption">Animation of egg release during fertilization</div>
                 </div>
 
                 <!-- Animation 2 -->
-                <div class="col-md-4 col-sm-6 gallery-img" data-category="animations">
-                    <div class="media-container">
-                        <video controls class="img-fluid rounded shadow">
-                            <source src="media/animation-4.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                <div class="col-md-4 col-sm-6 gallery-item" data-category="animations">
+                    <div class="gallery-img">
+                        <div class="media-container">
+                            <video controls>
+                                <source src="media/animation-4.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="media-caption">Short animation of mitosis</div>
                     </div>
-                    <div class="img-caption">Short animation of mitosis</div>
                 </div>
 
                 <!-- Animation 3 - Malaria Life Cycle -->
-                <div class="col-md-4 col-sm-6 gallery-img" data-category="animations">
-                    <div class="media-container">
-                        <video controls class="img-fluid rounded shadow">
-                            <source src="media/3.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                <div class="col-md-4 col-sm-6 gallery-item" data-category="animations">
+                    <div class="gallery-img">
+                        <div class="media-container">
+                            <video controls>
+                                <source src="media/3.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="media-caption">Malaria Life Cycle</div>
                     </div>
-                    <div class="img-caption">Malaria Life Cycle</div>
                 </div>
 
                 <!-- Animation 4 - Mitochondria Activity -->
-                <div class="col-md-4 col-sm-6 gallery-img" data-category="animations">
-                    <div class="media-container">
-                        <video controls class="img-fluid rounded shadow">
-                            <source src="media/4.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                <div class="col-md-4 col-sm-6 gallery-item" data-category="animations">
+                    <div class="gallery-img">
+                        <div class="media-container">
+                            <video controls>
+                                <source src="media/4.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="media-caption">Mitochondria Activity</div>
                     </div>
-                    <div class="img-caption">Mitochondria Activity</div>
                 </div>
 
                 <!-- Video 1 - Spring Immune Health -->
-                <div class="col-md-4 col-sm-6 gallery-img" data-category="videos">
-                    <div class="media-container">
-                        <video controls class="img-fluid rounded shadow">
-                            <source src="media/video-1.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                <div class="col-md-4 col-sm-6 gallery-item" data-category="videos">
+                    <div class="gallery-img">
+                        <div class="media-container">
+                            <video controls>
+                                <source src="media/video-1.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="media-caption">Spring Immune Health</div>
                     </div>
-                    <div class="img-caption">Spring Immune Health</div>
                 </div>
 
                 <!-- Video 2 - Immunological Effects Comparison -->
-                <div class="col-md-4 col-sm-6 gallery-img" data-category="videos">
-                    <div class="media-container">
-                        <video controls class="img-fluid rounded shadow">
-                            <source src="media/video-2.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                <div class="col-md-4 col-sm-6 gallery-item" data-category="videos">
+                    <div class="gallery-img">
+                        <div class="media-container">
+                            <video controls>
+                                <source src="media/video-2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="media-caption">Comparison of the Immunological and Neuroimmunological</div>
                     </div>
-                    <div class="img-caption">Comparison of the Immunological and Neuroimmunological</div>
                 </div>
 
                 <!-- Protein Ligand with Autodesk Vina software -->
-                <div class="col-md-4 col-sm-6 gallery-img" data-category="videos">
-                    <div class="media-container">
-                        <video controls class="img-fluid rounded shadow">
-                            <source src="media/Protein_Ligand with Autodesk Vina software.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                <div class="col-md-4 col-sm-6 gallery-item" data-category="videos">
+                    <div class="gallery-img">
+                        <div class="media-container">
+                            <video controls>
+                                <source src="media/Protein_Ligand_with_Autodesk_Vina_software.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="media-caption">Protein Ligand with Autodesk Vina software</div>
                     </div>
-                    <div class="img-caption">Protein Ligand with Autodesk Vina software</div>
                 </div>
 
                 <!-- High-quality DNA -->
-                <div class="col-md-4 col-sm-6 gallery-img" data-category="videos">
-                    <div class="media-container">
-                        <video controls class="img-fluid rounded shadow">
-                            <source src="media/High-quality DNA.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                <div class="col-md-4 col-sm-6 gallery-item" data-category="videos">
+                    <div class="gallery-img">
+                        <div class="media-container">
+                            <video controls>
+                                <source src="media/High-quality_DNA.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="media-caption">High-quality DNA</div>
                     </div>
-                    <div class="img-caption">High-quality DNA</div>
                 </div>
 
                 <!-- Sampling methodologies for DNA -->
-<div class="col-md-4 col-sm-6 gallery-img" data-category="videos">
-    <div class="media-container">
-        <video controls class="img-fluid rounded shadow">
-            <source src="media/Sampling_methodologies_for_DNA .mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
-</div>
-                <!-- Efficient DNA extraction -->
-                <div class="col-md-4 col-sm-6 gallery-img" data-category="videos">
-                    <div class="media-container">
-                        <video controls class="img-fluid rounded shadow">
-                            <source src="media/Efficient DNA extraction.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                <div class="col-md-4 col-sm-6 gallery-item" data-category="videos">
+                    <div class="gallery-img">
+                        <div class="media-container">
+                            <video controls>
+                                <source src="media/Sampling_methodologies_for_DNA.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="media-caption">Sampling methodologies for DNA</div>
                     </div>
-                    
-    <div class="img-caption">Blood coagulation</div>
-</div>
+                </div>
 
-                    <div class="img-caption">Efficient DNA extraction</div>
+                <!-- Efficient DNA extraction -->
+                <div class="col-md-4 col-sm-6 gallery-item" data-category="videos">
+                    <div class="gallery-img">
+                        <div class="media-container">
+                            <video controls>
+                                <source src="media/Efficient_DNA_extraction.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="media-caption">Efficient DNA extraction</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -339,10 +442,10 @@
                 
                 // Show/hide items
                 if(filter === 'all') {
-                    $('.gallery-img').show();
+                    $('.gallery-item').show();
                 } else {
-                    $('.gallery-img').hide();
-                    $(`.gallery-img[data-category="${filter}"]`).show();
+                    $('.gallery-item').hide();
+                    $(`.gallery-item[data-category="${filter}"]`).show();
                 }
             });
         });

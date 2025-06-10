@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Research gallery of Dr. Mehrdad Etemad (Mert) showcasing immunology and biotechnology laboratory work">
-    <meta name="keywords" content="Mehrdad Etemad, Mert Immunology, Etemad Research, Immunology Lab, Biotechnology Photos, Laboratory Images, Vaccine Research">
-    <meta name="author" content="Dr. Mehrdad Etemad">
-    <meta property="og:title" content="Research Gallery - Mehrdad Etemad (Mert) | Immunology & Biotechnology">
-    <meta property="og:description" content="Laboratory research images of Dr. Mehrdad Etemad's work in immunology and biotechnology">
+    <meta name="description" content="Dr. Mehrdad Etemad (Mert) research gallery showcasing immunology and biotechnology laboratory work at MertImmunology">
+    <meta name="keywords" content="Mehrdad Etemad, Mert, Mert Immunology, MertImmunology, Etemad Research, Dr. Mehrdad, Immunology Lab, Biotechnology Photos, Laboratory Images, Vaccine Research">
+    <meta name="author" content="Dr. Mehrdad Etemad (Mert)">
+    <meta property="og:title" content="Dr. Mehrdad Etemad (Mert) Research Gallery | MertImmunology">
+    <meta property="og:description" content="Laboratory research images and videos of Dr. Mehrdad Etemad's (Mert) work in immunology and biotechnology">
     <meta property="og:image" content="img/lab-1.jpg">
     <meta property="og:url" content="https://www.mertimmunology.com/gallery.html">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
-    <title>Research Gallery | Mert Immunology</title>
+    <title>Dr. Mehrdad Etemad (Mert) Research Gallery | MertImmunology</title>
 
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.mertimmunology.com/gallery.html">
+    
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
 
@@ -93,7 +96,37 @@
             width: 100%;
             height: 100%;
         }
+        
+        /* SEO Optimized Breadcrumb */
+        .breadcrumb {
+            background-color: transparent;
+            padding: 0.75rem 0;
+            margin-bottom: 1rem;
+        }
+        .breadcrumb-item a {
+            color: #6c757d;
+            text-decoration: none;
+        }
     </style>
+    
+    <!-- Schema.org markup for Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Dr. Mehrdad Etemad (Mert)",
+      "url": "https://www.mertimmunology.com",
+      "sameAs": [
+        "https://www.linkedin.com/in/mehrdad-etemad",
+        "https://twitter.com/mertimmunology"
+      ],
+      "jobTitle": "Immunology Researcher",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "MertImmunology"
+      }
+    }
+    </script>
     
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q8E8LN58Z4"></script>
@@ -108,14 +141,35 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Mert Immunology</a>
+            <a class="navbar-brand" href="index.html">MertImmunology</a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link active" href="gallery.html">Research Gallery</a>
+            </div>
         </div>
     </nav>
+
+    <!-- Breadcrumb Navigation -->
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Dr. Mehrdad Etemad (Mert) Research Gallery</li>
+            </ol>
+        </nav>
+    </div>
 
     <!-- Gallery Section -->
     <section class="py-5 bg-light">
         <div class="container">
-            <h1 class="text-center mb-5">Research Laboratory Gallery</h1>
+            <h1 class="text-center mb-5">Dr. Mehrdad Etemad (Mert) Research Laboratory Gallery</h1>
+            
+            <!-- SEO Optimized Introduction -->
+            <div class="row mb-4">
+                <div class="col-12">
+                    <p class="lead text-center">Welcome to the research gallery of <strong>Dr. Mehrdad Etemad (Mert)</strong>, showcasing immunological and biotechnological research at <strong>MertImmunology</strong>. This collection highlights laboratory work, educational animations, and research documentation.</p>
+                </div>
+            </div>
 
             <!-- Filter Buttons -->
             <div class="text-center category-filter">
@@ -130,11 +184,11 @@
                 <div class="col-md-4 col-sm-6 gallery-item" data-category="images">
                     <div class="gallery-img">
                         <div class="image-container">
-                            <a href="img/lab-1.jpg" data-lightbox="gallery" data-title="Quality control laboratory of ice cream">
-                                <img src="img/lab-1.jpg" alt="Quality control laboratory of ice cream">
+                            <a href="img/lab-1.jpg" data-lightbox="gallery" data-title="Dr. Mehrdad Etemad (Mert) in quality control laboratory of ice cream">
+                                <img src="img/lab-1.jpg" alt="Dr. Mehrdad Etemad (Mert) in quality control laboratory of ice cream">
                             </a>
                         </div>
-                        <div class="media-caption">Quality control laboratory of ice cream</div>
+                        <div class="media-caption">Dr. Mehrdad Etemad (Mert) in quality control laboratory</div>
                     </div>
                 </div>
 
@@ -142,11 +196,11 @@
                 <div class="col-md-4 col-sm-6 gallery-item" data-category="images">
                     <div class="gallery-img">
                         <div class="image-container">
-                            <a href="img/lab-2.jpg" data-lightbox="gallery" data-title="Teaching engineers how to work with inverted microscope">
-                                <img src="img/lab-2.jpg" alt="Teaching engineers how to work with inverted microscope">
+                            <a href="img/lab-2.jpg" data-lightbox="gallery" data-title="Dr. Mehrdad Etemad (Mert) teaching engineers how to work with inverted microscope">
+                                <img src="img/lab-2.jpg" alt="Dr. Mehrdad Etemad (Mert) teaching microscope techniques">
                             </a>
                         </div>
-                        <div class="media-caption">Teaching inverted microscope techniques</div>
+                        <div class="media-caption">Dr. Mehrdad Etemad (Mert) teaching inverted microscope techniques</div>
                     </div>
                 </div>
 
@@ -154,11 +208,11 @@
                 <div class="col-md-4 col-sm-6 gallery-item" data-category="images">
                     <div class="gallery-img">
                         <div class="image-container">
-                            <a href="img/lab-3.jpg" data-lightbox="gallery" data-title="Me and my assistant at Star Invest">
-                                <img src="img/lab-3.jpg" alt="Me and my assistant at Star Invest">
+                            <a href="img/lab-3.jpg" data-lightbox="gallery" data-title="Dr. Mehrdad Etemad (Mert) and assistant at Star Invest">
+                                <img src="img/lab-3.jpg" alt="Dr. Mehrdad Etemad (Mert) and assistant at Star Invest">
                             </a>
                         </div>
-                        <div class="media-caption">Me and my assistant at Star Invest</div>
+                        <div class="media-caption">Dr. Mehrdad Etemad (Mert) and assistant at Star Invest</div>
                     </div>
                 </div>
 
@@ -166,11 +220,11 @@
                 <div class="col-md-4 col-sm-6 gallery-item" data-category="images">
                     <div class="gallery-img">
                         <div class="image-container">
-                            <a href="img/lab-4.jpg" data-lightbox="gallery" data-title="University laboratory at 19 Mayıs University, Samsun">
-                                <img src="img/lab-4.jpg" alt="University laboratory at 19 Mayıs University, Samsun">
+                            <a href="img/lab-4.jpg" data-lightbox="gallery" data-title="Dr. Mehrdad Etemad (Mert) at 19 Mayıs University laboratory, Samsun">
+                                <img src="img/lab-4.jpg" alt="Dr. Mehrdad Etemad (Mert) at 19 Mayıs University laboratory">
                             </a>
                         </div>
-                        <div class="media-caption">19 Mayıs University laboratory</div>
+                        <div class="media-caption">Dr. Mehrdad Etemad (Mert) at 19 Mayıs University laboratory</div>
                     </div>
                 </div>
 
@@ -178,11 +232,11 @@
                 <div class="col-md-4 col-sm-6 gallery-item" data-category="images">
                     <div class="gallery-img">
                         <div class="image-container">
-                            <a href="img/lab-5.jpg" data-lightbox="gallery" data-title="Freeze dryer and drying orthopedic chips">
-                                <img src="img/lab-5.jpg" alt="Freeze dryer and drying orthopedic chips">
+                            <a href="img/lab-5.jpg" data-lightbox="gallery" data-title="Dr. Mehrdad Etemad (Mert) working with freeze dryer for orthopedic chips">
+                                <img src="img/lab-5.jpg" alt="Dr. Mehrdad Etemad (Mert) working with freeze dryer">
                             </a>
                         </div>
-                        <div class="media-caption">Freeze dryer for orthopedic chips</div>
+                        <div class="media-caption">Dr. Mehrdad Etemad (Mert) with freeze dryer for orthopedic chips</div>
                     </div>
                 </div>
 
@@ -190,11 +244,11 @@
                 <div class="col-md-4 col-sm-6 gallery-item" data-category="images">
                     <div class="gallery-img">
                         <div class="image-container">
-                            <a href="img/lab-6.jpg" data-lightbox="gallery" data-title="My room at Star Invest">
-                                <img src="img/lab-6.jpg" alt="My room at Star Invest">
+                            <a href="img/lab-6.jpg" data-lightbox="gallery" data-title="Dr. Mehrdad Etemad (Mert) in room at Star Invest">
+                                <img src="img/lab-6.jpg" alt="Dr. Mehrdad Etemad (Mert) in room at Star Invest">
                             </a>
                         </div>
-                        <div class="media-caption">My room at Star Invest</div>
+                        <div class="media-caption">Dr. Mehrdad Etemad (Mert) in room at Star Invest</div>
                     </div>
                 </div>
 
@@ -202,11 +256,11 @@
                 <div class="col-md-4 col-sm-6 gallery-item" data-category="images">
                     <div class="gallery-img">
                         <div class="image-container">
-                            <a href="img/lab-7.jpg" data-lightbox="gallery" data-title="Istanbul Book Fair">
-                                <img src="img/lab-7.jpg" alt="Istanbul Book Fair">
+                            <a href="img/lab-7.jpg" data-lightbox="gallery" data-title="Dr. Mehrdad Etemad (Mert) at Istanbul Book Fair">
+                                <img src="img/lab-7.jpg" alt="Dr. Mehrdad Etemad (Mert) at Istanbul Book Fair">
                             </a>
                         </div>
-                        <div class="media-caption">Istanbul Book Fair</div>
+                        <div class="media-caption">Dr. Mehrdad Etemad (Mert) at Istanbul Book Fair</div>
                     </div>
                 </div>
 
@@ -214,11 +268,11 @@
                 <div class="col-md-4 col-sm-6 gallery-item" data-category="images">
                     <div class="gallery-img">
                         <div class="image-container">
-                            <a href="img/lab-8.jpg" data-lightbox="gallery" data-title="A busy day">
-                                <img src="img/lab-8.jpg" alt="A busy day">
+                            <a href="img/lab-8.jpg" data-lightbox="gallery" data-title="Dr. Mehrdad Etemad (Mert) during a busy research day">
+                                <img src="img/lab-8.jpg" alt="Dr. Mehrdad Etemad (Mert) during busy research day">
                             </a>
                         </div>
-                        <div class="media-caption">A busy day</div>
+                        <div class="media-caption">Dr. Mehrdad Etemad (Mert) during busy research day</div>
                     </div>
                 </div>
 
@@ -226,11 +280,11 @@
                 <div class="col-md-4 col-sm-6 gallery-item" data-category="images">
                     <div class="gallery-img">
                         <div class="image-container">
-                            <a href="img/lab-9.jpg" data-lightbox="gallery" data-title="Drying orthopedic and dental chips">
-                                <img src="img/lab-9.jpg" alt="Drying orthopedic and dental chips">
+                            <a href="img/lab-9.jpg" data-lightbox="gallery" data-title="Dr. Mehrdad Etemad (Mert) drying orthopedic and dental chips">
+                                <img src="img/lab-9.jpg" alt="Dr. Mehrdad Etemad (Mert) drying orthopedic and dental chips">
                             </a>
                         </div>
-                        <div class="media-caption">Drying orthopedic and dental chips</div>
+                        <div class="media-caption">Dr. Mehrdad Etemad (Mert) drying orthopedic and dental chips</div>
                     </div>
                 </div>
 
@@ -238,11 +292,11 @@
                 <div class="col-md-4 col-sm-6 gallery-item" data-category="images">
                     <div class="gallery-img">
                         <div class="image-container">
-                            <a href="img/lab-10.jpg" data-lightbox="gallery" data-title="Visit of the Governor of Salova city to Sandrosse company">
-                                <img src="img/lab-10.jpg" alt="Visit of the Governor of Salova city to Sandrosse company">
+                            <a href="img/lab-10.jpg" data-lightbox="gallery" data-title="Dr. Mehrdad Etemad (Mert) during Governor of Salova visit to Sandrosse company">
+                                <img src="img/lab-10.jpg" alt="Dr. Mehrdad Etemad (Mert) during Governor visit to Sandrosse">
                             </a>
                         </div>
-                        <div class="media-caption">Governor's visit to Sandrosse</div>
+                        <div class="media-caption">Dr. Mehrdad Etemad (Mert) during Governor visit to Sandrosse</div>
                     </div>
                 </div>
 
@@ -250,11 +304,11 @@
                 <div class="col-md-4 col-sm-6 gallery-item" data-category="images">
                     <div class="gallery-img">
                         <div class="image-container">
-                            <a href="img/lab-11.jpg" data-lightbox="gallery" data-title="Visit of the Governor of Salova city to Sandrosse company with delegation">
-                                <img src="img/lab-11.jpg" alt="Visit of the Governor of Salova city to Sandrosse company with delegation">
+                            <a href="img/lab-11.jpg" data-lightbox="gallery" data-title="Dr. Mehrdad Etemad (Mert) with Governor of Salova and delegation at Sandrosse">
+                                <img src="img/lab-11.jpg" alt="Dr. Mehrdad Etemad (Mert) with Governor and delegation">
                             </a>
                         </div>
-                        <div class="media-caption">Governor's visit with delegation</div>
+                        <div class="media-caption">Dr. Mehrdad Etemad (Mert) with Governor and delegation</div>
                     </div>
                 </div>
 
@@ -262,11 +316,11 @@
                 <div class="col-md-4 col-sm-6 gallery-item" data-category="images">
                     <div class="gallery-img">
                         <div class="image-container">
-                            <a href="img/lab-12.jpg" data-lightbox="gallery" data-title="Visit of the Governor of Salova city to Sandrosse company and director of provincial agricultural jihad">
-                                <img src="img/lab-12.jpg" alt="Visit of the Governor of Salova city to Sandrosse company and director of provincial agricultural jihad">
+                            <a href="img/lab-12.jpg" data-lightbox="gallery" data-title="Dr. Mehrdad Etemad (Mert) with Governor and agricultural director at Sandrosse">
+                                <img src="img/lab-12.jpg" alt="Dr. Mehrdad Etemad (Mert) with Governor and agricultural director">
                             </a>
                         </div>
-                        <div class="media-caption">Governor and Agricultural Director visit</div>
+                        <div class="media-caption">Dr. Mehrdad Etemad (Mert) with Governor and agricultural director</div>
                     </div>
                 </div>
 
@@ -274,11 +328,11 @@
                 <div class="col-md-4 col-sm-6 gallery-item" data-category="images">
                     <div class="gallery-img">
                         <div class="image-container">
-                            <a href="img/lab-13.jpg" data-lightbox="gallery" data-title="Visit of the Governor of Salova city to Sandrosse company and director of provincial agricultural jihad with delegation">
-                                <img src="img/lab-13.jpg" alt="Visit of the Governor of Salova city to Sandrosse company and director of provincial agricultural jihad with delegation">
+                            <a href="img/lab-13.jpg" data-lightbox="gallery" data-title="Dr. Mehrdad Etemad (Mert) with Governor, agricultural director and delegation">
+                                <img src="img/lab-13.jpg" alt="Dr. Mehrdad Etemad (Mert) with Governor and full delegation">
                             </a>
                         </div>
-                        <div class="media-caption">Governor, Agricultural Director and delegation</div>
+                        <div class="media-caption">Dr. Mehrdad Etemad (Mert) with Governor and full delegation</div>
                     </div>
                 </div>
 
@@ -291,7 +345,7 @@
                                 Your browser does not support the video tag.
                             </video>
                         </div>
-                        <div class="media-caption">Animation of egg release during fertilization</div>
+                        <div class="media-caption">Dr. Mehrdad Etemad (Mert) - Animation of egg release during fertilization</div>
                     </div>
                 </div>
 
@@ -304,7 +358,7 @@
                                 Your browser does not support the video tag.
                             </video>
                         </div>
-                        <div class="media-caption">Short animation of mitosis</div>
+                        <div class="media-caption">Dr. Mehrdad Etemad (Mert) - Short animation of mitosis</div>
                     </div>
                 </div>
 
@@ -317,7 +371,7 @@
                                 Your browser does not support the video tag.
                             </video>
                         </div>
-                        <div class="media-caption">Malaria Life Cycle</div>
+                        <div class="media-caption">Dr. Mehrdad Etemad (Mert) - Malaria Life Cycle</div>
                     </div>
                 </div>
 
@@ -330,35 +384,36 @@
                                 Your browser does not support the video tag.
                             </video>
                         </div>
-                        <div class="media-caption">Mitochondria Activity</div>
+                        <div class="media-caption">Dr. Mehrdad Etemad (Mert) - Mitochondria Activity</div>
                     </div>
                 </div>
 
                 <!-- Animation 6 - Endocrine and Metabolism 1 -->
-<div class="col-md-4 col-sm-6 gallery-item" data-category="animations">
-    <div class="gallery-img">
-        <div class="media-container">
-            <video controls>
-                <source src="media/6.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-        <div class="media-caption">Endocrine and Metabolism 1</div>
-    </div>
-</div>
+                <div class="col-md-4 col-sm-6 gallery-item" data-category="animations">
+                    <div class="gallery-img">
+                        <div class="media-container">
+                            <video controls>
+                                <source src="media/6.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="media-caption">Dr. Mehrdad Etemad (Mert) - Endocrine and Metabolism 1</div>
+                    </div>
+                </div>
 
                 <!-- Animation 7 - Endocrine and Metabolism 2 -->
-<div class="col-md-4 col-sm-6 gallery-item" data-category="animations">
-    <div class="gallery-img">
-        <div class="media-container">
-            <video controls>
-                <source src="media/7.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-        <div class="media-caption">Endocrine and Metabolism 2</div>
-    </div>
-</div>
+                <div class="col-md-4 col-sm-6 gallery-item" data-category="animations">
+                    <div class="gallery-img">
+                        <div class="media-container">
+                            <video controls>
+                                <source src="media/7.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="media-caption">Dr. Mehrdad Etemad (Mert) - Endocrine and Metabolism 2</div>
+                    </div>
+                </div>
+                
                 <!-- Video 1 - Spring Immune Health -->
                 <div class="col-md-4 col-sm-6 gallery-item" data-category="videos">
                     <div class="gallery-img">
@@ -368,7 +423,7 @@
                                 Your browser does not support the video tag.
                             </video>
                         </div>
-                        <div class="media-caption">Spring Immune Health</div>
+                        <div class="media-caption">Dr. Mehrdad Etemad (Mert) - Spring Immune Health</div>
                     </div>
                 </div>
 
@@ -381,7 +436,7 @@
                                 Your browser does not support the video tag.
                             </video>
                         </div>
-                        <div class="media-caption">Comparison of the Immunological and Neuroimmunological</div>
+                        <div class="media-caption">Dr. Mehrdad Etemad (Mert) - Comparison of Immunological and Neuroimmunological</div>
                     </div>
                 </div>
 
@@ -394,7 +449,7 @@
                                 Your browser does not support the video tag.
                             </video>
                         </div>
-                        <div class="media-caption">Protein Ligand with Autodesk Vina software</div>
+                        <div class="media-caption">Dr. Mehrdad Etemad (Mert) - Protein Ligand with Autodesk Vina</div>
                     </div>
                 </div>
 
@@ -407,7 +462,7 @@
                                 Your browser does not support the video tag.
                             </video>
                         </div>
-                        <div class="media-caption">High-quality DNA</div>
+                        <div class="media-caption">Dr. Mehrdad Etemad (Mert) - High-quality DNA</div>
                     </div>
                 </div>
 
@@ -420,7 +475,7 @@
                                 Your browser does not support the video tag.
                             </video>
                         </div>
-                        <div class="media-caption">Sampling methodologies for DNA</div>
+                        <div class="media-caption">Dr. Mehrdad Etemad (Mert) - DNA Sampling Methodologies</div>
                     </div>
                 </div>
 
@@ -433,7 +488,7 @@
                                 Your browser does not support the video tag.
                             </video>
                         </div>
-                        <div class="media-caption">Efficient DNA extraction</div>
+                        <div class="media-caption">Dr. Mehrdad Etemad (Mert) - Efficient DNA Extraction</div>
                     </div>
                 </div>
             </div>
@@ -443,7 +498,7 @@
     <!-- Footer -->
     <footer class="bg-dark text-white py-4">
         <div class="container text-center">
-            <p>&copy; 2023 Mert Immunology. All Rights Reserved.</p>
+            <p>&copy; 2023 MertImmunology - Dr. Mehrdad Etemad Research. All Rights Reserved.</p>
         </div>
     </footer>
 

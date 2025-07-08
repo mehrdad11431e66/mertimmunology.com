@@ -177,11 +177,11 @@
                             <img id="article1-img" class="article-image" 
                                  src="img/autologous-blood-transfusion.jpg" 
                                  alt="Autologous Blood Transfusion research"
-                                 onerror="handleImageError(this)">
+                                 onerror="handleImageError(this, 'article1')">
                         </div>
                         <div class="card-body">
                             <h2 class="h4 card-title">
-                                <a id="article1-link" href="articles/Autologous Blood Transfusion for Immune System Rebalancing.pdf" 
+                                <a id="article1-link" href="articles/autologous-blood-transfusion.pdf" 
                                    target="_blank"
                                    rel="noopener noreferrer">
                                     Autologous Blood Transfusion for Immune System Rebalancing
@@ -217,7 +217,7 @@
                             <img id="article2-img" class="article-image" 
                                  src="img/vaccine-hesitancy.jpg" 
                                  alt="Vaccine Hesitancy research"
-                                 onerror="handleImageError(this)">
+                                 onerror="handleImageError(this, 'article2')">
                         </div>
                         <div class="card-body">
                             <h2 class="h4 card-title">
@@ -257,7 +257,7 @@
                             <img id="article3-img" class="article-image" 
                                  src="img/spring-immunity.jpg" 
                                  alt="Spring immunity research"
-                                 onerror="handleImageError(this)">
+                                 onerror="handleImageError(this, 'article3')">
                         </div>
                         <div class="card-body">
                             <h2 class="h4 card-title">
@@ -297,7 +297,7 @@
                             <img id="article4-img" class="article-image" 
                                  src="img/sedative-drugs.jpg" 
                                  alt="Sedative drugs research"
-                                 onerror="handleImageError(this)">
+                                 onerror="handleImageError(this, 'article4')">
                         </div>
                         <div class="card-body">
                             <h2 class="h4 card-title">
@@ -348,11 +348,11 @@
     <!-- Custom Scripts -->
     <script>
         // Function to handle image loading errors
-        function handleImageError(img) {
+        function handleImageError(img, articleId) {
             console.error('Error loading image:', img.src);
             img.src = 'img/default-article.jpg';
             img.alt = 'Default article image';
-            const errorElement = document.getElementById(img.id.replace('-img', '-error'));
+            const errorElement = document.getElementById(`${articleId}-error`);
             if (errorElement) {
                 errorElement.textContent = 'Article image could not be loaded. Using default image instead.';
                 errorElement.style.display = 'block';
@@ -362,27 +362,27 @@
         // Check if files exist
         document.addEventListener('DOMContentLoaded', function() {
             const articles = [
-    { 
-        id: 'article1', 
-        pdf: 'articles/Autologous-Blood-Transfusion-for-Immune-System-Rebalancing.pdf',
-        img: 'img/autologous-blood-transfusion.jpg'
-    },
-    { 
-        id: 'article2', 
-        pdf: 'articles/vaccine-hesitancy.pdf',
-        img: 'img/vaccine-hesitancy.jpg'
-    },
-    { 
-        id: 'article3', 
-        pdf: 'articles/spring-immunity.pdf',
-        img: 'img/spring-immunity.jpg'
-    },
-    { 
-        id: 'article4', 
-        pdf: 'articles/sedative-drugs.pdf',
-        img: 'img/sedative-drugs.jpg'
-    }
-];
+                { 
+                    id: 'article1', 
+                    pdf: 'articles/autologous-blood-transfusion.pdf',
+                    img: 'img/autologous-blood-transfusion.jpg'
+                },
+                { 
+                    id: 'article2', 
+                    pdf: 'articles/vaccine-hesitancy.pdf',
+                    img: 'img/vaccine-hesitancy.jpg'
+                },
+                { 
+                    id: 'article3', 
+                    pdf: 'articles/spring-immunity.pdf',
+                    img: 'img/spring-immunity.jpg'
+                },
+                { 
+                    id: 'article4', 
+                    pdf: 'articles/sedative-drugs.pdf',
+                    img: 'img/sedative-drugs.jpg'
+                }
+            ];
             
             articles.forEach(article => {
                 // Check PDF
@@ -447,7 +447,7 @@
           "item": {
             "@type": "ScholarlyArticle",
             "name": "Autologous Blood Transfusion for Immune System Rebalancing",
-            "url": "https://www.mehrdadetemad.com/articles/Autologous Blood Transfusion for Immune System Rebalancing.pdf",
+            "url": "https://www.mehrdadetemad.com/articles/autologous-blood-transfusion.pdf",
             "author": {
               "@type": "Person",
               "name": "Mehrdad Etemad"

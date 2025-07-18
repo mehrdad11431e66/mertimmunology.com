@@ -71,9 +71,7 @@
             border-right: 1px solid #ddd;
         }
 
-        <li class="title-item" data-article="article13">Top 10 Bioinformatics Tools</li>
         .titles-column {
-            
             width: 30%;
             padding-left: 20px;
             overflow-y: auto;
@@ -238,8 +236,88 @@
         
         <div class="main-content">
             <div class="articles-column" id="articlesColumn">
-                <!-- New Article - Plant Immunity -->
-                <div class="article active" id="article0">
+                <!-- Article 1 - Top 10 Bioinformatics Tools -->
+                <div class="article active" id="article1">
+                    <h2 class="article-title">Top 10 Bioinformatics Tools for Immune-Gene Analysis</h2>
+                    <img src="img/unnamed.png" alt="Bioinformatics Tools for Immunology" class="article-image">
+                    <div class="article-content">
+                        <h3>1. BLAST (Basic Local Alignment Search Tool)</h3>
+                        <p><strong>Interface:</strong> Web and command-line</p>
+                        <p><strong>Immune‑gene use:</strong> Rapidly identifies homologs of immune-related genes (e.g., cytokines, T‑cell receptor chains) by alignment to annotated databases. Gold standard for sequence similarity searches <a href="https://bversity.io">bversity.io</a>.</p>
+
+                        <h3>2. Galaxy</h3>
+                        <p><strong>Interface:</strong> Intuitive GUI, no-code workflows, cloud ready <a href="https://bversity.io">bversity.io</a></p>
+                        <p><strong>Immune‑gene use:</strong> Build reproducible RNA‑seq and ChIP‑seq pipelines for profiling immunoreceptor expression, immune signaling pathway activity, epitope mapping, and metadata integration.</p>
+
+                        <h3>3. Bioconductor (R)</h3>
+                        <p><strong>Interface:</strong> R packages, GUI via RStudio</p>
+                        <p><strong>Immune‑gene use:</strong> DESeq2, edgeR, immunedeconv, flowCore: differential mRNA of cytokines, deconvolution of immune‑cell populations; variant annotation in immune‑related loci <a href="https://immunology.hms.harvard.edu">immunology.hms.harvard.edu</a>.</p>
+
+                        <h3>4. ShinyGO</h3>
+                        <p><strong>Interface:</strong> Web‑based R Shiny</p>
+                        <p><strong>Immune‑gene use:</strong> Gene-set enrichment on immune gene lists; overlays genes onto KEGG/Reactome immune pathways like TLR, antigen processing <a href="https://reactome.org">reactome.org</a>.</p>
+
+                        <h3>5. Metascape</h3>
+                        <p><strong>Interface:</strong> Web portal</p>
+                        <p><strong>Immune‑gene use:</strong> Multi-list enrichment & PPI networks for immune clusters; integrates GO, Reactome, MSigDB immune modules.</p>
+
+                        <h3>6. Reactome Analysis Tools</h3>
+                        <p><strong>Interface:</strong> Web mapping/enrichment & Cytoscape ReactomeFIViz plugin</p>
+                        <p><strong>Immune‑gene use:</strong> Map expression variants in innate/adaptive pathways; overlay miRNA or cytokine transcript changes onto pathway diagrams.</p>
+
+                        <h3>7. GeneXplain Platform</h3>
+                        <p><strong>Interface:</strong> Web browser GUI, drag‑and‑drop bricks</p>
+                        <p><strong>Immune‑gene use:</strong> TFBS prediction (e.g., NF‑κB, STATs), analyze ChIP‑seq on promoter regions of immune genes, build end‑to‑end workflows.</p>
+
+                        <h3>8. OLAF (Open Life Science Analysis Framework)</h3>
+                        <p><strong>Interface:</strong> Conversational LLM‑based web UI</p>
+                        <p><strong>Immune‑gene use:</strong> Natural‑language workflows for single‑cell RNA‑seq focusing on immune cell clusters, marker gene annotation, pathway visualization — ideal for non‑bioinformaticians.</p>
+
+                        <h3>9. SnapGene Viewer</h3>
+                        <p><strong>Interface:</strong> Desktop/online GUI</p>
+                        <p><strong>Immune‑gene use:</strong> Visualize and annotate plasmids for immune gene cloning (e.g., IL‑genes, TCR constructs); simulate primer design for gene editing.</p>
+
+                        <h3>10. EBI Search / EMBL‑EBI Tools</h3>
+                        <p><strong>Interface:</strong> Web portal + REST API</p>
+                        <p><strong>Immune‑gene use:</strong> Comprehensive search across AlphaFold structures, domain databases, expression atlas; ideal for retrieving variant info and structural data for immune receptors.</p>
+
+                        <h3>🧬 Why These Are Ideal for Immune Research</h3>
+                        <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
+                            <tr style="background-color: #f0f0f0;">
+                                <th style="padding: 8px; border: 1px solid #ddd;">Feature</th>
+                                <th style="padding: 8px; border: 1px solid #ddd;">Examples</th>
+                            </tr>
+                            <tr>
+                                <td style="padding: 8px; border: 1px solid #ddd;">GUI + pipelines</td>
+                                <td style="padding: 8px; border: 1px solid #ddd;">Galaxy, GeneXplain, OLAF support no-code workflows</td>
+                            </tr>
+                            <tr style="background-color: #f9f9f9;">
+                                <td style="padding: 8px; border: 1px solid #ddd;">Gene/pathway-focused</td>
+                                <td style="padding: 8px; border: 1px solid #ddd;">ShinyGO, Metascape, Reactome map immune-specific gene sets</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 8px; border: 1px solid #ddd;">Deep annotation</td>
+                                <td style="padding: 8px; border: 1px solid #ddd;">Bioconductor enables statistical modeling, EBI and Reactome support structure and pathway analysis</td>
+                            </tr>
+                            <tr style="background-color: #f9f9f9;">
+                                <td style="padding: 8px; border: 1px solid #ddd;">Cloning & design</td>
+                                <td style="padding: 8px; border: 1px solid #ddd;">SnapGene aids in construct visualization, primer design for immune genes like cytokines</td>
+                            </tr>
+                        </table>
+
+                        <h3>🔧 Integration Tips</h3>
+                        <ul>
+                            <li>Start with Galaxy workflows for QC → alignment → differential expression on immune cell datasets</li>
+                            <li>Use Bioconductor in RStudio to analyze immune gene expression patterns and cell-type deconvolution</li>
+                            <li>Analyze gene lists with ShinyGO & Metascape to validate enrichment in immune pathways</li>
+                            <li>Dive deeper with Reactome, linking DE genes to pathway maps</li>
+                            <li>Finalize with SnapGene/EBI for cloning, structural prediction, and variant annotation</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Article 2 - Plant Immunity -->
+                <div class="article" id="article2">
                     <h2 class="article-title">🌱 Plant Immunity 101: How Crops Defend Themselves Naturally</h2>
                     <img src="img/AI Designer.png" alt="Plant Immunity" class="article-image">
                     <div class="article-content">
@@ -308,8 +386,8 @@
                     </div>
                 </div>
                 
-                <!-- Article 1 - Latest Advances in Vaccine Design -->
-                <div class="article" id="article1">
+                <!-- Article 3 - Latest Advances in Vaccine Design -->
+                <div class="article" id="article3">
                     <h2 class="article-title">Latest Advances in Vaccine Design in the Laboratory</h2>
                     <img src="img/33.png" alt="Latest Advances in Vaccine Design" class="article-image">
                     <div class="article-content">
@@ -395,8 +473,8 @@
                     </div>
                 </div>
                 
-                <!-- Article 2 - Innate vs. Adaptive Immunity -->
-                <div class="article" id="article2">
+                <!-- Article 4 - Innate vs. Adaptive Immunity -->
+                <div class="article" id="article4">
                     <h2 class="article-title">Innate vs. Adaptive Immunity: A Comprehensive Breakdown</h2>
                     <img src="img/Safety twins.jpg" alt="Innate vs Adaptive Immunity" class="article-image">
                     <div class="article-content">
@@ -464,8 +542,8 @@
                     </div>
                 </div>
                 
-                <!-- Article 3 -->
-                <div class="article" id="article3">
+                <!-- Article 5 - HIV mRNA Vaccines -->
+                <div class="article" id="article5">
                     <h2 class="article-title">Treatment of HIV Using mRNA Vaccines</h2>
                     <img src="img/Image of mRNA vaccine against HIV.jpg" alt="mRNA vaccine against HIV" class="article-image">
                     <div class="article-content">
@@ -475,8 +553,8 @@
                     </div>
                 </div>
                 
-                <!-- Article 4 -->
-                <div class="article" id="article4">
+                <!-- Article 6 - Personalized Cancer Vaccines -->
+                <div class="article" id="article6">
                     <h2 class="article-title">Personalized mRNA Cancer Vaccines</h2>
                     <img src="img/Treatment of HIV Using mRNA Vaccines.jpg" alt="Personalized mRNA Cancer Vaccines" class="article-image">
                     <div class="article-content">
@@ -488,8 +566,8 @@
                     </div>
                 </div>
                 
-                <!-- Article 5 -->
-                <div class="article" id="article5">
+                <!-- Article 7 - Influenza mRNA Vaccines -->
+                <div class="article" id="article7">
                     <h2 class="article-title">mRNA vaccines for influenza</h2>
                     <img src="img/mRNA vaccine vial for cancer.jpg" alt="mRNA vaccines for influenza" class="article-image">
                     <div class="article-content">
@@ -509,8 +587,8 @@
                     </div>
                 </div>
                 
-                <!-- Article 6 -->
-                <div class="article" id="article6">
+                <!-- Article 8 - Genetics and Immunity -->
+                <div class="article" id="article8">
                     <h2 class="article-title">How Our Genes Shape the Immune System</h2>
                     <div class="article-content">
                         <p>Have you ever wondered why some people catch every cold going around, while others rarely get sick? Or why some individuals have severe reactions to viruses like COVID-19, while others barely notice symptoms? The answer lies largely in our DNA. Recent global research has made it increasingly clear that our genetic makeup plays a crucial role in determining how our immune system responds to infections, vaccines, and even our own body tissues. This article aims to explain, in simple terms, how genes influence immunity—and why that matters more than ever in today's world.</p>
@@ -535,8 +613,8 @@
                     </div>
                 </div>
                 
-                <!-- Article 7 -->
-                <div class="article" id="article7">
+                <!-- Article 9 - Practical Guide -->
+                <div class="article" id="article9">
                     <h2 class="article-title">Practical and Experimental Guide</h2>
                     <div class="article-content">
                         <p>How to Design a Vaccine: From Concept to Clinical Trials</p>
@@ -569,8 +647,8 @@
                     </div>
                 </div>
                 
-                <!-- Article 8 -->
-                <div class="article" id="article8">
+                <!-- Article 10 - Plant Immune Systems -->
+                <div class="article" id="article10">
                     <h2 class="article-title">Activating Plant Immune Systems: Innovative Strategies</h2>
                     <img src="img/Innovative Strategies.jpg" alt="Plant Immune Systems" class="article-image">
                     <div class="article-content">
@@ -594,8 +672,8 @@
                     </div>
                 </div>
                 
-                <!-- Article 9 -->
-                <div class="article" id="article9">
+                <!-- Article 11 - Immunology Tools -->
+                <div class="article" id="article11">
                     <h2 class="article-title">Introduction to Tools and Technologies</h2>
                     <img src="img/Immunology Laboratory Technology.jpg" alt="Immunology Tools" class="article-image">
                     <div class="article-content">
@@ -631,8 +709,8 @@
                     </div>
                 </div>
                 
-                <!-- Article 10 -->
-                <div class="article" id="article10">
+                <!-- Article 12 - Immunology Education -->
+                <div class="article" id="article12">
                     <h2 class="article-title">Education and Skill Development</h2>
                     <img src="img/Education and Skill Development.jpg" alt="Immunology Education" class="article-image">
                     <div class="article-content">
@@ -678,8 +756,8 @@
                     </div>
                 </div>
                 
-                <!-- Article 11 -->
-                <div class="article" id="article11">
+                <!-- Article 13 - Immunology Advances -->
+                <div class="article" id="article13">
                     <h2 class="article-title">Major Advances in Immunology (as of May 2025)</h2>
                     <img src="img/Major Advances in Immunology.jpg" alt="Immunology Advances" class="article-image">
                     <div class="article-content">
@@ -703,8 +781,8 @@
                     </div>
                 </div>
 
-                <!-- Article 12 -->
-                <div class="article" id="article12">
+                <!-- Article 14 - CRISPR and Immunology -->
+                <div class="article" id="article14">
                     <h2 class="article-title">CRISPR Meets Immunology: A New Era of Gene Editing Therapies</h2>
                     <img src="img/CRISPR Meets Immunology.jpg" alt="CRISPR and Immunology" class="article-image">
                     <div class="article-content">
@@ -753,86 +831,7 @@
                         <p>In essence, "CRISPR Meets Immunology" is not just a scientific headline; it signifies a paradigm shift in how we understand, engineer, and harness the immune system for treating diseases once considered incurable.</p>
                     </div>
                 </div>
-
-                <!-- Article 13 - Immune Bioinformatics Tools -->
-<div class="article" id="article13">
-    <h2 class="article-title">Top 10 Bioinformatics Tools for Immune-Gene Analysis</h2>
-    <img src="img/unnamed.png" alt="Bioinformatics Tools for Immunology" class="article-image">
-    <div class="article-content">
-        <h3>1. BLAST (Basic Local Alignment Search Tool)</h3>
-        <p><strong>Interface:</strong> Web and command-line</p>
-        <p><strong>Immune‑gene use:</strong> Rapidly identifies homologs of immune-related genes (e.g., cytokines, T‑cell receptor chains) by alignment to annotated databases. Gold standard for sequence similarity searches <a href="https://bversity.io">bversity.io</a>.</p>
-
-        <h3>2. Galaxy</h3>
-        <p><strong>Interface:</strong> Intuitive GUI, no-code workflows, cloud ready <a href="https://bversity.io">bversity.io</a></p>
-        <p><strong>Immune‑gene use:</strong> Build reproducible RNA‑seq and ChIP‑seq pipelines for profiling immunoreceptor expression, immune signaling pathway activity, epitope mapping, and metadata integration.</p>
-
-        <h3>3. Bioconductor (R)</h3>
-        <p><strong>Interface:</strong> R packages, GUI via RStudio</p>
-        <p><strong>Immune‑gene use:</strong> DESeq2, edgeR, immunedeconv, flowCore: differential mRNA of cytokines, deconvolution of immune‑cell populations; variant annotation in immune‑related loci <a href="https://immunology.hms.harvard.edu">immunology.hms.harvard.edu</a>.</p>
-
-        <h3>4. ShinyGO</h3>
-        <p><strong>Interface:</strong> Web‑based R Shiny</p>
-        <p><strong>Immune‑gene use:</strong> Gene-set enrichment on immune gene lists; overlays genes onto KEGG/Reactome immune pathways like TLR, antigen processing <a href="https://reactome.org">reactome.org</a>.</p>
-
-        <h3>5. Metascape</h3>
-        <p><strong>Interface:</strong> Web portal</p>
-        <p><strong>Immune‑gene use:</strong> Multi-list enrichment & PPI networks for immune clusters; integrates GO, Reactome, MSigDB immune modules.</p>
-
-        <h3>6. Reactome Analysis Tools</h3>
-        <p><strong>Interface:</strong> Web mapping/enrichment & Cytoscape ReactomeFIViz plugin</p>
-        <p><strong>Immune‑gene use:</strong> Map expression variants in innate/adaptive pathways; overlay miRNA or cytokine transcript changes onto pathway diagrams.</p>
-
-        <h3>7. GeneXplain Platform</h3>
-        <p><strong>Interface:</strong> Web browser GUI, drag‑and‑drop bricks</p>
-        <p><strong>Immune‑gene use:</strong> TFBS prediction (e.g., NF‑κB, STATs), analyze ChIP‑seq on promoter regions of immune genes, build end‑to‑end workflows.</p>
-
-        <h3>8. OLAF (Open Life Science Analysis Framework)</h3>
-        <p><strong>Interface:</strong> Conversational LLM‑based web UI</p>
-        <p><strong>Immune‑gene use:</strong> Natural‑language workflows for single‑cell RNA‑seq focusing on immune cell clusters, marker gene annotation, pathway visualization — ideal for non‑bioinformaticians.</p>
-
-        <h3>9. SnapGene Viewer</h3>
-        <p><strong>Interface:</strong> Desktop/online GUI</p>
-        <p><strong>Immune‑gene use:</strong> Visualize and annotate plasmids for immune gene cloning (e.g., IL‑genes, TCR constructs); simulate primer design for gene editing.</p>
-
-        <h3>10. EBI Search / EMBL‑EBI Tools</h3>
-        <p><strong>Interface:</strong> Web portal + REST API</p>
-        <p><strong>Immune‑gene use:</strong> Comprehensive search across AlphaFold structures, domain databases, expression atlas; ideal for retrieving variant info and structural data for immune receptors.</p>
-
-        <h3>🧬 Why These Are Ideal for Immune Research</h3>
-        <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
-            <tr style="background-color: #f0f0f0;">
-                <th style="padding: 8px; border: 1px solid #ddd;">Feature</th>
-                <th style="padding: 8px; border: 1px solid #ddd;">Examples</th>
-            </tr>
-            <tr>
-                <td style="padding: 8px; border: 1px solid #ddd;">GUI + pipelines</td>
-                <td style="padding: 8px; border: 1px solid #ddd;">Galaxy, GeneXplain, OLAF support no-code workflows</td>
-            </tr>
-            <tr style="background-color: #f9f9f9;">
-                <td style="padding: 8px; border: 1px solid #ddd;">Gene/pathway-focused</td>
-                <td style="padding: 8px; border: 1px solid #ddd;">ShinyGO, Metascape, Reactome map immune-specific gene sets</td>
-            </tr>
-            <tr>
-                <td style="padding: 8px; border: 1px solid #ddd;">Deep annotation</td>
-                <td style="padding: 8px; border: 1px solid #ddd;">Bioconductor enables statistical modeling, EBI and Reactome support structure and pathway analysis</td>
-            </tr>
-            <tr style="background-color: #f9f9f9;">
-                <td style="padding: 8px; border: 1px solid #ddd;">Cloning & design</td>
-                <td style="padding: 8px; border: 1px solid #ddd;">SnapGene aids in construct visualization, primer design for immune genes like cytokines</td>
-            </tr>
-        </table>
-
-        <h3>🔧 Integration Tips</h3>
-        <ul>
-            <li>Start with Galaxy workflows for QC → alignment → differential expression on immune cell datasets</li>
-            <li>Use Bioconductor in RStudio to analyze immune gene expression patterns and cell-type deconvolution</li>
-            <li>Analyze gene lists with ShinyGO & Metascape to validate enrichment in immune pathways</li>
-            <li>Dive deeper with Reactome, linking DE genes to pathway maps</li>
-            <li>Finalize with SnapGene/EBI for cloning, structural prediction, and variant annotation</li>
-        </ul>
-    </div>
-</div>
+                
                 <div class="ad-banner">
                     <h3>Advertisement</h3>
                     <p>This space available for your promotional content</p>
@@ -858,19 +857,20 @@
                 
                 <h3>Today's Articles</h3>
                 <ul class="title-list">
-                    <li class="title-item active" data-article="article0">🌱 Plant Immunity 101</li>
-                    <li class="title-item" data-article="article1">Latest Advances in Vaccine Design</li>
-                    <li class="title-item" data-article="article2">Innate vs. Adaptive Immunity</li>
-                    <li class="title-item" data-article="article3">Treatment of HIV Using mRNA Vaccines</li>
-                    <li class="title-item" data-article="article4">Personalized mRNA Cancer Vaccines</li>
-                    <li class="title-item" data-article="article5">mRNA vaccines for influenza</li>
-                    <li class="title-item" data-article="article6">How Our Genes Shape the Immune System</li>
-                    <li class="title-item" data-article="article7">Practical and Experimental Guide</li>
-                    <li class="title-item" data-article="article8">Activating Plant Immune Systems</li>
-                    <li class="title-item" data-article="article9">Tools and Technologies</li>
-                    <li class="title-item" data-article="article10">Education and Skill Development</li>
-                    <li class="title-item" data-article="article11">Major Advances in Immunology</li>
-                    <li class="title-item" data-article="article12">CRISPR Meets Immunology</li>
+                    <li class="title-item active" data-article="article1">Top 10 Bioinformatics Tools</li>
+                    <li class="title-item" data-article="article2">🌱 Plant Immunity 101</li>
+                    <li class="title-item" data-article="article3">Latest Advances in Vaccine Design</li>
+                    <li class="title-item" data-article="article4">Innate vs. Adaptive Immunity</li>
+                    <li class="title-item" data-article="article5">Treatment of HIV Using mRNA Vaccines</li>
+                    <li class="title-item" data-article="article6">Personalized mRNA Cancer Vaccines</li>
+                    <li class="title-item" data-article="article7">mRNA vaccines for influenza</li>
+                    <li class="title-item" data-article="article8">How Our Genes Shape the Immune System</li>
+                    <li class="title-item" data-article="article9">Practical and Experimental Guide</li>
+                    <li class="title-item" data-article="article10">Activating Plant Immune Systems</li>
+                    <li class="title-item" data-article="article11">Tools and Technologies</li>
+                    <li class="title-item" data-article="article12">Education and Skill Development</li>
+                    <li class="title-item" data-article="article13">Major Advances in Immunology</li>
+                    <li class="title-item" data-article="article14">CRISPR Meets Immunology</li>
                 </ul>
                 
                 <div class="ad-banner">

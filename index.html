@@ -1,36 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mehrdad Etemad, PhD in Immunology - Research Hub</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Immunology Research, Biomedical Science, Mehrdad Etemad PhD" name="keywords">
-    <meta content="Mehrdad Etemad, PhD in Immunology - Hub for Immunology and Biomedical Research" name="description">
-
+    <meta name="keywords" content="Immunology Research, Biomedical Science, Mehrdad Etemad PhD">
+    <meta name="description" content="Mehrdad Etemad, PhD in Immunology - Hub for Immunology and Biomedical Research">
+    
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
-
+    
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">  
-
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
+    
     <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
-
-    <!-- Customized Bootstrap Stylesheet -->
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
+    
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
     
-    <!-- PDF.js for displaying PDF articles -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
-
     <!-- Schema Markup for SEO -->
     <script type="application/ld+json">
     {
@@ -41,14 +38,13 @@
         "jobTitle": "Immunology Researcher",
         "url": "https://yourwebsite.com",
         "sameAs": [
-            "https://linkedin.com/in/mehrdad-etemad-713359358",
-            "https://github.com/yourprofile"
+            "https://linkedin.com/in/mehrdad-etemad-713359358"
         ],
         "knowsAbout": ["Immunology", "Biomedical Research", "Vaccine Development", "Immunogenetics"],
         "description": "Mehrdad Etemad, PhD in Immunology - Immunology and Biomedical Researcher"
     }
     </script>
-
+    
     <style>
         /* Research Section Styles */
         .research-grid {
@@ -129,17 +125,32 @@
                 grid-template-columns: 1fr;
             }
         }
+        
+        /* Hero Section */
+        .hero-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/hero-bg.jpg') center/cover no-repeat;
+        }
+        
+        /* Service Icons */
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: #3498db;
+        }
     </style>
 </head>
 
 <body>
     <!-- Topbar Start -->
-    <div class="container-fluid py-2 border-bottom d-none d-lg-block">
+    <div class="container-fluid py-2 border-bottom d-none d-lg-block bg-light">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 text-center text-lg-start mb-2 mb-lg-0">
                     <div class="d-inline-flex align-items-center">
-                        <span class="text-body">|</span>
                         <a class="text-decoration-none text-body px-3" href="mailto:mehrdad.etemad1988@gmail.com">
                             <i class="bi bi-envelope me-2"></i>mehrdad.etemad1988@gmail.com
                         </a>
@@ -170,53 +181,64 @@
     <!-- Topbar End -->
 
     <!-- Navbar Start -->
-    <div class="container-fluid sticky-top bg-white shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
         <div class="container">
-            <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0">
-                <a href="index.html" class="navbar-brand">
-                    <h1 class="m-0 text-uppercase text-primary"><i class="fa fa-microscope me-2"></i>Mehrdad Etemad, PhD</h1>
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto py-0">
-                        <a href="index.html" class="nav-item nav-link active">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="Research.html" class="nav-item nav-link">Research</a>
-                        <a href="articles.html" class="nav-item nav-link">Articles</a>
-                        <a href="gallery.html" class="nav-item nav-link">Gallery</a>
-                        <a href="blog.html" class="nav-item nav-link">Blog</a>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
-                    </div>
-                </div>
-            </nav>
+            <a class="navbar-brand" href="index.html">
+                <h1 class="m-0 text-uppercase text-primary"><i class="fa fa-microscope me-2"></i>Mehrdad Etemad, PhD</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="research.html">Research</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="articles.html">Articles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
+    </nav>
     <!-- Navbar End -->
 
-    <!-- Hero Start -->
-    <div class="container-fluid bg-primary py-5 mb-5 hero-header">
+    <!-- Hero Section -->
+    <section class="hero-header bg-primary py-5 mb-5">
         <div class="container py-5">
             <div class="row justify-content-start">
                 <div class="col-lg-8 text-center text-lg-start">
-                    <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5" style="border-color: rgba(256, 256, 256, .3) !important;">Welcome to PhD. Mehrdad Etemad's Lab</h5>
-                    <h1 class="display-1 text-white mb-md-4">Mehrdad Etemad, PhD in Immunology Research</h1>
+                    <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5 mb-3" style="border-color: rgba(256, 256, 256, .3) !important;">Welcome to PhD. Mehrdad Etemad's Lab</h5>
+                    <h1 class="display-4 text-white mb-4">Mehrdad Etemad, PhD in Immunology Research</h1>
                     <div class="pt-2">
-                        <a href="Research.html" class="btn btn-light rounded-pill py-md-3 px-md-5 mx-2">Latest Research</a>
-                        <a href="contact.html" class="btn btn-outline-light rounded-pill py-md-3 px-md-5 mx-2">Contact Me</a>
+                        <a href="research.html" class="btn btn-light rounded-pill py-3 px-4 me-2">Latest Research</a>
+                        <a href="contact.html" class="btn btn-outline-light rounded-pill py-3 px-4">Contact Me</a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Hero End -->
+    </section>
 
-    <!-- About Start -->
-    <div class="container-fluid py-5">
+    <!-- About Section -->
+    <section class="container-fluid py-5">
         <div class="container">
             <div class="row gx-5">
-                <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 500px;">
+                <div class="col-lg-5 mb-5 mb-lg-0">
                     <div class="position-relative h-100">
                         <img class="position-absolute w-100 h-100 rounded" src="img/about.jpg" style="object-fit: cover;" alt="PhD. Mehrdad Etemad">
                     </div>
@@ -256,60 +278,58 @@
                 </div>
             </div>
         </div>
-    </div>
-    <!-- About End -->
+    </section>
 
-    <!-- Services Start -->
-    <div class="container-fluid py-5">
+    <!-- Research Areas Section -->
+    <section class="container-fluid py-5 bg-light">
         <div class="container">
             <div class="text-center mx-auto mb-5" style="max-width: 500px;">
                 <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Research Areas</h5>
                 <h1 class="display-4">My Specialized Research Domains</h1>
             </div>
-            <div class="row g-5">
+            <div class="row g-4">
                 <div class="col-lg-4 col-md-6">
-                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                    <div class="service-item bg-white rounded d-flex flex-column align-items-center justify-content-center text-center p-4">
                         <div class="service-icon mb-4">
                             <i class="fa fa-2x fa-dna text-white"></i>
                         </div>
                         <h4 class="mb-3">Immunogenetics</h4>
                         <p class="m-0">Exploring the genetic basis of immune responses and autoimmune disorders through advanced genomic technologies.</p>
-                        <a class="btn btn-lg btn-primary rounded-pill mt-3" href="Research.html">
+                        <a class="btn btn-lg btn-primary rounded-pill mt-3" href="research.html">
                             <i class="bi bi-arrow-right"></i>
                         </a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                    <div class="service-item bg-white rounded d-flex flex-column align-items-center justify-content-center text-center p-4">
                         <div class="service-icon mb-4">
                             <i class="fa fa-2x fa-syringe text-white"></i>
                         </div>
                         <h4 class="mb-3">Vaccine Development</h4>
                         <p class="m-0">Researching novel vaccine technologies and delivery systems for emerging infectious diseases.</p>
-                        <a class="btn btn-lg btn-primary rounded-pill mt-3" href="Research.html">
+                        <a class="btn btn-lg btn-primary rounded-pill mt-3" href="research.html">
                             <i class="bi bi-arrow-right"></i>
                         </a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                    <div class="service-item bg-white rounded d-flex flex-column align-items-center justify-content-center text-center p-4">
                         <div class="service-icon mb-4">
                             <i class="fa fa-2x fa-vial text-white"></i>
                         </div>
                         <h4 class="mb-3">Biomedical Research</h4>
                         <p class="m-0">Investigating molecular mechanisms of disease and immunity at cellular and molecular levels.</p>
-                        <a class="btn btn-lg btn-primary rounded-pill mt-3" href="Research.html">
+                        <a class="btn btn-lg btn-primary rounded-pill mt-3" href="research.html">
                             <i class="bi bi-arrow-right"></i>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Services End -->
+    </section>
 
-    <!-- Research Start -->
-    <div class="container-fluid py-5" id="research-content">
+    <!-- Research Projects Section -->
+    <section class="container-fluid py-5" id="research-content">
         <div class="container">
             <div class="text-center mx-auto mb-5" style="max-width: 800px;">
                 <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">My Research</h5>
@@ -367,14 +387,13 @@
             
             <!-- View More Button -->
             <div class="text-center mt-5">
-                <a href="Research.html" class="btn btn-primary py-3 px-5">View All Research Projects</a>
+                <a href="research.html" class="btn btn-primary py-3 px-5">View All Research Projects</a>
             </div>
         </div>
-    </div>
-    <!-- Research End -->
+    </section>
 
-    <!-- Appointment Start -->
-    <div class="container-fluid bg-primary my-5 py-5">
+    <!-- Appointment Section -->
+    <section class="container-fluid bg-primary my-5 py-5">
         <div class="container py-5">
             <div class="row gx-5">
                 <div class="col-lg-6 mb-5 mb-lg-0">
@@ -440,17 +459,16 @@
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Appointment End -->
+    </section>
 
-    <!-- Blog Start -->
-    <div class="container-fluid py-5">
+    <!-- Blog Section -->
+    <section class="container-fluid py-5">
         <div class="container">
             <div class="text-center mx-auto mb-5" style="max-width: 500px;">
                 <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Blog Post</h5>
                 <h1 class="display-4">My Latest Scientific Blog Posts</h1>
             </div>
-            <div class="row g-5">
+            <div class="row g-4">
                 <div class="col-xl-4 col-lg-6">
                     <div class="bg-light rounded overflow-hidden">
                         <img class="img-fluid w-100" src="img/blog-1.jpg" alt="Immunotherapy Research">
@@ -510,11 +528,10 @@
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Blog End -->
+    </section>
 
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light mt-5 py-5">
+    <!-- Footer -->
+    <footer class="container-fluid bg-dark text-light mt-5 py-5">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
@@ -528,7 +545,7 @@
                     <div class="d-flex flex-column justify-content-start">
                         <a class="text-light mb-2" href="index.html"><i class="fa fa-angle-right me-2"></i>Home</a>
                         <a class="text-light mb-2" href="about.html"><i class="fa fa-angle-right me-2"></i>About</a>
-                        <a class="text-light mb-2" href="Research.html"><i class="fa fa-angle-right me-2"></i>Research</a>
+                        <a class="text-light mb-2" href="research.html"><i class="fa fa-angle-right me-2"></i>Research</a>
                         <a class="text-light mb-2" href="articles.html"><i class="fa fa-angle-right me-2"></i>Articles</a>
                         <a class="text-light mb-2" href="gallery.html"><i class="fa fa-angle-right me-2"></i>Gallery</a>
                         <a class="text-light" href="contact.html"><i class="fa fa-angle-right me-2"></i>Contact</a>
@@ -574,23 +591,22 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="container-fluid bg-dark text-light border-top border-secondary py-4">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-md-0">&copy; <a class="text-primary" href="#">Mehrdad Etemad, PhD</a>. All Rights Reserved.</p>
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <p class="mb-0">Designed by <a class="text-primary" href="#">Mehrdad Etemad, PhD</a></p>
+        <div class="container-fluid bg-dark text-light border-top border-secondary py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start">
+                        <p class="mb-md-0">&copy; <a class="text-primary" href="#">Mehrdad Etemad, PhD</a>. All Rights Reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <p class="mb-0">Designed by <a class="text-primary" href="#">Mehrdad Etemad, PhD</a></p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Footer End -->
+    </footer>
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top position-fixed" style="bottom: 30px; right: 30px; display: none;"><i class="bi bi-arrow-up"></i></a>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -638,73 +654,18 @@
             });
         });
 
-        // Initialize PDF.js
-        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.min.js';
+        // Back to top button
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 300) {
+                $('.back-to-top').fadeIn('slow');
+            } else {
+                $('.back-to-top').fadeOut('slow');
+            }
+        });
         
-        // Function to render PDF
-        function renderPDF(pdfPath, canvasContainer) {
-            pdfjsLib.getDocument(pdfPath).promise.then(function(pdf) {
-                // Fetch the first page
-                pdf.getPage(1).then(function(page) {
-                    var scale = 1.5;
-                    var viewport = page.getViewport({ scale: scale });
-
-                    // Prepare canvas
-                    var canvas = document.createElement('canvas');
-                    var context = canvas.getContext('2d');
-                    canvas.height = viewport.height;
-                    canvas.width = viewport.width;
-
-                    // Append canvas to container
-                    var container = document.getElementById(canvasContainer);
-                    container.innerHTML = '';
-                    container.appendChild(canvas);
-
-                    // Render PDF page into canvas context
-                    page.render({
-                        canvasContext: context,
-                        viewport: viewport
-                    });
-                });
-            }).catch(function(error) {
-                console.error('Error loading PDF:', error);
-                document.getElementById(canvasContainer).innerHTML = 
-                    '<div class="alert alert-danger">Error loading PDF preview. Please download the full article.</div>';
-            });
-        }
-
-        // Render PDFs when page loads
-        document.addEventListener('DOMContentLoaded', function() {
-            // Replace these paths with your actual PDF paths
-            renderPDF('articles/immune-genetics.pdf', 'pdf-viewer-1');
-            renderPDF('articles/vaccine-development.pdf', 'pdf-viewer-2');
-            renderPDF('articles/biomedical-research.pdf', 'pdf-viewer-3');
-            
-            // Initialize carousels
-            $('.team-carousel').owlCarousel({
-                items: 1,
-                loop: true,
-                margin: 20,
-                nav: true,
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    768: {
-                        items: 2
-                    },
-                    992: {
-                        items: 3
-                    }
-                }
-            });
-            
-            $('.testimonial-carousel').owlCarousel({
-                items: 1,
-                loop: true,
-                margin: 20,
-                nav: true
-            });
+        $('.back-to-top').click(function() {
+            $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+            return false;
         });
     });
     </script>

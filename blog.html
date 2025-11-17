@@ -132,6 +132,8 @@
             height: auto;
             margin-bottom: 15px;
             border: 1px solid #ddd;
+            max-height: 400px;
+            object-fit: cover;
         }
         
         .article-content {
@@ -274,6 +276,19 @@
             color: #555;
         }
         
+        .image-placeholder {
+            width: 100%;
+            height: 300px;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            color: #666;
+            font-style: italic;
+        }
+        
         @media (max-width: 768px) {
             .main-content {
                 flex-direction: column;
@@ -306,10 +321,10 @@
         
         <div class="main-content">
             <div class="articles-column" id="articlesColumn">
-                <!-- Article 1 - NEW ARTICLE: Immunoendocrine Mechanisms -->
+                <!-- Article 1 - Immunoendocrine Mechanisms -->
                 <div class="article active" id="article1">
                     <h1 class="article-title">Immunoendocrine Mechanisms Underlying Risky and Self-Destructive Behavior</h1>
-                    <img src="img/1762761789255.jpeg" alt="Immunoendocrine mechanisms in behavior" class="article-image">
+                    <div class="image-placeholder">Immunoendocrine Mechanisms Image</div>
                     <div class="article-content">
                         <p>As an immunologist, I am increasingly intrigued by the profound ways in which the immune and endocrine systems jointly shape behavior—a field we term immunoendocrinology. Recent research indicates that sex hormones, stress mediators, and immune signaling molecules collectively influence risk perception, social behavior, and decision-making in both humans and animals.</p>
                         
@@ -335,135 +350,28 @@
                 
                 <!-- Article 2 - Thalassemia and Hair Growth -->
                 <div class="article" id="article2">
-                    <h2 class="article-title">The Impact of Thalassemia on Hair and Beard Growth — Scientific Explanation, Causes, Diagnosis, and Treatment Options</h2>
-                    <img src="img/10.jpg" alt="Dr-Mehrdad-Etemad-thalassemia-hair-loss-figure" class="article-image">
+                    <h2 class="article-title">The Impact of Thalassemia on Hair and Beard Growth</h2>
+                    <div class="image-placeholder">Thalassemia and Hair Growth Image</div>
                     <div class="article-content">
                         <h2>Abstract</h2>
-                        <p>Thalassemia (particularly transfusion-dependent beta-thalassemia) can affect hair and beard health in several ways, ranging from diffuse hair loss and thinning to irregular or weak beard growth. These effects result from a combination of chronic anemia, iron overload, endocrine complications secondary to iron deposition, nutritional deficiencies, and, in some cases, side effects of treatment. Addressing the underlying cause along with topical/systemic therapies and, in selected cases, hair transplantation under specific medical conditions can be beneficial. (References and details provided in the text.)</p>
-                        <p><strong>PMC+1</strong></p>
+                        <p>Thalassemia (particularly transfusion-dependent beta-thalassemia) can affect hair and beard health in several ways, ranging from diffuse hair loss and thinning to irregular or weak beard growth. These effects result from a combination of chronic anemia, iron overload, endocrine complications secondary to iron deposition, nutritional deficiencies, and, in some cases, side effects of treatment.</p>
                         
                         <h2>Brief Overview: Types of Thalassemia</h2>
                         <ul>
-                            <li><strong>Alpha-thalassemia:</strong> Deletions or mutations in alpha-globin genes — spectrum ranges from silent carriers (trait) to hydrops fetalis.</li>
-                            <li><strong>Beta-thalassemia:</strong> Includes major (transfusion-dependent / TDT), intermedia, and minor (carrier).</li>
-                            <li><strong>Clinical relevance:</strong> The severity of the disease (e.g., frequency of transfusions) determines the risk of secondary complications such as iron overload and subsequent endocrine/systemic effects.</li>
+                            <li><strong>Alpha-thalassemia:</strong> Deletions or mutations in alpha-globin genes</li>
+                            <li><strong>Beta-thalassemia:</strong> Includes major (transfusion-dependent), intermedia, and minor (carrier)</li>
                         </ul>
-                        <p><strong>NCBI+1</strong></p>
                         
-                        <h2>Why Can Thalassemia Cause Hair Loss or Poor Beard Growth? (Mechanisms)</h2>
+                        <h2>Why Can Thalassemia Cause Hair Loss?</h2>
                         <ol>
-                            <li><strong>Chronic anemia and metabolic stress:</strong> Reduced peripheral oxygenation may slow down hair growth and shift follicles into the telogen (resting) phase.</li>
-                            <li><strong>Iron overload:</strong> Repeated transfusions lead to iron deposition in tissues, causing cellular damage and oxidative stress — these mechanisms can impair the skin, hair follicles, and endocrine-hormonal axes.</li>
-                            <li><strong>Endocrine disorders:</strong> Iron deposition in the pituitary and gonadal glands can lead to hypogonadism or thyroid dysfunction, both linked to hair loss and irregular beard/hair growth. Studies show high prevalence of sexual dysfunction, delayed puberty, and related endocrine abnormalities in TDT patients.</li>
-                            <li><strong>Nutritional and metabolic deficiencies:</strong> Zinc, vitamin D, protein, or other micronutrient deficiencies may coexist and impair hair growth.</li>
-                            <li><strong>Drug or treatment-related effects:</strong> Certain chelation therapies or chronic infections may contribute.</li>
-                            <li><strong>Chronic inflammation and oxidative stress:</strong> Persistent inflammatory states can disrupt follicular cycling.</li>
-                        </ol>
-                        <p><strong>Summary:</strong> The dominant pathway is iron overload → endocrine damage → hormonal/nutritional imbalance → hair loss/weak growth.</p>
-                        <p><strong>MDPI+1</strong></p>
-                        
-                        <h2>Common Clinical Manifestations in Thalassemia Patients (Hair-Related)</h2>
-                        <ul>
-                            <li>Diffuse hair thinning, especially during adolescence and adulthood in patients with high iron load.</li>
-                            <li>Patchy or thin beard growth in males (often due to hypogonadism or low testosterone).</li>
-                            <li>Alopecia patterns secondary to nutritional or drug-induced causes.</li>
-                        </ul>
-                        <p>Accurate diagnosis requires dermatological examination, evaluation of hair loss patterns, and laboratory investigations.</p>
-                        <p><strong>PMC</strong></p>
-                        
-                        <h2>Medical Evaluation (Recommended Laboratory Tests)</h2>
-                        <ol>
-                            <li><strong>Complete blood count (CBC)</strong> – to assess anemia.</li>
-                            <li><strong>Ferritin, TIBC, NTBI/LIC</strong> – to evaluate iron overload (ferritin alone is not sufficient but is a first-line marker).</li>
-                            <li><strong>Endocrine panel:</strong> FSH, LH, testosterone (in males), TSH, Free T4, and diabetes profile if indicated.</li>
-                            <li><strong>Micronutrient assessment:</strong> Zinc, vitamin D, and serum iron (may vary in carriers).</li>
-                            <li><strong>Specialized evaluations:</strong> Hematology consultation and, when needed, liver/heart MRI for iron concentration (LIC, cardiac MRI T2*).</li>
-                        </ol>
-                        <p>Identifying and treating the underlying cause (e.g., treatable hypogonadism) is the key step, as many solutions stem from there.</p>
-                        
-                        <h2>General and Specific Treatments for Hair/Beard Problems in Thalassemia</h2>
-                        
-                        <h3>A) Etiology-focused treatment (top priority)</h3>
-                        <ul>
-                            <li><strong>Iron overload management:</strong> Optimize transfusion schedules and chelation therapy (deferasirox, desferrioxamine, etc.) to prevent or slow endocrine complications. Controlling iron overload is essential to reduce secondary damage.</li>
-                            <li><strong>Endocrine therapy:</strong> In confirmed hypogonadism, hormone replacement (e.g., testosterone in males or thyroid hormone management) can help restore hair and beard growth. Requires close cooperation between hematology and endocrinology.</li>
-                        </ul>
-                        
-                        <h3>B) Nutritional and supportive therapy</h3>
-                        <ul>
-                            <li>Correct deficiencies in zinc, vitamin D, and other micronutrients. (Iron supplementation should be avoided unless medically justified, as iron overload is common in thalassemia.)</li>
-                            <li>Maintain a protein-rich diet and consider supplementation as needed.</li>
-                        </ul>
-                        
-                        <h3>C) Topical/pharmacologic treatments for hair growth</h3>
-                        <ul>
-                            <li><strong>Topical minoxidil:</strong> Effective for diffuse thinning (though does not address the underlying cause).</li>
-                            <li><strong>Finasteride:</strong> In androgenic alopecia, for men only and with caution after full assessment.</li>
-                            <li><strong>Scalp care:</strong> Gentle washing and avoidance of mechanical stress.</li>
-                        </ul>
-                        
-                        <h3>D) Surgical/interventional treatments (Hair transplantation)</h3>
-                        <p>Detailed in the next section.</p>
-                        
-                        <h2>Hair Transplantation in Thalassemia — Risks, Benefits, and Safety Criteria</h2>
-                        <p><strong>Is thalassemia a contraindication to hair transplantation?</strong></p>
-                        <p>Generally, thalassemia is not an absolute contraindication, but thorough evaluation by a hematologist and hair transplant surgeon is mandatory.</p>
-                        
-                        <p><strong>Potential issues to assess:</strong></p>
-                        <ol>
-                            <li><strong>Hemoglobin level and anesthesia tolerance:</strong> Severe anemia may increase anesthesia risk — Hb should be optimized preoperatively.</li>
-                            <li><strong>Bleeding or coagulation disorders:</strong> Platelet count and coagulation profile must be checked.</li>
-                            <li><strong>Infection and wound healing:</strong> Chronic infections or iron overload may impair healing; infection control is essential.</li>
-                            <li><strong>Endocrine status:</strong> Untreated hypogonadism or hormonal disorders may limit cosmetic results.</li>
-                            <li><strong>Chelation or other medications:</strong> Review possible drug–anesthetic/antibiotic interactions.</li>
-                            <li><strong>Donor site healing:</strong> Must be evaluated in patients with poor regenerative capacity.</li>
+                            <li>Chronic anemia and metabolic stress</li>
+                            <li>Iron overload from repeated transfusions</li>
+                            <li>Endocrine disorders from iron deposition</li>
+                            <li>Nutritional deficiencies</li>
                         </ol>
                         
-                        <p><strong>Benefits (for well-selected patients):</strong></p>
-                        <ul>
-                            <li>Restoration of hair/beard density where viable donor follicles exist.</li>
-                            <li>Improved self-esteem and quality of life — only after systemic stability and safety optimization.</li>
-                        </ul>
-                        
-                        <p><strong>Pre-transplant checklist:</strong></p>
-                        <ul>
-                            <li>Hematology clearance (Hb, platelets, coagulation, ferritin/LIC, transfusion and chelation plan).</li>
-                            <li>Endocrine evaluation (thyroid and sex hormones).</li>
-                            <li>Infection control (skin/systemic).</li>
-                            <li>Joint planning between surgeon and hematologist; transfusion or medication adjustment may be needed pre-op.</li>
-                        </ul>
-                        <p><strong>Dermatoloji Dergisi+1</strong></p>
-                        
-                        <h2>Emerging and Advanced Therapies Indirectly Improving Hair Health</h2>
-                        <p>Recent advances in stem cell and gene therapy for beta-thalassemia have shown promising results, reducing transfusion dependency and long-term iron overload, thereby indirectly improving hair and beard health.</p>
-                        <p>Examples include exa-cel / Casgevy (exagamglogene autotemcel), FDA-approved in January 2024 for transfusion-dependent beta-thalassemia, and beti-cel / Zynteglo from earlier generations — both of which significantly reduce iron overload and endocrine complications over time.</p>
-                        <p><strong>hematology.org+2, Çocuk Hastanesi+2</strong></p>
-                        
-                        <h2>Practical Recommendations — Simplified Algorithm for Physicians/Patients</h2>
-                        <ol>
-                            <li>Comprehensive clinical evaluation (hematology, endocrinology, nutrition).</li>
-                            <li>If iron overload or suboptimal chelation: improve management or refer to a specialized center. TIF</li>
-                            <li>If hypogonadism/hormonal deficiency: initiate hormone replacement under endocrinologist supervision.</li>
-                            <li>Nutritional support and topical/scalp therapy (minoxidil, care routine).</li>
-                            <li>For hair transplant candidates: perform full risk–benefit assessment and coordinate timing between hematology and surgery teams.</li>
-                        </ol>
-                        <p><strong>Dermatoloji Dergisi</strong></p>
-                        
-                        <h2>Notes for Immunology Readers (and SEO Optimization)</h2>
-                        <ul>
-                            <li>As an immunology expert, emphasize the relationship between oxidative stress, systemic inflammation, and follicular health — this mechanistic insight strengthens the scientific depth and SEO relevance of the article.</li>
-                            <li>Highlight the multidisciplinary approach (hematology, endocrinology, dermatology, reconstructive surgery) in management.</li>
-                        </ul>
-                        <p><strong>Nature</strong></p>
-                        
-                        <h2>Key References (For Further Reading)</h2>
-                        <ul>
-                            <li>De Sanctis V. Growth and endocrine disorders in thalassemia. (Comprehensive review on endocrine dysfunctions in thalassemia). PMC</li>
-                            <li>Evangelidis P. Endocrinopathies in Hemoglobinopathies (2023 review on iron overload and oxidative stress). MDPI</li>
-                            <li>Thalassemia International Federation (TIF) Guidelines for TDT management.</li>
-                            <li>Casgevy / Exagamglogene Autotemcel gene therapy updates and FDA approval (Jan 2024). hematology.org+1</li>
-                            <li>Clinical Reviews (2024): Pathophysiology and novel therapies in beta-thalassemia. MDPI</li>
-                        </ul>
+                        <h2>Treatment Approaches</h2>
+                        <p>Management includes iron overload control, endocrine therapy, nutritional support, and in selected cases, hair transplantation after thorough medical evaluation.</p>
                         
                         <div class="author-info">
                            <p><strong>Author: Mehrdad Etemad | Immunology Specialist</strong></p>
@@ -471,432 +379,304 @@
                     </div>
                 </div>
                 
-                <!-- Article 3 - Top 10 Bioinformatics Tools -->
+                <!-- Article 3 - Bioinformatics Tools -->
                 <div class="article" id="article3">
                     <h2 class="article-title">Top 10 Bioinformatics Tools for Immune-Gene Analysis</h2>
-                    <img src="img/unnamed.png" alt="Bioinformatics Tools for Immunology" class="article-image">
+                    <div class="image-placeholder">Bioinformatics Tools Image</div>
                     <div class="article-content">
                         <h3>1. BLAST (Basic Local Alignment Search Tool)</h3>
-                        <p><strong>Interface:</strong> Web and command-line</p>
-                        <p><strong>Immune‑gene use:</strong> Rapidly identifies homologs of immune-related genes (e.g., cytokines, T‑cell receptor chains) by alignment to annotated databases. Gold standard for sequence similarity searches <a href="https://bversity.io">bversity.io</a>.</p>
+                        <p>Rapidly identifies homologs of immune-related genes by alignment to annotated databases.</p>
 
                         <h3>2. Galaxy</h3>
-                        <p><strong>Interface:</strong> Intuitive GUI, no-code workflows, cloud ready <a href="https://bversity.io">bversity.io</a></p>
-                        <p><strong>Immune‑gene use:</strong> Build reproducible RNA‑seq and ChIP‑seq pipelines for profiling immunoreceptor expression, immune signaling pathway activity, epitope mapping, and metadata integration.</p>
+                        <p>Intuitive GUI for building reproducible RNA-seq and ChIP-seq pipelines.</p>
 
                         <h3>3. Bioconductor (R)</h3>
-                        <p><strong>Interface:</strong> R packages, GUI via RStudio</p>
-                        <p><strong>Immune‑gene use:</strong> DESeq2, edgeR, immunedeconv, flowCore: differential mRNA of cytokines, deconvolution of immune‑cell populations; variant annotation in immune‑related loci <a href="https://immunology.hms.harvard.edu">immunology.hms.harvard.edu</a>.</p>
+                        <p>Comprehensive R packages for differential gene expression analysis.</p>
 
                         <h3>4. ShinyGO</h3>
-                        <p><strong>Interface:</strong> Web‑based R Shiny</p>
-                        <p><strong>Immune‑gene use:</strong> Gene-set enrichment on immune gene lists; overlays genes onto KEGG/Reactome immune pathways like TLR, antigen processing <a href="https://reactome.org">reactome.org</a>.</p>
+                        <p>Gene-set enrichment analysis with visualization capabilities.</p>
 
                         <h3>5. Metascape</h3>
-                        <p><strong>Interface:</strong> Web portal</p>
-                        <p><strong>Immune‑gene use:</strong> Multi-list enrichment & PPI networks for immune clusters; integrates GO, Reactome, MSigDB immune modules.</p>
-
-                        <h3>6. Reactome Analysis Tools</h3>
-                        <p><strong>Interface:</strong> Web mapping/enrichment & Cytoscape ReactomeFIViz plugin</p>
-                        <p><strong>Immune‑gene use:</strong> Map expression variants in innate/adaptive pathways; overlay miRNA or cytokine transcript changes onto pathway diagrams.</p>
-
-                        <h3>7. GeneXplain Platform</h3>
-                        <p><strong>Interface:</strong> Web browser GUI, drag‑and‑drop bricks</p>
-                        <p><strong>Immune‑gene use:</strong> TFBS prediction (e.g., NF‑κB, STATs), analyze ChIP‑seq on promoter regions of immune genes, build end‑to‑end workflows.</p>
-
-                        <h3>8. OLAF (Open Life Science Analysis Framework)</h3>
-                        <p><strong>Interface:</strong> Conversational LLM‑based web UI</p>
-                        <p><strong>Immune‑gene use:</strong> Natural‑language workflows for single‑cell RNA‑seq focusing on immune cell clusters, marker gene annotation, pathway visualization — ideal for non‑bioinformaticians.</p>
-
-                        <h3>9. SnapGene Viewer</h3>
-                        <p><strong>Interface:</strong> Desktop/online GUI</p>
-                        <p><strong>Immune‑gene use:</strong> Visualize and annotate plasmids for immune gene cloning (e.g., IL‑genes, TCR constructs); simulate primer design for gene editing.</p>
-
-                        <h3>10. EBI Search / EMBL‑EBI Tools</h3>
-                        <p><strong>Interface:</strong> Web portal + REST API</p>
-                        <p><strong>Immune‑gene use:</strong> Comprehensive search across AlphaFold structures, domain databases, expression atlas; ideal for retrieving variant info and structural data for immune receptors.</p>
-
-                        <h3>🧬 Why These Are Ideal for Immune Research</h3>
-                        <table>
-                            <tr>
-                                <th>Feature</th>
-                                <th>Examples</th>
-                            </tr>
-                            <tr>
-                                <td>GUI + pipelines</td>
-                                <td>Galaxy, GeneXplain, OLAF support no-code workflows</td>
-                            </tr>
-                            <tr>
-                                <td>Gene/pathway-focused</td>
-                                <td>ShinyGO, Metascape, Reactome map immune-specific gene sets</td>
-                            </tr>
-                            <tr>
-                                <td>Deep annotation</td>
-                                <td>Bioconductor enables statistical modeling, EBI and Reactome support structure and pathway analysis</td>
-                            </tr>
-                            <tr>
-                                <td>Cloning & design</td>
-                                <td>SnapGene aids in construct visualization, primer design for immune genes like cytokines</td>
-                            </tr>
-                        </table>
-
-                        <h3>🔧 Integration Tips</h3>
+                        <p>Multi-list enrichment and protein-protein interaction networks.</p>
+                        
+                        <h3>Integration Tips</h3>
                         <ul>
-                            <li>Start with Galaxy workflows for QC → alignment → differential expression on immune cell datasets</li>
-                            <li>Use Bioconductor in RStudio to analyze immune gene expression patterns and cell-type deconvolution</li>
-                            <li>Analyze gene lists with ShinyGO & Metascape to validate enrichment in immune pathways</li>
-                            <li>Dive deeper with Reactome, linking DE genes to pathway maps</li>
-                            <li>Finalize with SnapGene/EBI for cloning, structural prediction, and variant annotation</li>
+                            <li>Start with Galaxy for workflow management</li>
+                            <li>Use Bioconductor for statistical analysis</li>
+                            <li>Validate with ShinyGO and Metascape</li>
                         </ul>
                     </div>
                 </div>
                 
-                <!-- Article 4 - Plant Immunity 101 -->
+                <!-- Article 4 - Plant Immunity -->
                 <div class="article" id="article4">
-                    <h2 class="article-title">🌱 Plant Immunity 101</h2>
-                    <img src="img/plant-immunity.jpg" alt="Plant Immunity Mechanisms" class="article-image">
+                    <h2 class="article-title">Plant Immunity 101: Mechanisms and Applications</h2>
+                    <div class="image-placeholder">Plant Immunity Image</div>
                     <div class="article-content">
-                        <p>Plants, like animals, have evolved sophisticated immune systems to defend against pathogens. However, plant immunity operates through fundamentally different mechanisms than animal immunity.</p>
+                        <p>Plants have evolved sophisticated immune systems that operate through different mechanisms than animal immunity.</p>
                         
                         <h3>Two-Tiered Immune System</h3>
-                        <p>Plants employ a two-tiered immune system:</p>
                         <ul>
-                            <li><strong>PTI (PAMP-Triggered Immunity):</strong> The first line of defense that recognizes conserved pathogen molecules</li>
-                            <li><strong>ETI (Effector-Triggered Immunity):</strong> A stronger, specific response triggered by recognition of pathogen effectors</li>
+                            <li><strong>PTI (PAMP-Triggered Immunity):</strong> First line of defense</li>
+                            <li><strong>ETI (Effector-Triggered Immunity):</strong> Stronger, specific response</li>
                         </ul>
                         
                         <h3>Key Components</h3>
-                        <p>Plant immune responses involve:</p>
-                        <ul>
-                            <li>Pattern Recognition Receptors (PRRs)</li>
-                            <li>Reactive Oxygen Species (ROS) production</li>
-                            <li>Callose deposition at infection sites</li>
-                            <li>Systemic Acquired Resistance (SAR)</li>
-                            <li>Phytohormone signaling (salicylic acid, jasmonic acid, ethylene)</li>
-                        </ul>
+                        <p>Plant immune responses involve pattern recognition receptors, reactive oxygen species production, and phytohormone signaling.</p>
                         
                         <p>Understanding plant immunity has important implications for sustainable agriculture and crop protection.</p>
                     </div>
                 </div>
                 
-                <!-- Article 5 - Latest Advances in Vaccine Design -->
+                <!-- Article 5 - Vaccine Advances -->
                 <div class="article" id="article5">
-                    <h2 class="article-title">Latest Advances in Vaccine Design</h2>
-                    <img src="img/vaccine-design.jpg" alt="Vaccine Design Advances" class="article-image">
+                    <h2 class="article-title">Latest Advances in Vaccine Design and Technology</h2>
+                    <div class="image-placeholder">Vaccine Design Image</div>
                     <div class="article-content">
-                        <p>The field of vaccinology has undergone revolutionary changes in recent years, with new technologies enabling more precise and effective vaccine development.</p>
+                        <p>The field of vaccinology has undergone revolutionary changes with new technologies enabling more precise vaccine development.</p>
                         
-                        <h3>mRNA Vaccine Platform</h3>
-                        <p>The success of mRNA vaccines during the COVID-19 pandemic has opened new possibilities for vaccine development against various pathogens.</p>
+                        <h3>Key Technologies</h3>
+                        <ul>
+                            <li>mRNA vaccine platform</li>
+                            <li>Structural vaccinology</li>
+                            <li>Nanoparticle vaccines</li>
+                            <li>Computational vaccine design</li>
+                        </ul>
                         
-                        <h3>Structural Vaccinology</h3>
-                        <p>Using structural biology to design immunogens that elicit targeted immune responses against specific epitopes.</p>
-                        
-                        <h3>Universal Vaccines</h3>
-                        <p>Development of vaccines that provide broad protection against multiple strains or variants of pathogens, particularly for rapidly evolving viruses like influenza and coronaviruses.</p>
-                        
-                        <h3>Nanoparticle Vaccines</h3>
-                        <p>Engineered nanoparticles that mimic viral structures to enhance immune recognition and response.</p>
-                        
-                        <h3>Computational Vaccine Design</h3>
-                        <p>Using AI and machine learning to predict antigenic epitopes and optimize vaccine candidates.</p>
+                        <h3>Future Directions</h3>
+                        <p>Universal vaccines providing broad protection against multiple strains of pathogens represent the next frontier in vaccine development.</p>
                     </div>
                 </div>
                 
-                <!-- Article 6 - Innate vs. Adaptive Immunity -->
+                <!-- Article 6 - Innate vs Adaptive -->
                 <div class="article" id="article6">
-                    <h2 class="article-title">Innate vs. Adaptive Immunity</h2>
-                    <img src="img/innate-adaptive.jpg" alt="Innate vs Adaptive Immunity" class="article-image">
+                    <h2 class="article-title">Innate vs Adaptive Immunity: Comparative Analysis</h2>
+                    <div class="image-placeholder">Immune System Comparison Image</div>
                     <div class="article-content">
-                        <p>The immune system is broadly divided into two complementary arms: innate immunity and adaptive immunity.</p>
+                        <p>The immune system is broadly divided into two complementary arms with distinct characteristics and functions.</p>
                         
                         <h3>Innate Immunity</h3>
                         <ul>
-                            <li><strong>Rapid response</strong> (minutes to hours)</li>
-                            <li><strong>Non-specific</strong> recognition of pathogens</li>
-                            <li><strong>No memory</strong> of previous infections</li>
-                            <li>Includes physical barriers, phagocytes, natural killer cells, complement system</li>
+                            <li>Rapid response (minutes to hours)</li>
+                            <li>Non-specific recognition</li>
+                            <li>No immunological memory</li>
                         </ul>
                         
                         <h3>Adaptive Immunity</h3>
                         <ul>
-                            <li><strong>Slower response</strong> (days to develop)</li>
-                            <li><strong>Highly specific</strong> recognition of antigens</li>
-                            <li><strong>Immunological memory</strong> for long-term protection</li>
-                            <li>Includes B cells (antibody production) and T cells (cellular immunity)</li>
+                            <li>Slower response (days to develop)</li>
+                            <li>Highly specific recognition</li>
+                            <li>Long-term immunological memory</li>
                         </ul>
                         
-                        <h3>Integration and Cooperation</h3>
-                        <p>These two systems work together, with innate immunity providing immediate defense while adaptive immunity develops targeted, long-lasting protection.</p>
+                        <p>These systems work together to provide comprehensive protection against pathogens.</p>
                     </div>
                 </div>
                 
-                <!-- Article 7 - Treatment of HIV Using mRNA Vaccines -->
+                <!-- Article 7 - HIV mRNA Vaccines -->
                 <div class="article" id="article7">
-                    <h2 class="article-title">Treatment of HIV Using mRNA Vaccines</h2>
-                    <img src="img/hiv-mrna.jpg" alt="HIV mRNA Vaccine Research" class="article-image">
+                    <h2 class="article-title">mRNA Vaccine Approaches for HIV Treatment</h2>
+                    <div class="image-placeholder">HIV Research Image</div>
                     <div class="article-content">
-                        <p>The success of mRNA vaccine technology has sparked renewed interest in developing an effective HIV vaccine, a goal that has eluded researchers for decades.</p>
+                        <p>The success of mRNA vaccine technology has sparked renewed interest in developing an effective HIV vaccine.</p>
                         
                         <h3>Challenges in HIV Vaccine Development</h3>
                         <ul>
-                            <li>Rapid mutation of the HIV virus</li>
+                            <li>Rapid mutation of HIV virus</li>
                             <li>Integration into host genome</li>
                             <li>Immune evasion mechanisms</li>
-                            <li>Difficulty in generating broadly neutralizing antibodies</li>
                         </ul>
                         
-                        <h3>mRNA Vaccine Advantages for HIV</h3>
+                        <h3>mRNA Vaccine Advantages</h3>
                         <ul>
                             <li>Rapid development and modification</li>
                             <li>Ability to encode multiple antigens</li>
                             <li>Strong T-cell responses</li>
-                            <li>Potential for sequential immunization strategies</li>
                         </ul>
                         
-                        <h3>Current Research Approaches</h3>
-                        <p>Researchers are exploring:</p>
-                        <ul>
-                            <li>mRNA encoding conserved HIV epitopes</li>
-                            <li>Prime-boost strategies combining different vaccine platforms</li>
-                            <li>Sequential immunization to guide antibody maturation</li>
-                            <li>Combination with latency-reversing agents</li>
-                        </ul>
+                        <h3>Research Directions</h3>
+                        <p>Current approaches focus on mRNA encoding conserved HIV epitopes and sequential immunization strategies.</p>
                     </div>
                 </div>
                 
-                <!-- Article 8 - Personalized mRNA Cancer Vaccines -->
+                <!-- Article 8 - Cancer Vaccines -->
                 <div class="article" id="article8">
                     <h2 class="article-title">Personalized mRNA Cancer Vaccines</h2>
-                    <img src="img/cancer-vaccine.jpg" alt="Personalized Cancer Vaccines" class="article-image">
+                    <div class="image-placeholder">Cancer Vaccine Image</div>
                     <div class="article-content">
-                        <p>Personalized mRNA cancer vaccines represent a revolutionary approach to cancer immunotherapy, tailoring treatment to individual patients' tumors.</p>
+                        <p>Personalized mRNA cancer vaccines represent a revolutionary approach to cancer immunotherapy.</p>
                         
                         <h3>How They Work</h3>
                         <ol>
-                            <li><strong>Tumor sequencing</strong> to identify neoantigens (tumor-specific mutations)</li>
-                            <li><strong>Bioinformatics analysis</strong> to predict immunogenic neoantigens</li>
-                            <li><strong>mRNA vaccine design</strong> encoding selected neoantigens</li>
-                            <li><strong>Vaccine administration</strong> to stimulate T-cell responses against the tumor</li>
+                            <li>Tumor sequencing to identify neoantigens</li>
+                            <li>Bioinformatics analysis</li>
+                            <li>mRNA vaccine design</li>
+                            <li>Vaccine administration</li>
                         </ol>
                         
                         <h3>Advantages</h3>
                         <ul>
                             <li>Highly specific to individual tumors</li>
-                            <li>Rapid development (weeks rather than months)</li>
-                            <li>Ability to target multiple neoantigens simultaneously</li>
-                            <li>Favorable safety profile compared to traditional therapies</li>
+                            <li>Rapid development</li>
+                            <li>Favorable safety profile</li>
                         </ul>
                         
                         <h3>Clinical Progress</h3>
-                        <p>Promising results have been reported in clinical trials for melanoma, pancreatic cancer, and other solid tumors, often in combination with checkpoint inhibitors.</p>
+                        <p>Promising results in trials for melanoma, pancreatic cancer, and other solid tumors.</p>
                     </div>
                 </div>
                 
-                <!-- Article 9 - mRNA vaccines for influenza -->
+                <!-- Article 9 - Influenza Vaccines -->
                 <div class="article" id="article9">
-                    <h2 class="article-title">mRNA Vaccines for Influenza</h2>
-                    <img src="img/influenza-mrna.jpg" alt="mRNA Influenza Vaccines" class="article-image">
+                    <h2 class="article-title">mRNA Vaccines for Influenza: Next Generation Protection</h2>
+                    <div class="image-placeholder">Influenza Vaccine Image</div>
                     <div class="article-content">
-                        <p>mRNA technology offers significant advantages for influenza vaccination, potentially addressing long-standing challenges with seasonal flu vaccines.</p>
+                        <p>mRNA technology offers significant advantages for influenza vaccination.</p>
                         
-                        <h3>Current Limitations of Influenza Vaccines</h3>
+                        <h3>Current Limitations</h3>
                         <ul>
-                            <li>Long production timelines (6-8 months)</li>
-                            <li>Egg-based production can select for antigenic changes</li>
-                            <li>Effectiveness varies by season and strain match</li>
+                            <li>Long production timelines</li>
+                            <li>Egg-based production issues</li>
                             <li>Annual reformulation required</li>
                         </ul>
                         
-                        <h3>mRNA Vaccine Benefits</h3>
+                        <h3>mRNA Benefits</h3>
                         <ul>
-                            <li><strong>Rapid development</strong> - weeks instead of months</li>
-                            <li><strong>Cell-free production</strong> - no egg adaptation issues</li>
-                            <li><strong>Multivalent designs</strong> - targeting multiple strains in one vaccine</li>
-                            <li><strong>Potential for universal flu vaccines</strong> targeting conserved regions</li>
+                            <li>Rapid development</li>
+                            <li>Cell-free production</li>
+                            <li>Multivalent designs</li>
                         </ul>
                         
-                        <h3>Research Directions</h3>
-                        <p>Current research focuses on:</p>
-                        <ul>
-                            <li>Hemagglutinin stalk-targeting vaccines</li>
-                            <li>Combination vaccines against multiple respiratory viruses</li>
-                            <li>Self-amplifying mRNA platforms for dose-sparing</li>
-                            <li>Improved thermostability for global distribution</li>
-                        </ul>
+                        <h3>Future Prospects</h3>
+                        <p>Universal flu vaccines targeting conserved regions represent the ultimate goal.</p>
                     </div>
                 </div>
                 
-                <!-- Article 10 - How Our Genes Shape the Immune System -->
+                <!-- Article 10 - Genetics and Immunity -->
                 <div class="article" id="article10">
-                    <h2 class="article-title">How Our Genes Shape the Immune System</h2>
-                    <img src="img/genes-immune.jpg" alt="Genetics and Immune System" class="article-image">
+                    <h2 class="article-title">Genetic Influences on Immune System Function</h2>
+                    <div class="image-placeholder">Genetics and Immunity Image</div>
                     <div class="article-content">
-                        <p>Our genetic makeup plays a crucial role in determining the composition and function of our immune system, influencing susceptibility to infections, autoimmune diseases, and response to vaccines.</p>
+                        <p>Genetic makeup plays a crucial role in determining immune system composition and function.</p>
                         
-                        <h3>Major Histocompatibility Complex (MHC)</h3>
-                        <p>The MHC region contains the most polymorphic genes in the human genome, encoding HLA molecules that present antigens to T cells. MHC diversity affects:</p>
-                        <ul>
-                            <li>Susceptibility to autoimmune diseases</li>
-                            <li>Response to infections</li>
-                            <li>Transplant compatibility</li>
-                            <li>Vaccine efficacy</li>
-                        </ul>
+                        <h3>Major Histocompatibility Complex</h3>
+                        <p>The most polymorphic genes in human genome, affecting susceptibility to diseases and vaccine responses.</p>
                         
                         <h3>Immune Gene Polymorphisms</h3>
-                        <p>Variations in genes encoding cytokines, chemokines, and their receptors can significantly impact immune responses and disease outcomes.</p>
+                        <p>Variations in cytokine and receptor genes impact immune responses and disease outcomes.</p>
                         
                         <h3>Epigenetic Regulation</h3>
-                        <p>Environmental factors can modify gene expression through epigenetic mechanisms, creating lasting changes in immune function.</p>
-                        
-                        <h3>Twin Studies and Heritability</h3>
-                        <p>Research comparing identical and fraternal twins has revealed the substantial heritability of immune cell composition and function.</p>
+                        <p>Environmental factors can create lasting changes in immune function through epigenetic mechanisms.</p>
                     </div>
                 </div>
                 
-                <!-- Article 11 - Practical and Experimental Guide -->
+                <!-- Article 11 - Experimental Guide -->
                 <div class="article" id="article11">
-                    <h2 class="article-title">Practical and Experimental Guide to Immunology Research</h2>
-                    <img src="img/experimental-guide.jpg" alt="Immunology Experimental Guide" class="article-image">
+                    <h2 class="article-title">Practical Guide to Immunology Research Methods</h2>
+                    <div class="image-placeholder">Research Methods Image</div>
                     <div class="article-content">
-                        <p>This guide provides an overview of essential techniques and approaches in modern immunology research.</p>
+                        <p>Overview of essential techniques and approaches in modern immunology research.</p>
                         
                         <h3>Core Techniques</h3>
                         <ul>
-                            <li><strong>Flow cytometry</strong> - for immune cell phenotyping and functional analysis</li>
-                            <li><strong>ELISA and ELISPOT</strong> - for cytokine and antibody detection</li>
-                            <li><strong>Cell culture</strong> - primary immune cells and cell lines</li>
-                            <li><strong>Molecular biology</strong> - PCR, cloning, gene expression analysis</li>
+                            <li>Flow cytometry</li>
+                            <li>ELISA and ELISPOT</li>
+                            <li>Cell culture</li>
+                            <li>Molecular biology methods</li>
                         </ul>
                         
                         <h3>Advanced Methods</h3>
                         <ul>
-                            <li><strong>Single-cell RNA sequencing</strong> - for comprehensive immune profiling</li>
-                            <li><strong>Multiplex immunofluorescence</strong> - spatial analysis of immune cells in tissues</li>
-                            <li><strong>CRISPR screening</strong> - functional genomics in immune cells</li>
-                            <li><strong>Mass cytometry (CyTOF)</strong> - high-dimensional immune phenotyping</li>
+                            <li>Single-cell RNA sequencing</li>
+                            <li>Multiplex immunofluorescence</li>
+                            <li>CRISPR screening</li>
+                            <li>Mass cytometry</li>
                         </ul>
-                        
-                        <h3>Animal Models</h3>
-                        <p>Commonly used models include mice, zebrafish, and humanized mouse models for studying human immune responses.</p>
-                        
-                        <h3>Data Analysis</h3>
-                        <p>Bioinformatics tools for immune repertoire analysis, differential gene expression, and pathway enrichment.</p>
                     </div>
                 </div>
                 
-                <!-- Article 12 - Activating Plant Immune Systems -->
+                <!-- Article 12 - Plant Defense -->
                 <div class="article" id="article12">
-                    <h2 class="article-title">Activating Plant Immune Systems for Crop Protection</h2>
-                    <img src="img/plant-defense.jpg" alt="Plant Immune System Activation" class="article-image">
+                    <h2 class="article-title">Activating Plant Immune Systems for Sustainable Agriculture</h2>
+                    <div class="image-placeholder">Plant Defense Image</div>
                     <div class="article-content">
-                        <p>Harnessing plant immune systems offers sustainable approaches to crop protection, reducing reliance on chemical pesticides.</p>
+                        <p>Harnessing plant immune systems offers sustainable approaches to crop protection.</p>
                         
                         <h3>Induced Resistance</h3>
-                        <p>Plants can be "primed" for enhanced defense through:</p>
                         <ul>
-                            <li><strong>Chemical inducers</strong> - salicylic acid analogs, benzothiadiazole</li>
-                            <li><strong>Biological agents</strong> - beneficial microbes, plant growth-promoting rhizobacteria</li>
-                            <li><strong>Physical stress</strong> - mild drought, temperature fluctuations</li>
+                            <li>Chemical inducers</li>
+                            <li>Biological agents</li>
+                            <li>Physical stress priming</li>
                         </ul>
                         
                         <h3>Genetic Approaches</h3>
                         <ul>
-                            <li><strong>R gene pyramiding</strong> - stacking multiple resistance genes</li>
-                            <li><strong>Susceptibility gene knockout</strong> using CRISPR/Cas9</li>
-                            <li><strong>Promoter engineering</strong> for enhanced defense gene expression</li>
+                            <li>R gene pyramiding</li>
+                            <li>Susceptibility gene knockout</li>
+                            <li>Promoter engineering</li>
                         </ul>
                         
-                        <h3>Integrated Pest Management</h3>
-                        <p>Combining immune priming with cultural practices and biological control for sustainable agriculture.</p>
+                        <h3>Sustainable Agriculture</h3>
+                        <p>Combining immune priming with cultural practices for integrated pest management.</p>
                     </div>
                 </div>
                 
-                <!-- Article 13 - Tools and Technologies in Immunology -->
+                <!-- Article 13 - Immunology Tools -->
                 <div class="article" id="article13">
-                    <h2 class="article-title">Cutting-Edge Tools and Technologies in Immunology</h2>
-                    <img src="img/immunology-tools.jpg" alt="Immunology Research Tools" class="article-image">
+                    <h2 class="article-title">Advanced Tools and Technologies in Immunology Research</h2>
+                    <div class="image-placeholder">Research Tools Image</div>
                     <div class="article-content">
-                        <p>Recent technological advances are transforming our ability to study the immune system with unprecedented resolution and scale.</p>
+                        <p>Recent technological advances are transforming immune system research.</p>
                         
                         <h3>Single-Cell Technologies</h3>
                         <ul>
-                            <li><strong>Single-cell RNA sequencing</strong> - transcriptome profiling of individual cells</li>
-                            <li><strong>CITE-seq</strong> - combined protein and RNA measurement</li>
-                            <li><strong>ATAC-seq</strong> - chromatin accessibility mapping</li>
-                            <li><strong>Spatial transcriptomics</strong> - tissue context for immune cells</li>
+                            <li>Single-cell RNA sequencing</li>
+                            <li>CITE-seq</li>
+                            <li>ATAC-seq</li>
+                            <li>Spatial transcriptomics</li>
                         </ul>
                         
-                        <h3>High-Parameter Flow Cytometry</h3>
-                        <p>Modern flow cytometers can measure 30+ parameters simultaneously, enabling detailed immune phenotyping.</p>
-                        
-                        <h3>Advanced Imaging</h3>
-                        <ul>
-                            <li><strong>Intravital microscopy</strong> - real-time observation of immune responses in living animals</li>
-                            <li><strong>Light-sheet microscopy</strong> - rapid 3D imaging of large samples</li>
-                            <li><strong>Expansion microscopy</strong> - physical magnification of biological specimens</li>
-                        </ul>
+                        <h3>High-Parameter Analysis</h3>
+                        <p>Modern flow cytometers can measure 30+ parameters simultaneously.</p>
                         
                         <h3>Computational Tools</h3>
-                        <p>AI and machine learning for immune repertoire analysis, cell type identification, and predictive modeling.</p>
+                        <p>AI and machine learning for immune repertoire analysis and predictive modeling.</p>
                     </div>
                 </div>
                 
-                <!-- Article 14 - Education and Skill Development -->
+                <!-- Article 14 - Education -->
                 <div class="article" id="article14">
-                    <h2 class="article-title">Education and Skill Development in Immunology</h2>
-                    <img src="img/immunology-education.jpg" alt="Immunology Education" class="article-image">
+                    <h2 class="article-title">Immunology Education and Career Development</h2>
+                    <div class="image-placeholder">Education Image</div>
                     <div class="article-content">
-                        <p>Building a successful career in immunology requires a diverse skill set spanning laboratory techniques, computational analysis, and scientific communication.</p>
+                        <p>Building a successful career in immunology requires diverse skills spanning laboratory techniques to scientific communication.</p>
                         
                         <h3>Core Knowledge Areas</h3>
                         <ul>
                             <li>Basic immunology principles</li>
                             <li>Molecular and cellular biology</li>
                             <li>Genetics and genomics</li>
-                            <li>Statistics and data analysis</li>
                             <li>Bioinformatics</li>
                         </ul>
                         
-                        <h3>Essential Technical Skills</h3>
-                        <ul>
-                            <li>Cell culture and aseptic technique</li>
-                            <li>Flow cytometry</li>
-                            <li>Molecular cloning</li>
-                            <li>Protein analysis (Western blot, ELISA)</li>
-                            <li>Microscopy</li>
-                        </ul>
-                        
                         <h3>Career Pathways</h3>
-                        <p>Opportunities in academia, pharmaceutical industry, biotechnology, clinical diagnostics, and public health.</p>
-                        
-                        <h3>Continuing Education</h3>
-                        <p>Importance of staying current with rapidly evolving technologies and research findings through conferences, workshops, and literature review.</p>
+                        <p>Opportunities in academia, pharmaceutical industry, biotechnology, and public health.</p>
                     </div>
                 </div>
                 
-                <!-- Article 15 - Major Advances in Immunology -->
+                <!-- Article 15 - Advances -->
                 <div class="article" id="article15">
-                    <h2 class="article-title">Major Advances in Immunology: Past Decade Review</h2>
-                    <img src="img/immunology-advances.jpg" alt="Immunology Advances" class="article-image">
+                    <h2 class="article-title">Major Advances in Immunology: Decade in Review</h2>
+                    <div class="image-placeholder">Immunology Advances Image</div>
                     <div class="article-content">
-                        <p>The past decade has witnessed remarkable progress in immunology, with transformative discoveries and technological innovations.</p>
+                        <p>The past decade has witnessed remarkable progress in immunology.</p>
                         
                         <h3>Key Breakthroughs</h3>
                         <ul>
-                            <li><strong>Cancer immunotherapy</strong> - checkpoint inhibitors, CAR-T cells</li>
-                            <li><strong>Single-cell technologies</strong> - revolutionizing immune cell analysis</li>
-                            <li><strong>Microbiome-immune interactions</strong> - gut-immune axis discoveries</li>
-                            <li><strong>Innate immune memory</strong> - trained immunity concept</li>
-                            <li><strong>mRNA vaccine platform</strong> - rapid response to pandemics</li>
-                        </ul>
-                        
-                        <h3>Technological Innovations</h3>
-                        <ul>
-                            <li>CRISPR-based immune cell engineering</li>
-                            <li>High-dimensional flow and mass cytometry</li>
-                            <li>Spatial transcriptomics and proteomics</li>
-                            <li>AI-driven drug discovery and diagnostics</li>
+                            <li>Cancer immunotherapy</li>
+                            <li>Single-cell technologies</li>
+                            <li>Microbiome-immune interactions</li>
+                            <li>mRNA vaccine platform</li>
                         </ul>
                         
                         <h3>Therapeutic Applications</h3>
@@ -904,31 +684,26 @@
                     </div>
                 </div>
                 
-                <!-- Article 16 - CRISPR Meets Immunology -->
+                <!-- Article 16 - CRISPR -->
                 <div class="article" id="article16">
-                    <h2 class="article-title">CRISPR Meets Immunology: Gene Editing in Immune Cells</h2>
-                    <img src="img/crispr-immunology.jpg" alt="CRISPR in Immunology" class="article-image">
+                    <h2 class="article-title">CRISPR Technology in Immunology Research and Therapy</h2>
+                    <div class="image-placeholder">CRISPR Image</div>
                     <div class="article-content">
-                        <p>CRISPR gene editing technology has revolutionized immunology research and therapeutic development.</p>
+                        <p>CRISPR gene editing has revolutionized immunology research and therapeutic development.</p>
                         
                         <h3>Research Applications</h3>
                         <ul>
-                            <li><strong>Functional genomics</strong> - genome-wide screens in immune cells</li>
-                            <li><strong>Gene knockout</strong> - studying specific gene functions</li>
-                            <li><strong>Precise gene editing</strong> - introducing specific mutations</li>
-                            <li><strong>Gene regulation</strong> - CRISPRa/i for controlled gene expression</li>
+                            <li>Functional genomics screens</li>
+                            <li>Gene knockout studies</li>
+                            <li>Precise gene editing</li>
                         </ul>
                         
                         <h3>Therapeutic Applications</h3>
                         <ul>
-                            <li><strong>CAR-T cell engineering</strong> - enhanced cancer immunotherapy</li>
-                            <li><strong>HIV resistance</strong> - CCR5 knockout in hematopoietic stem cells</li>
-                            <li><strong>Autoimmune disease treatment</strong> - targeting pathogenic immune cells</li>
-                            <li><strong>Primary immunodeficiency correction</strong> - gene therapy approaches</li>
+                            <li>CAR-T cell engineering</li>
+                            <li>HIV resistance strategies</li>
+                            <li>Autoimmune disease treatment</li>
                         </ul>
-                        
-                        <h3>Technical Challenges</h3>
-                        <p>Efficient delivery to primary immune cells, off-target effects, and immune responses to CRISPR components.</p>
                         
                         <h3>Future Directions</h3>
                         <p>Base editing, prime editing, and in vivo delivery systems for precise immune cell engineering.</p>
@@ -956,27 +731,27 @@
             <div class="titles-column">
                 <div class="search-box">
                     <input type="text" placeholder="Search articles..." id="searchInput">
-                    <button onclick="searchArticles()">🔍</button>
+                    <button onclick="searchArticles()">Search</button>
                 </div>
                 
                 <h3>Today's Articles</h3>
                 <ul class="title-list">
                     <li class="title-item active" data-article="article1">Immunoendocrine Mechanisms in Risky Behavior</li>
-                    <li class="title-item" data-article="article2">Thalassemia Impact on Hair Loss & Beard Growth</li>
+                    <li class="title-item" data-article="article2">Thalassemia Impact on Hair Growth</li>
                     <li class="title-item" data-article="article3">Top 10 Bioinformatics Tools</li>
-                    <li class="title-item" data-article="article4">🌱 Plant Immunity 101</li>
+                    <li class="title-item" data-article="article4">Plant Immunity 101</li>
                     <li class="title-item" data-article="article5">Latest Advances in Vaccine Design</li>
-                    <li class="title-item" data-article="article6">Innate vs. Adaptive Immunity</li>
-                    <li class="title-item" data-article="article7">Treatment of HIV Using mRNA Vaccines</li>
-                    <li class="title-item" data-article="article8">Personalized mRNA Cancer Vaccines</li>
-                    <li class="title-item" data-article="article9">mRNA vaccines for influenza</li>
-                    <li class="title-item" data-article="article10">How Our Genes Shape the Immune System</li>
-                    <li class="title-item" data-article="article11">Practical and Experimental Guide</li>
-                    <li class="title-item" data-article="article12">Activating Plant Immune Systems</li>
-                    <li class="title-item" data-article="article13">Tools and Technologies</li>
-                    <li class="title-item" data-article="article14">Education and Skill Development</li>
+                    <li class="title-item" data-article="article6">Innate vs Adaptive Immunity</li>
+                    <li class="title-item" data-article="article7">HIV mRNA Vaccine Approaches</li>
+                    <li class="title-item" data-article="article8">Personalized Cancer Vaccines</li>
+                    <li class="title-item" data-article="article9">mRNA Vaccines for Influenza</li>
+                    <li class="title-item" data-article="article10">Genetics and Immune System</li>
+                    <li class="title-item" data-article="article11">Immunology Research Methods</li>
+                    <li class="title-item" data-article="article12">Plant Immune Systems</li>
+                    <li class="title-item" data-article="article13">Advanced Research Tools</li>
+                    <li class="title-item" data-article="article14">Immunology Education</li>
                     <li class="title-item" data-article="article15">Major Advances in Immunology</li>
-                    <li class="title-item" data-article="article16">CRISPR Meets Immunology</li>
+                    <li class="title-item" data-article="article16">CRISPR in Immunology</li>
                 </ul>
                 
                 <div class="ad-banner">

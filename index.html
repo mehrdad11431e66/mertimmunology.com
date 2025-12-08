@@ -115,8 +115,8 @@
             }
         }
 
-        /* CV Download Section Styles */
-        .cv-download-section {
+        /* CV .pdf Download Section Styles */
+        .CV .pdf-download-section {
             border-left: 4px solid #3498db;
             transition: all 0.3s ease;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
@@ -126,12 +126,12 @@
             margin: 2rem 0;
         }
 
-        .cv-download-section:hover {
+        .CV .pdf-download-section:hover {
             transform: translateY(-5px);
             box-shadow: 0 15px 30px rgba(0,0,0,0.1);
         }
 
-        .cv-download-section .btn {
+        .CV .pdf-download-section .btn {
             transition: all 0.3s ease;
             border-radius: 8px;
             font-weight: 600;
@@ -139,18 +139,18 @@
             font-size: 1rem;
         }
 
-        .cv-download-section .btn-primary {
+        .CV .pdf-download-section .btn-primary {
             background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
             border: none;
         }
 
-        .cv-download-section .btn-primary:hover {
+        .CV .pdf-download-section .btn-primary:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 20px rgba(52, 152, 219, 0.4);
             background: linear-gradient(135deg, #2980b9 0%, #21618c 100%);
         }
 
-        .cv-download-section .btn-outline-primary:hover {
+        .CV .pdf-download-section .btn-outline-primary:hover {
             background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
             color: white;
             border-color: #3498db;
@@ -158,18 +158,18 @@
             box-shadow: 0 8px 20px rgba(52, 152, 219, 0.3);
         }
 
-        .cv-icon {
+        .CV .pdf-icon {
             font-size: 1.5rem;
             margin-bottom: 0.75rem;
             color: #3498db;
         }
         
-        .cv-download-section h4 {
+        .CV .pdf-download-section h4 {
             font-size: 1.25rem;
             margin-bottom: 0.75rem;
         }
         
-        .cv-download-section p {
+        .CV .pdf-download-section p {
             font-size: 0.95rem;
             line-height: 1.6;
         }
@@ -256,7 +256,7 @@
                 gap: 20px;
             }
             
-            .cv-download-section .btn {
+            .CV .pdf-download-section .btn {
                 width: 100%;
                 margin-bottom: 10px;
             }
@@ -319,7 +319,7 @@
             margin-bottom: 1rem;
         }
 
-        /* Animation for CV Section */
+        /* Animation for CV .pdf Section */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -443,9 +443,9 @@
                     </div>
                     <p>I am PhD. Mehrdad Etemad, a dedicated Immunology researcher with a PhD in Immunology. My research focuses on advancing the understanding of immune system functions and developing innovative solutions for immunological disorders. I combine cutting-edge technology with interdisciplinary approaches to tackle the most pressing challenges in immunology and biomedical science.</p>
                     
-                    <!-- CV Download Section -->
-                    <div class="cv-download-section">
-                        <div class="cv-icon">
+                    <!-- CV .pdf Download Section -->
+                    <div class="CV .pdf-download-section">
+                        <div class="CV .pdf-icon">
                             <i class="fas fa-file-pdf"></i>
                         </div>
                         <h4 class="text-primary mb-3">Download My Curriculum Vitae</h4>
@@ -479,7 +479,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- End CV Download Section -->
+                    <!-- End CV .pdf Download Section -->
                     
                     <div class="row g-3 pt-3">
                         <div class="col-sm-3 col-6">
@@ -770,7 +770,7 @@
                     <p class="mb-4">Connect with me for research collaborations, speaking engagements, or scientific discussions.</p>
                     <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>Research Center, Istanbul, Turkey</p>
                     <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>info@mertimmunology.com</p>
-                    <p class="mb-2"><i class="fas fa-file-pdf text-primary me-3"></i><a href="docs/cv.pdf" class="text-light" download>Download My CV</a></p>
+                    <p class="mb-2"><i class="fas fa-file-pdf text-primary me-3"></i><a href="docs/cv.pdf" class="text-light" download>Download My CV .pdf</a></p>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">Quick Links</h4>
@@ -913,16 +913,16 @@
             $(this).trigger('reset');
         });
 
-        // Track CV downloads
+        // Track CV .pdf downloads
         $('a[href*="cv.pdf"]').on('click', function(e) {
             const action = $(this).attr('download') ? 'download' : 'view';
             gtag('event', 'cv_action', {
                 'event_category': 'engagement',
-                'event_label': 'CV ' + action
+                'event_label': 'CV .pdf ' + action
             });
         });
 
-        // Check if CV file exists
+        // Check if CV .pdf file exists
         function checkCVFile() {
             $.ajax({
                 url: 'docs/cv.pdf',

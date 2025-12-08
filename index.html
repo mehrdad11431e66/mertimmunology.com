@@ -37,9 +37,6 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
     
-    <!-- PDF.js for displaying PDF articles -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
-
     <!-- Schema Markup for SEO -->
     <script type="application/ld+json">
     {
@@ -58,6 +55,66 @@
     </script>
 
     <style>
+        /* تنظیم سایز فونت‌های بزرگ */
+        h1.display-1 {
+            font-size: 3.5rem !important;
+            line-height: 1.2;
+        }
+        
+        h1.display-4 {
+            font-size: 2.5rem !important;
+            line-height: 1.3;
+        }
+        
+        .display-1 {
+            font-size: 3.5rem;
+        }
+        
+        .display-4 {
+            font-size: 2.5rem;
+        }
+        
+        /* تنظیمات ریسپانسیو برای موبایل */
+        @media (max-width: 768px) {
+            h1.display-1 {
+                font-size: 2.5rem !important;
+            }
+            
+            h1.display-4 {
+                font-size: 2rem !important;
+            }
+            
+            .display-1 {
+                font-size: 2.5rem;
+            }
+            
+            .display-4 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem !important;
+            }
+            
+            h3 {
+                font-size: 1.25rem !important;
+            }
+            
+            h4 {
+                font-size: 1.1rem !important;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            h1.display-1 {
+                font-size: 2rem !important;
+            }
+            
+            h1.display-4 {
+                font-size: 1.75rem !important;
+            }
+        }
+
         /* CV Download Section Styles */
         .cv-download-section {
             border-left: 4px solid #3498db;
@@ -66,6 +123,7 @@
             background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
             border-radius: 10px;
             padding: 1.5rem !important;
+            margin: 2rem 0;
         }
 
         .cv-download-section:hover {
@@ -78,6 +136,7 @@
             border-radius: 8px;
             font-weight: 600;
             padding: 0.75rem 1.5rem;
+            font-size: 1rem;
         }
 
         .cv-download-section .btn-primary {
@@ -100,9 +159,19 @@
         }
 
         .cv-icon {
-            font-size: 2rem;
-            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
             color: #3498db;
+        }
+        
+        .cv-download-section h4 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .cv-download-section p {
+            font-size: 0.95rem;
+            line-height: 1.6;
         }
 
         /* Research Grid Styles */
@@ -110,7 +179,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
             gap: 30px;
-            margin: 3rem 0;
+            margin: 2rem 0;
         }
         
         .research-card {
@@ -128,7 +197,7 @@
         }
         
         .research-img-container {
-            height: 220px;
+            height: 200px;
             overflow: hidden;
         }
         
@@ -144,21 +213,22 @@
         }
         
         .research-content {
-            padding: 1.5rem;
+            padding: 1.25rem;
         }
         
         .research-title {
             color: #2c3e50;
-            margin: 0 0 1rem 0;
-            font-size: 1.3rem;
+            margin: 0 0 0.75rem 0;
+            font-size: 1.1rem;
             font-weight: 600;
+            line-height: 1.4;
         }
         
         .research-desc {
             color: #1a252f;
-            margin-bottom: 1.5rem;
-            font-size: 0.95rem;
-            line-height: 1.7;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            line-height: 1.6;
         }
         
         .research-meta {
@@ -166,12 +236,12 @@
             justify-content: space-between;
             align-items: center;
             color: #95a5a6;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
         }
         
         .research-category {
             display: inline-block;
-            padding: 0.25rem 0.75rem;
+            padding: 0.2rem 0.6rem;
             background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
             color: white;
             border-radius: 50px;
@@ -183,12 +253,70 @@
         @media (max-width: 768px) {
             .research-grid {
                 grid-template-columns: 1fr;
+                gap: 20px;
             }
             
             .cv-download-section .btn {
                 width: 100%;
                 margin-bottom: 10px;
             }
+            
+            .research-img-container {
+                height: 180px;
+            }
+        }
+        
+        /* Hero section adjustments */
+        .hero-header {
+            padding: 4rem 0 !important;
+        }
+        
+        .hero-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Service items adjustments */
+        .service-item h4 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .service-item p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        
+        /* Blog section adjustments */
+        .blog-post h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .blog-post p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* General text adjustments */
+        p.lead {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        
+        p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        
+        /* Footer text adjustments */
+        .footer-links a {
+            font-size: 0.9rem;
+        }
+        
+        .footer-links h4 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
         }
 
         /* Animation for CV Section */
@@ -205,6 +333,16 @@
 
         .cv-download-section {
             animation: fadeInUp 0.6s ease-out;
+        }
+        
+        /* Button size adjustments */
+        .btn-lg {
+            padding: 0.5rem 1.5rem;
+            font-size: 1rem;
+        }
+        
+        .btn {
+            font-size: 0.9rem;
         }
     </style>
 </head>
@@ -251,16 +389,16 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0">
                 <a href="index.html" class="navbar-brand">
-                    <h1 class="m-0 text-uppercase text-primary"><i class="fa fa-microscope me-2"></i>Mehrdad Etemad, PhD</h1>
+                    <h1 class="m-0 text-uppercase text-primary" style="font-size: 1.5rem;"><i class="fa fa-microscope me-2"></i>Mehrdad Etemad, PhD</h1>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto py": "0">
+                    <div class="navbar-nav ms-auto py-0">
                         <a href="index.html" class="nav-item nav-link active">Home</a>
                         <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="Research.html" class="nav-item nav-link">Research</a>
+                        <a href="research.html" class="nav-item nav-link">Research</a>
                         <a href="articles.html" class="nav-item nav-link">Articles</a>
                         <a href="gallery.html" class="nav-item nav-link">Gallery</a>
                         <a href="blog.html" class="nav-item nav-link">Blog</a>
@@ -280,8 +418,8 @@
                     <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5" style="border-color: rgba(256, 256, 256, .3) !important;">Welcome to PhD. Mehrdad Etemad's Lab</h5>
                     <h1 class="display-1 text-white mb-md-4">Mehrdad Etemad, PhD in Immunology Research</h1>
                     <div class="pt-2">
-                        <a href="Research.html" class="btn btn-light rounded-pill py-md-3 px-md-5 mx-2">Latest Research</a>
-                        <a href="contact.html" class="btn btn-outline-light rounded-pill py-md-3 px-md-5 mx-2">Contact Me</a>
+                        <a href="research.html" class="btn btn-light rounded-pill py-md-2 px-md-4 mx-2">Latest Research</a>
+                        <a href="contact.html" class="btn btn-outline-light rounded-pill py-md-2 px-md-4 mx-2">Contact Me</a>
                     </div>
                 </div>
             </div>
@@ -306,7 +444,7 @@
                     <p>I am PhD. Mehrdad Etemad, a dedicated Immunology researcher with a PhD in Immunology. My research focuses on advancing the understanding of immune system functions and developing innovative solutions for immunological disorders. I combine cutting-edge technology with interdisciplinary approaches to tackle the most pressing challenges in immunology and biomedical science.</p>
                     
                     <!-- CV Download Section -->
-                    <div class="cv-download-section mt-4 mb-4">
+                    <div class="cv-download-section">
                         <div class="cv-icon">
                             <i class="fas fa-file-pdf"></i>
                         </div>
@@ -314,12 +452,12 @@
                         <p class="mb-4">For a comprehensive overview of my academic qualifications, research experience, publications, and professional achievements, download my complete CV below.</p>
                         <div class="row g-3">
                             <div class="col-md-6">
-                                <a href="articles/CV.pdf" class="btn btn-primary w-100" download="Mehrdad_Etemad_CV.pdf">
+                                <a href="docs/cv.pdf" class="btn btn-primary w-100" download="Mehrdad_Etemad_CV.pdf">
                                     <i class="fas fa-download me-2"></i>Download PDF
                                 </a>
                             </div>
                             <div class="col-md-6">
-                                <a href="articles/CV.pdf" class="btn btn-outline-primary w-100" target="_blank" rel="noopener noreferrer">
+                                <a href="docs/cv.pdf" class="btn btn-outline-primary w-100" target="_blank" rel="noopener noreferrer">
                                     <i class="fas fa-external-link-alt me-2"></i>View Online
                                 </a>
                             </div>
@@ -390,7 +528,7 @@
                         </div>
                         <h4 class="mb-3">Immunogenetics</h4>
                         <p class="m-0">Exploring the genetic basis of immune responses and autoimmune disorders through advanced genomic technologies.</p>
-                        <a class="btn btn-lg btn-primary rounded-pill mt-3" href="Research.html">
+                        <a class="btn btn-lg btn-primary rounded-pill mt-3" href="research.html">
                             <i class="bi bi-arrow-right"></i>
                         </a>
                     </div>
@@ -402,7 +540,7 @@
                         </div>
                         <h4 class="mb-3">Vaccine Development</h4>
                         <p class="m-0">Researching novel vaccine technologies and delivery systems for emerging infectious diseases.</p>
-                        <a class="btn btn-lg btn-primary rounded-pill mt-3" href="Research.html">
+                        <a class="btn btn-lg btn-primary rounded-pill mt-3" href="research.html">
                             <i class="bi bi-arrow-right"></i>
                         </a>
                     </div>
@@ -414,7 +552,7 @@
                         </div>
                         <h4 class="mb-3">Biomedical Research</h4>
                         <p class="m-0">Investigating molecular mechanisms of disease and immunity at cellular and molecular levels.</p>
-                        <a class="btn btn-lg btn-primary rounded-pill mt-3" href="Research.html">
+                        <a class="btn btn-lg btn-primary rounded-pill mt-3" href="research.html">
                             <i class="bi bi-arrow-right"></i>
                         </a>
                     </div>
@@ -483,7 +621,7 @@
             
             <!-- View More Button -->
             <div class="text-center mt-5">
-                <a href="Research.html" class="btn btn-primary py-3 px-5">View All Research Projects</a>
+                <a href="research.html" class="btn btn-primary py-3 px-5">View All Research Projects</a>
             </div>
         </div>
     </div>
@@ -562,7 +700,7 @@
             </div>
             <div class="row g-5">
                 <div class="col-xl-4 col-lg-6">
-                    <div class="bg-light rounded overflow-hidden">
+                    <div class="bg-light rounded overflow-hidden blog-post">
                         <img class="img-fluid w-100" src="img/blog-1.jpg" alt="Immunotherapy Research">
                         <div class="p-4">
                             <a class="h3 d-block mb-3" href="">Advances in Immunotherapy Research</a>
@@ -581,7 +719,7 @@
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-6">
-                    <div class="bg-light rounded overflow-hidden">
+                    <div class="bg-light rounded overflow-hidden blog-post">
                         <img class="img-fluid w-100" src="img/blog-2.jpg" alt="Genomic Immunology">
                         <div class="p-4">
                             <a class="h3 d-block mb-3" href="">Genomic Approaches to Immunology</a>
@@ -600,7 +738,7 @@
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-6">
-                    <div class="bg-light rounded overflow-hidden">
+                    <div class="bg-light rounded overflow-hidden blog-post">
                         <img class="img-fluid w-100" src="img/blog-3.jpg" alt="Infectious Diseases">
                         <div class="p-4">
                             <a class="h3 d-block mb-3" href="">Emerging Infectious Diseases</a>
@@ -632,14 +770,14 @@
                     <p class="mb-4">Connect with me for research collaborations, speaking engagements, or scientific discussions.</p>
                     <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>Research Center, Istanbul, Turkey</p>
                     <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>info@mertimmunology.com</p>
-                    <p class="mb-2"><i class="fas fa-file-pdf text-primary me-3"></i><a href="articles/CV.pdf" class="text-light" download>Download My CV</a></p>
+                    <p class="mb-2"><i class="fas fa-file-pdf text-primary me-3"></i><a href="docs/cv.pdf" class="text-light" download>Download My CV</a></p>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">Quick Links</h4>
-                    <div class="d-flex flex-column justify-content-start">
+                    <div class="d-flex flex-column justify-content-start footer-links">
                         <a class="text-light mb-2" href="index.html"><i class="fa fa-angle-right me-2"></i>Home</a>
                         <a class="text-light mb-2" href="about.html"><i class="fa fa-angle-right me-2"></i>About</a>
-                        <a class="text-light mb-2" href="Research.html"><i class="fa fa-angle-right me-2"></i>Research</a>
+                        <a class="text-light mb-2" href="research.html"><i class="fa fa-angle-right me-2"></i>Research</a>
                         <a class="text-light mb-2" href="articles.html"><i class="fa fa-angle-right me-2"></i>Articles</a>
                         <a class="text-light mb-2" href="gallery.html"><i class="fa fa-angle-right me-2"></i>Gallery</a>
                         <a class="text-light" href="contact.html"><i class="fa fa-angle-right me-2"></i>Contact</a>
@@ -647,7 +785,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">Research Areas</h4>
-                    <div class="d-flex flex-column justify-content-start">
+                    <div class="d-flex flex-column justify-content-start footer-links">
                         <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Immunology</a>
                         <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Medical Genetics</a>
                         <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Vaccine Development</a>
@@ -776,13 +914,32 @@
         });
 
         // Track CV downloads
-        $('a[href*="CV.pdf"]').on('click', function() {
+        $('a[href*="cv.pdf"]').on('click', function(e) {
             const action = $(this).attr('download') ? 'download' : 'view';
             gtag('event', 'cv_action', {
                 'event_category': 'engagement',
                 'event_label': 'CV ' + action
             });
         });
+
+        // Check if CV file exists
+        function checkCVFile() {
+            $.ajax({
+                url: 'docs/cv.pdf',
+                type: 'HEAD',
+                success: function() {
+                    console.log('CV file exists');
+                },
+                error: function() {
+                    console.log('CV file not found');
+                    // Show alert to user
+                    alert('CV file not found. Please upload your CV file to the docs folder as cv.pdf');
+                }
+            });
+        }
+        
+        // Check CV file on page load
+        checkCVFile();
 
         // Track social media clicks
         $('a[target="_blank"]').on('click', function() {
@@ -793,73 +950,11 @@
             });
         });
 
-        // Initialize PDF.js
-        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.min.js';
-        
-        // Function to render PDF
-        function renderPDF(pdfPath, canvasContainer) {
-            pdfjsLib.getDocument(pdfPath).promise.then(function(pdf) {
-                pdf.getPage(1).then(function(page) {
-                    var scale = 1.5;
-                    var viewport = page.getViewport({ scale: scale });
-
-                    var canvas = document.createElement('canvas');
-                    var context = canvas.getContext('2d');
-                    canvas.height = viewport.height;
-                    canvas.width = viewport.width;
-
-                    var container = document.getElementById(canvasContainer);
-                    if (container) {
-                        container.innerHTML = '';
-                        container.appendChild(canvas);
-
-                        page.render({
-                            canvasContext: context,
-                            viewport: viewport
-                        });
-                    }
-                });
-            }).catch(function(error) {
-                console.error('Error loading PDF:', error);
-                const container = document.getElementById(canvasContainer);
-                if (container) {
-                    container.innerHTML = '<div class="alert alert-danger">Error loading PDF preview. Please download the full article.</div>';
-                }
-            });
-        }
-
-        // Render PDFs when page loads
         $(window).on('load', function() {
             // Track page view
             gtag('event', 'page_view', {
                 'page_title': document.title,
                 'page_location': window.location.href
-            });
-
-            // Initialize carousels
-            $('.team-carousel').owlCarousel({
-                items: 1,
-                loop: true,
-                margin: 20,
-                nav: true,
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    768: {
-                        items: 2
-                    },
-                    992: {
-                        items: 3
-                    }
-                }
-            });
-            
-            $('.testimonial-carousel').owlCarousel({
-                items: 1,
-                loop: true,
-                margin: 20,
-                nav: true
             });
         });
     });

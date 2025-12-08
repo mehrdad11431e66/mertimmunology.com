@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <title>Mehrdad Etemad, PhD in Immunology - Research Hub</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Immunology Research, Biomedical Science, Mehrdad Etemad PhD" name="keywords">
-    <meta content="Mehrdad Etemad, PhD in Immunology - Hub for Immunology and Biomedical Research" name="description">
+    <meta content="Immunology Research, Biomedical Science, Mehrdad Etemad PhD, CV Download" name="keywords">
+    <meta content="Mehrdad Etemad, PhD in Immunology - Hub for Immunology and Biomedical Research with downloadable CV" name="description">
 
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-A354741709"></script>
@@ -50,8 +50,7 @@
         "jobTitle": "Immunology Researcher",
         "url": "https://yourwebsite.com",
         "sameAs": [
-            "https://linkedin.com/in/mehrdad-etemad-713359358",
-            "https://github.com/yourprofile"
+            "https://linkedin.com/in/mehrdad-etemad-713359358"
         ],
         "knowsAbout": ["Immunology", "Biomedical Research", "Vaccine Development", "Immunogenetics"],
         "description": "Mehrdad Etemad, PhD in Immunology - Immunology and Biomedical Researcher"
@@ -59,6 +58,54 @@
     </script>
 
     <style>
+        /* CV Download Section Styles */
+        .cv-download-section {
+            border-left: 4px solid #3498db;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 10px;
+            padding: 1.5rem !important;
+        }
+
+        .cv-download-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .cv-download-section .btn {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            font-weight: 600;
+            padding: 0.75rem 1.5rem;
+        }
+
+        .cv-download-section .btn-primary {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            border: none;
+        }
+
+        .cv-download-section .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(52, 152, 219, 0.4);
+            background: linear-gradient(135deg, #2980b9 0%, #21618c 100%);
+        }
+
+        .cv-download-section .btn-outline-primary:hover {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+            border-color: #3498db;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(52, 152, 219, 0.3);
+        }
+
+        .cv-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #3498db;
+        }
+
+        /* Research Grid Styles */
         .research-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -117,6 +164,7 @@
         .research-meta {
             display: flex;
             justify-content: space-between;
+            align-items: center;
             color: #95a5a6;
             font-size: 0.85rem;
         }
@@ -124,18 +172,39 @@
         .research-category {
             display: inline-block;
             padding: 0.25rem 0.75rem;
-            background-color: #3498db;
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
             color: white;
             border-radius: 50px;
             font-size: 0.75rem;
             font-weight: 600;
-            margin-right: 0.5rem;
         }
         
+        /* Responsive Design */
         @media (max-width: 768px) {
             .research-grid {
                 grid-template-columns: 1fr;
             }
+            
+            .cv-download-section .btn {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+
+        /* Animation for CV Section */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .cv-download-section {
+            animation: fadeInUp 0.6s ease-out;
         }
     </style>
 </head>
@@ -188,7 +257,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto py-0">
+                    <div class="navbar-nav ms-auto py": "0">
                         <a href="index.html" class="nav-item nav-link active">Home</a>
                         <a href="about.html" class="nav-item nav-link">About</a>
                         <a href="Research.html" class="nav-item nav-link">Research</a>
@@ -235,6 +304,45 @@
                         <h1 class="display-4">Mehrdad Etemad, PhD - Immunology Research</h1>
                     </div>
                     <p>I am PhD. Mehrdad Etemad, a dedicated Immunology researcher with a PhD in Immunology. My research focuses on advancing the understanding of immune system functions and developing innovative solutions for immunological disorders. I combine cutting-edge technology with interdisciplinary approaches to tackle the most pressing challenges in immunology and biomedical science.</p>
+                    
+                    <!-- CV Download Section -->
+                    <div class="cv-download-section mt-4 mb-4">
+                        <div class="cv-icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <h4 class="text-primary mb-3">Download My Curriculum Vitae</h4>
+                        <p class="mb-4">For a comprehensive overview of my academic qualifications, research experience, publications, and professional achievements, download my complete CV below.</p>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <a href="articles/CV.pdf" class="btn btn-primary w-100" download="Mehrdad_Etemad_CV.pdf">
+                                    <i class="fas fa-download me-2"></i>Download PDF
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="articles/CV.pdf" class="btn btn-outline-primary w-100" target="_blank" rel="noopener noreferrer">
+                                    <i class="fas fa-external-link-alt me-2"></i>View Online
+                                </a>
+                            </div>
+                        </div>
+                        <div class="mt-3 pt-3 border-top">
+                            <div class="row text-center">
+                                <div class="col-6">
+                                    <small class="text-muted">
+                                        <i class="fas fa-file-alt me-1"></i>
+                                        PDF Format
+                                    </small>
+                                </div>
+                                <div class="col-6">
+                                    <small class="text-muted">
+                                        <i class="fas fa-calendar-alt me-1"></i>
+                                        Updated: Jan 2024
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End CV Download Section -->
+                    
                     <div class="row g-3 pt-3">
                         <div class="col-sm-3 col-6">
                             <div class="bg-light text-center rounded-circle py-4">
@@ -524,6 +632,7 @@
                     <p class="mb-4">Connect with me for research collaborations, speaking engagements, or scientific discussions.</p>
                     <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>Research Center, Istanbul, Turkey</p>
                     <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>info@mertimmunology.com</p>
+                    <p class="mb-2"><i class="fas fa-file-pdf text-primary me-3"></i><a href="articles/CV.pdf" class="text-light" download>Download My CV</a></p>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">Quick Links</h4>
@@ -666,6 +775,15 @@
             $(this).trigger('reset');
         });
 
+        // Track CV downloads
+        $('a[href*="CV.pdf"]').on('click', function() {
+            const action = $(this).attr('download') ? 'download' : 'view';
+            gtag('event', 'cv_action', {
+                'event_category': 'engagement',
+                'event_label': 'CV ' + action
+            });
+        });
+
         // Track social media clicks
         $('a[target="_blank"]').on('click', function() {
             const platform = $(this).attr('href').split('.')[1];
@@ -718,11 +836,6 @@
                 'page_location': window.location.href
             });
 
-            // Replace these paths with your actual PDF paths
-            renderPDF('articles/immune-genetics.pdf', 'pdf-viewer-1');
-            renderPDF('articles/vaccine-development.pdf', 'pdf-viewer-2');
-            renderPDF('articles/biomedical-research.pdf', 'pdf-viewer-3');
-            
             // Initialize carousels
             $('.team-carousel').owlCarousel({
                 items: 1,

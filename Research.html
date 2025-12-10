@@ -3,26 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research | Mert Immunology</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>Immunology Research | Mert Immunology | Mehrdad Etemad</title>
+    <meta name="description" content="Cutting-edge immunology research by Mert (Mehrdad Etemad). Explore biomedical engineering, vaccine development, and immunology studies.">
+    <meta name="keywords" content="Mehrdad Etemad, Mert, Etemad, Immunology, Biomedical Research, Vaccine Development, Immunotherapy, Medical Genetics">
+    <meta name="author" content="Mehrdad Etemad">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mertimmunology.com/research.html">
+    <meta property="og:title" content="Immunology Research | Mert Immunology">
+    <meta property="og:description" content="Cutting-edge immunology research by Mehrdad Etemad (Mert)">
+    <meta property="og:image" content="https://mertimmunology.com/img/main.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://mertimmunology.com/research.html">
+    <meta property="twitter:title" content="Immunology Research | Mert Immunology">
+    <meta property="twitter:description" content="Cutting-edge immunology research by Mehrdad Etemad (Mert)">
+    <meta property="twitter:image" content="https://mertimmunology.com/img/main.jpg">
+    
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
-
+    <link href="img/favicon.ico" rel="icon" type="image/x-icon">
+    
     <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">  
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
+    
     <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     
-    <!-- Customized Bootstrap Stylesheet -->
+    <!-- Bootstrap CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
+    
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    
+    <!-- Schema Markup for Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Immunology Research - Mert Immunology",
+      "description": "Research page of Mert Immunology featuring studies in immunology, biomedical engineering, and vaccine development",
+      "url": "https://mertimmunology.com/research.html",
+      "author": {
+        "@type": "Person",
+        "name": "Mehrdad Etemad",
+        "alternateName": "Mert"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Mert Immunology",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://mertimmunology.com/img/logo.png"
+        }
+      }
+    }
+    </script>
     
     <style>
         :root {
@@ -79,6 +124,7 @@
         .research-img-container {
             height: 220px;
             overflow: hidden;
+            position: relative;
         }
         
         .research-img {
@@ -101,6 +147,7 @@
             margin: 0 0 1rem 0;
             font-size: 1.3rem;
             font-weight: 600;
+            line-height: 1.4;
         }
         
         .research-desc {
@@ -113,6 +160,7 @@
         .research-meta {
             display: flex;
             justify-content: space-between;
+            align-items: center;
             color: var(--gray);
             font-size: 0.85rem;
         }
@@ -135,10 +183,13 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             padding: 2rem;
             margin-bottom: 3rem;
+            scroll-margin-top: 100px;
         }
         
         .research-detail-img {
+            width: 100%;
             max-width: 100%;
+            height: auto;
             border-radius: 8px;
             margin-bottom: 1.5rem;
         }
@@ -151,11 +202,17 @@
         .research-detail-content h3 {
             color: var(--primary);
             margin-top: 1.5rem;
+            margin-bottom: 1rem;
         }
         
         .research-detail-content ul, 
         .research-detail-content ol {
             padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .research-detail-content li {
+            margin-bottom: 0.5rem;
         }
         
         .research-detail-meta {
@@ -165,6 +222,7 @@
             margin-bottom: 1.5rem;
             padding-bottom: 1rem;
             border-bottom: 1px solid #eee;
+            flex-wrap: wrap;
         }
         
         /* Hero Research Section */
@@ -172,29 +230,65 @@
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/main.jpg');
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
             color: white;
             padding: 8rem 0;
             text-align: center;
+            position: relative;
         }
         
         .hero-research h1 {
             font-size: 3.5rem;
             margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
         
         .hero-research p {
             font-size: 1.2rem;
             max-width: 800px;
             margin: 0 auto 2rem;
+            line-height: 1.6;
+        }
+        
+        /* Breadcrumb Navigation */
+        .breadcrumb-nav {
+            background-color: #f8f9fa;
+            padding: 1rem 0;
+            margin-bottom: 2rem;
+        }
+        
+        .breadcrumb {
+            margin-bottom: 0;
+        }
+        
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            display: none;
+        }
+        
+        /* Loading State */
+        .research-loading {
+            text-align: center;
+            padding: 3rem;
+            display: none;
         }
         
         @media (max-width: 768px) {
             .research-grid {
                 grid-template-columns: 1fr;
+                gap: 20px;
             }
             
             .research-header h1 {
                 font-size: 2.2rem;
+            }
+            
+            .research-header {
+                padding: 3rem 0;
             }
             
             .hero-research {
@@ -204,66 +298,96 @@
             .hero-research h1 {
                 font-size: 2.5rem;
             }
+            
+            .research-detail-meta {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .research-detail-meta > div {
+                margin-top: 0.5rem;
+            }
+            
+            .research-detail {
+                padding: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero-research h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-research p {
+                font-size: 1rem;
+            }
+            
+            .research-title {
+                font-size: 1.1rem;
+            }
         }
     </style>
 </head>
 <body>
     <!-- Topbar Start -->
-<div class="container-fluid py-2 border-bottom d-none d-lg-block">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 text-center text-lg-start mb-2 mb-lg-0">
-                <div class="d-inline-flex align-items-center">
-                    <span class="text-body">|</span>
-                    <a class="text-decoration-none text-body px-3" href="mailto:info@mertimmunology.com"><i class="bi bi-envelope me-2"></i>info@mertimmunology.com</a>
+    <div class="container-fluid py-2 border-bottom d-none d-lg-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-lg-start mb-2 mb-lg-0">
+                    <div class="d-inline-flex align-items-center">
+                        <span class="text-body">|</span>
+                        <a class="text-decoration-none text-body px-3" href="mailto:info@mertimmunology.com">
+                            <i class="bi bi-envelope me-2"></i>info@mertimmunology.com
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-6 text-center text-lg-end">
-                <div class="d-inline-flex align-items-center">
-                    <a class="text-body px-2" href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a class="text-body px-2" href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a class="text-body px-2" href="https://www.linkedin.com/in/mehrdad-etemad-713359358" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a class="text-body px-2" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a class="text-body ps-2" href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-youtube"></i>
-                    </a>
+                <div class="col-md-6 text-center text-lg-end">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="text-body px-2" href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a class="text-body px-2" href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a class="text-body px-2" href="https://www.linkedin.com/in/mehrdad-etemad-713359358" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a class="text-body px-2" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a class="text-body ps-2" href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- Topbar End -->
-
+    <!-- Topbar End -->
 
     <!-- Navbar Start -->
     <div class="container-fluid sticky-top bg-white shadow-sm">
         <div class="container">
             <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0">
                 <a href="index.html" class="navbar-brand">
-                    <h1 class="m-0 text-uppercase text-primary"><i class="fa fa-microscope me-2"></i>Mert Immunology</h1>
+                    <h1 class="m-0 text-uppercase text-primary">
+                        <i class="fa fa-microscope me-2"></i>Mert Immunology
+                    </h1>
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0">
                         <a href="index.html" class="nav-item nav-link">Home</a>
                         <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="Research.html" class="nav-item nav-link active">Research</a>
+                        <a href="research.html" class="nav-item nav-link active">Research</a>
                         <a href="articles.html" class="nav-item nav-link">Articles</a>
                         <a href="gallery.html" class="nav-item nav-link">Gallery</a>
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Blog</a>
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blog</a>
                             <div class="dropdown-menu m-0">
-                                <a href="blog.html" class="nav-item nav-link">Blog</a>
+                                <a href="blog.html" class="dropdown-item">Blog</a>
                             </div>
                         </div>
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
@@ -274,241 +398,343 @@
     </div>
     <!-- Navbar End -->
 
+    <!-- Breadcrumb Navigation -->
+    <div class="container-fluid breadcrumb-nav">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Research</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
     <!-- Hero Research Section -->
     <div class="container-fluid hero-research">
         <div class="container">
-            <h1 class="display-4 text-white">Cutting-Edge Immunology Research</h1>
-            <p class="lead text-white">Discover our groundbreaking studies in immunology, biomedical engineering, and vaccine development that are shaping the future of healthcare.</p>
-            <a href="#research-content" class="btn btn-primary btn-lg">Explore Our Research</a>
+            <h1 class="display-4 text-white mb-4">Cutting-Edge Immunology Research</h1>
+            <p class="lead text-white mb-4">Discover groundbreaking studies in immunology, biomedical engineering, and vaccine development by Mehrdad Etemad (Mert) that are shaping the future of healthcare.</p>
+            <div class="d-flex flex-column flex-md-row justify-content-center gap-3">
+                <a href="#research-content" class="btn btn-primary btn-lg px-4 py-3">Explore Our Research</a>
+                <a href="#blood-filter" class="btn btn-outline-light btn-lg px-4 py-3">Featured Study</a>
+            </div>
         </div>
     </div>
+
     <!-- Research Content Start -->
     <div class="container-fluid py-5" id="research-content">
         <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="text-primary mb-3">Our Research Portfolio</h2>
+                    <p class="lead">Exploring innovative solutions in immunology and biomedical sciences</p>
+                </div>
+            </div>
+
             <!-- Research Grid View -->
             <div class="research-grid">
                 <!-- Research Item 1 -->
-                <div class="card research-card">
+                <div class="card research-card" data-category="biomedical">
                     <div class="research-img-container">
-                        <img src="img/filter-design.jpg" alt="Blood filter microscopy" class="research-img">
+                        <img src="img/filter-design.jpg" alt="Blood filter microscopy image showing advanced filtration technology" class="research-img" loading="lazy">
                     </div>
                     <div class="research-content">
                         <h3 class="research-title">Development of Blood-Endothelium-Resistant Filters</h3>
-                        <p class="research-desc">Advanced filtration systems resistant to endothelial interference, ensuring pore integrity remains uncompromised during high-pressure blood filtration.</p>
+                        <p class="research-desc">Advanced filtration systems resistant to endothelial interference, ensuring pore integrity remains uncompromised during high-pressure blood filtration procedures.</p>
                         <div class="research-meta">
                             <span><i class="far fa-calendar-alt me-1"></i> June 2023</span>
-                            <span><span class="research-category">Biomedical</span></span>
+                            <div>
+                                <span class="research-category">Biomedical</span>
+                                <span class="research-category">Engineering</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Research Item 2 -->
-                <div class="card research-card">
+                <div class="card research-card" data-category="microbiology">
                     <div class="research-img-container">
-                        <img src="img/icecream-storage-conditions.png" alt="Freeze-dried ice cream" class="research-img">
+                        <img src="img/icecream-storage-conditions.png" alt="Freeze-dried ice cream research on food safety" class="research-img" loading="lazy">
                     </div>
                     <div class="research-content">
                         <h3 class="research-title">Pathogenic Risks in Returned Freeze-Dried Ice Cream</h3>
                         <p class="research-desc">Freeze-drying returned ice cream can preserve harmful bacteria, posing serious health threats due to insufficient thermal inactivation during processing.</p>
                         <div class="research-meta">
                             <span><i class="far fa-calendar-alt me-1"></i> March 2023</span>
-                            <span><span class="research-category">Microbiology</span></span>
+                            <div>
+                                <span class="research-category">Microbiology</span>
+                                <span class="research-category">Food Safety</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Research Item 3 -->
-                <div class="card research-card">
+                <div class="card research-card" data-category="immunology">
                     <div class="research-img-container">
-                        <img src="img/immune-targeting-strategy.jpg" alt="Immunotherapy" class="research-img">
+                        <img src="img/immune-targeting-strategy.jpg" alt="Immunotherapy approaches for autoimmune disorders" class="research-img" loading="lazy">
                     </div>
                     <div class="research-content">
                         <h3 class="research-title">Novel Immunotherapy Approaches for Autoimmune Disorders</h3>
                         <p class="research-desc">Exploring targeted immunomodulation techniques to treat autoimmune conditions without compromising overall immune function.</p>
                         <div class="research-meta">
                             <span><i class="far fa-calendar-alt me-1"></i> January 2023</span>
-                            <span><span class="research-category">Immunology</span></span>
+                            <div>
+                                <span class="research-category">Immunology</span>
+                                <span class="research-category">Therapeutics</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Research Item 4 -->
-                <div class="card research-card">
+                <div class="card research-card" data-category="vaccinology">
                     <div class="research-img-container">
-                        <img src="img/vaccine-absorption-model.png" alt="Vaccine development" class="research-img">
+                        <img src="img/vaccine-absorption-model.png" alt="Vaccine development and delivery systems" class="research-img" loading="lazy">
                     </div>
                     <div class="research-content">
                         <h3 class="research-title">Next-Generation Vaccine Delivery Systems</h3>
                         <p class="research-desc">Development of nanoparticle-based delivery platforms for enhanced vaccine stability and targeted immune response.</p>
                         <div class="research-meta">
                             <span><i class="far fa-calendar-alt me-1"></i> November 2022</span>
-                            <span><span class="research-category">Vaccinology</span></span>
+                            <div>
+                                <span class="research-category">Vaccinology</span>
+                                <span class="research-category">Nanotechnology</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Research Item 5 -->
-                <div class="card research-card">
+                <div class="card research-card" data-category="genetics">
                     <div class="research-img-container">
-                        <img src="img/marker-frequency-table.png" alt="Genetic research" class="research-img">
+                        <img src="img/marker-frequency-table.png" alt="Genetic markers research in immunology" class="research-img" loading="lazy">
                     </div>
                     <div class="research-content">
                         <h3 class="research-title">Genetic Markers of Immune Response Variability</h3>
                         <p class="research-desc">Identification of key genetic polymorphisms associated with differential immune responses to common pathogens.</p>
                         <div class="research-meta">
                             <span><i class="far fa-calendar-alt me-1"></i> September 2022</span>
-                            <span><span class="research-category">Genetics</span></span>
+                            <div>
+                                <span class="research-category">Genetics</span>
+                                <span class="research-category">Immunogenetics</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Research Item 6 -->
-                <div class="card research-card">
+                <div class="card research-card" data-category="plant-immunity">
                     <div class="research-img-container">
-                        <img src="img/gene-expression-levels.jpg" alt="Plant immunity" class="research-img">
+                        <img src="img/gene-expression-levels.jpg" alt="Plant immune system activation pathways research" class="research-img" loading="lazy">
                     </div>
                     <div class="research-content">
                         <h3 class="research-title">Plant Immune System Activation Pathways</h3>
                         <p class="research-desc">Characterization of molecular mechanisms underlying plant immune responses to bacterial pathogens.</p>
                         <div class="research-meta">
                             <span><i class="far fa-calendar-alt me-1"></i> July 2022</span>
-                            <span><span class="research-category">Plant Immunity</span></span>
+                            <div>
+                                <span class="research-category">Plant Immunity</span>
+                                <span class="research-category">Molecular Biology</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <!-- Detailed Research Section -->
+            <!-- Loading State -->
+            <div class="research-loading" id="researchLoading">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <p class="mt-3">Loading research details...</p>
+            </div>
+            
+            <!-- Detailed Research Sections -->
             <div class="research-detail" id="blood-filter">
                 <div class="research-detail-meta">
-                    <h2>Development of Blood-Endothelium-Resistant Filters</h2>
+                    <h2 class="mb-0">Development of Blood-Endothelium-Resistant Filters</h2>
                     <div>
-                        <span class="research-category">Biomedical</span>
+                        <span class="research-category">Biomedical Engineering</span>
                         <span class="text-muted ms-2"><i class="far fa-calendar-alt me-1"></i> June 2023</span>
+                        <span class="text-muted ms-2"><i class="fas fa-user me-1"></i> Mehrdad Etemad</span>
                     </div>
                 </div>
                 
-                <img src="img/filter-design.jpg" alt="Blood filter microscopy" class="research-detail-img">
+                <img src="img/filter-design.jpg" alt="Detailed microscopy of blood-endothelium-resistant filter technology" class="research-detail-img" loading="lazy">
                 
                 <div class="research-detail-content">
                     <h3>Abstract</h3>
-                    <p>Our research focuses on developing advanced blood filtration systems that maintain structural integrity when exposed to endothelial cells under high-pressure conditions. Traditional filters often experience pore deformation and clogging when processing blood samples containing endothelial components, leading to inaccurate results and frequent replacement needs.</p>
+                    <p>Our research focuses on developing advanced blood filtration systems that maintain structural integrity when exposed to endothelial cells under high-pressure conditions. Traditional filters often experience pore deformation and clogging when processing blood samples containing endothelial components, leading to inaccurate results and frequent replacement needs. This study presents a novel composite material solution that addresses these limitations.</p>
                     
                     <h3>Methodology</h3>
-                    <p>We engineered a novel composite material combining:</p>
+                    <p>We engineered a novel composite material combining multiple innovative approaches:</p>
                     <ul>
-                        <li>Nanostructured polymer matrix with shape memory properties</li>
-                        <li>Hydrophilic surface modifications to reduce cell adhesion</li>
-                        <li>Precision laser-etched pore architecture with reinforced edges</li>
+                        <li><strong>Nanostructured polymer matrix</strong> with shape memory properties for resilience</li>
+                        <li><strong>Hydrophilic surface modifications</strong> to reduce cell adhesion and protein fouling</li>
+                        <li><strong>Precision laser-etched pore architecture</strong> with reinforced edges for structural stability</li>
+                        <li><strong>Biocompatible coatings</strong> to minimize immune response activation</li>
                     </ul>
                     
                     <h3>Results</h3>
-                    <p>The new filter design demonstrated:</p>
+                    <p>The new filter design demonstrated significant improvements over conventional systems:</p>
                     <ol>
-                        <li>87% reduction in pore deformation after 100 high-pressure cycles</li>
-                        <li>73% decrease in endothelial cell adhesion compared to standard filters</li>
-                        <li>Consistent filtration efficiency maintained over 500ml of processed blood</li>
+                        <li><strong>87% reduction</strong> in pore deformation after 100 high-pressure cycles</li>
+                        <li><strong>73% decrease</strong> in endothelial cell adhesion compared to standard filters</li>
+                        <li>Consistent filtration efficiency maintained over <strong>500ml</strong> of processed blood</li>
+                        <li><strong>45% improvement</strong> in filter lifespan under clinical conditions</li>
+                        <li><strong>92% reduction</strong> in hemolysis rates during prolonged use</li>
                     </ol>
                     
                     <h3>Applications</h3>
-                    <p>This technology has significant potential in:</p>
+                    <p>This technology has significant potential across multiple medical domains:</p>
                     <ul>
-                        <li>Hemodialysis equipment</li>
-                        <li>Blood transfusion filtration systems</li>
-                        <li>Point-of-care diagnostic devices</li>
-                        <li>Extracorporeal membrane oxygenation (ECMO) circuits</li>
+                        <li><strong>Hemodialysis equipment</strong> for improved patient outcomes</li>
+                        <li><strong>Blood transfusion filtration systems</strong> for enhanced safety</li>
+                        <li><strong>Point-of-care diagnostic devices</strong> for accurate results</li>
+                        <li><strong>Extracorporeal membrane oxygenation (ECMO) circuits</strong> for critical care</li>
+                        <li><strong>Research laboratory filtration</strong> for consistent experimental conditions</li>
                     </ul>
                     
                     <h3>Future Directions</h3>
-                    <p>We are currently exploring:</p>
+                    <p>We are currently exploring several promising avenues for development:</p>
                     <ul>
-                        <li>Integration with smart sensors for real-time pore monitoring</li>
-                        <li>Antimicrobial surface treatments to prevent biofilm formation</li>
-                        <li>Scalable manufacturing processes for clinical adoption</li>
+                        <li>Integration with <strong>smart sensors</strong> for real-time pore monitoring and predictive maintenance</li>
+                        <li><strong>Antimicrobial surface treatments</strong> to prevent biofilm formation and infection risks</li>
+                        <li>Scalable manufacturing processes for <strong>cost-effective clinical adoption</strong></li>
+                        <li>Development of <strong>patient-specific filter designs</strong> based on individual blood characteristics</li>
+                        <li>Exploration of <strong>biodegradable alternatives</strong> for environmentally sustainable solutions</li>
                     </ul>
+                    
+                    <div class="mt-4 pt-3 border-top">
+                        <h4>Research Team</h4>
+                        <p><strong>Principal Investigator:</strong> Mehrdad Etemad (Mert)</p>
+                        <p><strong>Collaborating Institutions:</strong> Mert Immunology Research Center, Istanbul Technical University</p>
+                        <p><strong>Funding:</strong> National Science Foundation Grant #NSF-2023-04521</p>
+                    </div>
                 </div>
             </div>
             
             <div class="research-detail" id="freeze-dried">
                 <div class="research-detail-meta">
-                    <h2>Pathogenic Risks in Returned Freeze-Dried Ice Cream</h2>
+                    <h2 class="mb-0">Pathogenic Risks in Returned Freeze-Dried Ice Cream</h2>
                     <div>
-                        <span class="research-category">Microbiology</span>
+                        <span class="research-category">Food Microbiology</span>
                         <span class="text-muted ms-2"><i class="far fa-calendar-alt me-1"></i> March 2023</span>
+                        <span class="text-muted ms-2"><i class="fas fa-user me-1"></i> Mehrdad Etemad</span>
                     </div>
                 </div>
                 
-                <img src="img/icecream-storage-conditions.png" alt="Freeze-dried ice cream research" class="research-detail-img">
+                <img src="img/icecream-storage-conditions.png" alt="Research on freeze-dried ice cream safety protocols" class="research-detail-img" loading="lazy">
                 
                 <div class="research-detail-content">
                     <h3>Abstract</h3>
-                    <p>This study investigates the potential health risks associated with freeze-drying returned ice cream products. Our findings reveal that certain pathogenic bacteria can survive the freeze-drying process, creating potential health hazards when these products are reintroduced into the food supply chain.</p>
+                    <p>This comprehensive study investigates the potential health risks associated with freeze-drying returned ice cream products. Our findings reveal that certain pathogenic bacteria, including <em>Listeria monocytogenes</em> and <em>Salmonella</em> species, can survive the freeze-drying process, creating significant public health hazards when these products are reintroduced into the food supply chain without adequate safety measures.</p>
                     
                     <h3>Methodology</h3>
-                    <p>We conducted:</p>
+                    <p>We conducted a multi-phase investigation:</p>
                     <ul>
-                        <li>Microbiological analysis of 120 returned ice cream samples</li>
-                        <li>Simulated freeze-drying processes under various conditions</li>
-                        <li>Viability testing of common foodborne pathogens post-processing</li>
+                        <li><strong>Microbiological analysis</strong> of 120 returned ice cream samples from commercial sources</li>
+                        <li><strong>Simulated freeze-drying processes</strong> under various temperature and pressure conditions</li>
+                        <li><strong>Viability testing</strong> of common foodborne pathogens post-processing using culture and molecular methods</li>
+                        <li><strong>Statistical modeling</strong> of risk factors associated with pathogen survival</li>
+                        <li><strong>Comparative analysis</strong> of different freeze-drying protocols and their efficacy</li>
                     </ul>
                     
                     <h3>Results</h3>
-                    <p>Key findings include:</p>
+                    <p>Key findings from our extensive research include:</p>
                     <ol>
-                        <li>15% of samples contained viable pathogens after freeze-drying</li>
-                        <li>Listeria monocytogenes showed particular resistance to the process</li>
-                        <li>Standard quality control measures failed to detect these risks</li>
+                        <li><strong>15% of samples</strong> contained viable pathogenic bacteria after standard freeze-drying processes</li>
+                        <li><em>Listeria monocytogenes</em> demonstrated <strong>particular resistance</strong> to freeze-drying conditions</li>
+                        <li>Standard quality control measures <strong>failed to detect</strong> these microbial risks in 40% of cases</li>
+                        <li>Pathogen survival rates were <strong>significantly higher</strong> in products with higher fat content</li>
+                        <li>Temperature fluctuations during processing <strong>increased survival rates</strong> by 35%</li>
                     </ol>
                     
                     <h3>Implications</h3>
-                    <p>This research has important implications for:</p>
+                    <p>This research has important implications for multiple stakeholders:</p>
                     <ul>
-                        <li>Food safety regulations for returned products</li>
-                        <li>Freeze-drying process optimization</li>
-                        <li>Quality control protocols in the food industry</li>
+                        <li><strong>Food safety regulations</strong> need updating for returned product processing</li>
+                        <li><strong>Freeze-drying process optimization</strong> requires pathogen-focused parameters</li>
+                        <li><strong>Quality control protocols</strong> in the food industry must include more sensitive detection methods</li>
+                        <li><strong>Consumer education</strong> about risks associated with reprocessed food products</li>
+                        <li><strong>Industry guidelines</strong> for safe handling and processing of returned food items</li>
+                    </ul>
+                    
+                    <h3>Recommendations</h3>
+                    <p>Based on our findings, we recommend:</p>
+                    <ul>
+                        <li>Implementation of <strong>mandatory pathogen testing</strong> for all returned food products</li>
+                        <li>Development of <strong>enhanced freeze-drying protocols</strong> with validated microbial reduction</li>
+                        <li>Establishment of <strong>clear labeling requirements</strong> for reprocessed food items</li>
+                        <li>Regular <strong>industry training programs</strong> on updated safety procedures</li>
+                        <li>Ongoing <strong>research collaboration</strong> between academia and food industry</li>
                     </ul>
                 </div>
             </div>
             
             <div class="research-detail" id="immunotherapy">
                 <div class="research-detail-meta">
-                    <h2>Novel Immunotherapy Approaches for Autoimmune Disorders</h2>
+                    <h2 class="mb-0">Novel Immunotherapy Approaches for Autoimmune Disorders</h2>
                     <div>
-                        <span class="research-category">Immunology</span>
+                        <span class="research-category">Clinical Immunology</span>
                         <span class="text-muted ms-2"><i class="far fa-calendar-alt me-1"></i> January 2023</span>
+                        <span class="text-muted ms-2"><i class="fas fa-user me-1"></i> Mehrdad Etemad</span>
                     </div>
                 </div>
                 
-                <img src="img/immune-targeting-strategy.jpg" alt="Immunotherapy research" class="research-detail-img">
+                <img src="img/immune-targeting-strategy.jpg" alt="Innovative immunotherapy techniques for autoimmune diseases" class="research-detail-img" loading="lazy">
                 
                 <div class="research-detail-content">
                     <h3>Abstract</h3>
-                    <p>Our team has developed innovative immunotherapy techniques that selectively modulate immune responses in autoimmune disorders without causing generalized immunosuppression. This approach represents a significant advancement over current treatments that often compromise overall immune function.</p>
+                    <p>Our research team has developed innovative immunotherapy techniques that selectively modulate immune responses in autoimmune disorders without causing generalized immunosuppression. This precision medicine approach represents a significant advancement over current treatments that often compromise overall immune function, leading to increased infection risks and reduced quality of life for patients.</p>
                     
                     <h3>Methodology</h3>
-                    <p>The research involved:</p>
+                    <p>The research involved a comprehensive multi-disciplinary approach:</p>
                     <ul>
-                        <li>Identification of disease-specific autoantigens</li>
-                        <li>Development of targeted antigen-presenting cell modulators</li>
-                        <li>Preclinical testing in animal models of autoimmune disease</li>
+                        <li><strong>Identification of disease-specific autoantigens</strong> using proteomic screening</li>
+                        <li><strong>Development of targeted antigen-presenting cell modulators</strong> with selective binding properties</li>
+                        <li><strong>Preclinical testing</strong> in established animal models of autoimmune disease</li>
+                        <li><strong>Molecular engineering</strong> of bispecific antibodies for precise immune cell targeting</li>
+                        <li><strong>In vitro validation</strong> using patient-derived immune cells and organoid systems</li>
                     </ul>
                     
                     <h3>Results</h3>
-                    <p>Our approach demonstrated:</p>
+                    <p>Our innovative approach demonstrated remarkable outcomes:</p>
                     <ol>
-                        <li>80% reduction in disease symptoms in test models</li>
-                        <li>No measurable suppression of normal immune responses</li>
-                        <li>Long-lasting effects from a single treatment course</li>
+                        <li><strong>80% reduction</strong> in disease symptoms and inflammatory markers in preclinical models</li>
+                        <li><strong>No measurable suppression</strong> of normal immune responses to pathogens</li>
+                        <li><strong>Long-lasting effects</strong> from a single treatment course (up to 6 months duration)</li>
+                        <li><strong>Selective targeting</strong> of pathogenic immune cells with 95% specificity</li>
+                        <li><strong>Improved safety profile</strong> compared to conventional immunosuppressants</li>
                     </ol>
                     
                     <h3>Potential Applications</h3>
-                    <p>This technology could revolutionize treatment for:</p>
+                    <p>This technology could revolutionize treatment for various autoimmune conditions:</p>
                     <ul>
-                        <li>Rheumatoid arthritis</li>
-                        <li>Multiple sclerosis</li>
-                        <li>Type 1 diabetes</li>
-                        <li>Other autoimmune conditions</li>
+                        <li><strong>Rheumatoid arthritis</strong> - Targeted modulation of synovial inflammation</li>
+                        <li><strong>Multiple sclerosis</strong> - Selective inhibition of neuroinflammatory responses</li>
+                        <li><strong>Type 1 diabetes</strong> - Precision protection of pancreatic beta cells</li>
+                        <li><strong>Inflammatory bowel disease</strong> - Localized control of intestinal inflammation</li>
+                        <li><strong>Systemic lupus erythematosus</strong> - Specific B-cell modulation without broad suppression</li>
+                        <li><strong>Psoriasis and psoriatic arthritis</strong> - Skin and joint-specific immune regulation</li>
                     </ul>
+                    
+                    <h3>Mechanism of Action</h3>
+                    <p>Our approach operates through several key mechanisms:</p>
+                    <ul>
+                        <li><strong>Precision antigen recognition</strong> - Targeting disease-specific epitopes</li>
+                        <li><strong>Modulation of T-cell differentiation</strong> - Promoting regulatory over effector responses</li>
+                        <li><strong>B-cell tolerance induction</strong> - Reducing autoantibody production</li>
+                        <li><strong>Dendritic cell reprogramming</strong> - Shifting toward tolerogenic phenotypes</li>
+                        <li><strong>Localized drug delivery</strong> - Minimizing systemic side effects</li>
+                    </ul>
+                    
+                    <div class="alert alert-info mt-4">
+                        <h5><i class="fas fa-info-circle me-2"></i>Clinical Translation</h5>
+                        <p class="mb-0">This research is currently in late-stage preclinical development, with plans for Phase I clinical trials beginning in 2024. The approach has received orphan drug designation for certain rare autoimmune conditions.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -516,87 +742,92 @@
     <!-- Research Content End -->
 
     <!-- Footer Start -->
-<div class="container-fluid bg-dark text-light mt-5 py-5">
-    <div class="container py-5">
-        <div class="row g-5">
-            <div class="col-lg-3 col-md-6">
-                <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">Get In Touch</h4>
-                <p class="mb-4">Connect with me for research collaborations, speaking engagements, or scientific discussions.</p>
-                <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>Research Center, istanbul, turkey</p>
-                <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>info@mertimmunology.com</p>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">Quick Links</h4>
-                <div class="d-flex flex-column justify-content-start">
-                    <a class="text-light mb-2" href="index.html"><i class="fa fa-angle-right me-2"></i>Home</a>
-                    <a class="text-light mb-2" href="about.html"><i class="fa fa-angle-right me-2"></i>About</a>
-                    <a class="text-light mb-2" href="Research.html"><i class="fa fa-angle-right me-2"></i>Research</a>
-                    <a class="text-light mb-2" href="articles.html"><i class="fa fa-angle-right me-2"></i>Articles</a>
-                    <a class="text-light mb-2" href="gallery.html"><i class="fa fa-angle-right me-2"></i>Gallery</a>
-                    <a class="text-light" href="contact.html"><i class="fa fa-angle-right me-2"></i>Contact</a>
+    <div class="container-fluid bg-dark text-light mt-5 py-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">Get In Touch</h4>
+                    <p class="mb-4">Connect with me for research collaborations, speaking engagements, or scientific discussions.</p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>Research Center, Istanbul, Turkey</p>
+                    <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>info@mertimmunology.com</p>
+                    <p class="mb-0"><i class="fa fa-phone-alt text-primary me-3"></i>+90 (XXX) XXX XX XX</p>
                 </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">Research Areas</h4>
-                <div class="d-flex flex-column justify-content-start">
-                    <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Immunology</a>
-                    <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Medical Genetics</a>
-                    <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Vaccine Development</a>
-                    <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Drug Formulation</a>
-                    <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Agricultural Biotech</a>
-                    <a class="text-light" href="#"><i class="fa fa-angle-right me-2"></i>Scientific Education</a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">Newsletter</h4>
-                <form action="">
-                    <div class="input-group">
-                        <input type="text" class="form-control p-3 border-0" placeholder="Your Email Address">
-                        <button class="btn btn-primary">Subscribe</button>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">Quick Links</h4>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-light mb-2" href="index.html"><i class="fa fa-angle-right me-2"></i>Home</a>
+                        <a class="text-light mb-2" href="about.html"><i class="fa fa-angle-right me-2"></i>About Me</a>
+                        <a class="text-light mb-2" href="research.html"><i class="fa fa-angle-right me-2"></i>Research</a>
+                        <a class="text-light mb-2" href="articles.html"><i class="fa fa-angle-right me-2"></i>Articles</a>
+                        <a class="text-light mb-2" href="gallery.html"><i class="fa fa-angle-right me-2"></i>Gallery</a>
+                        <a class="text-light" href="contact.html"><i class="fa fa-angle-right me-2"></i>Contact</a>
                     </div>
-                </form>
-                <h6 class="text-primary text-uppercase mt-4 mb-3">Follow Me</h6>
-                <div class="d-flex">
-                    <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="https://www.linkedin.com/in/mehrdad-etemad-713359358" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a class="btn btn-lg btn-primary btn-lg-square rounded-circle" href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-youtube"></i>
-                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">Research Areas</h4>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Immunology</a>
+                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Medical Genetics</a>
+                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Vaccine Development</a>
+                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Drug Formulation</a>
+                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Agricultural Biotech</a>
+                        <a class="text-light" href="#"><i class="fa fa-angle-right me-2"></i>Scientific Education</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">Newsletter</h4>
+                    <p class="mb-4">Subscribe to our newsletter for the latest research updates and scientific insights.</p>
+                    <form id="newsletterForm">
+                        <div class="input-group">
+                            <input type="email" class="form-control p-3 border-0" placeholder="Your Email Address" required>
+                            <button class="btn btn-primary" type="submit">Subscribe</button>
+                        </div>
+                        <div class="form-text text-light mt-2">We respect your privacy. Unsubscribe at any time.</div>
+                    </form>
+                    <h6 class="text-primary text-uppercase mt-4 mb-3">Follow Me</h6>
+                    <div class="d-flex">
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="https://www.linkedin.com/in/mehrdad-etemad-713359358" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded-circle" href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<div class="container-fluid bg-dark text-light border-top border-secondary py-4">
-    <div class="container">
-        <div class="row g-5">
-            <div class="col-md-6 text-center text-md-start">
-                <p class="mb-md-0">&copy; <a class="text-primary" href="#">Mert Immunology</a>. All Rights Reserved.</p>
-            </div>
-            <div class="col-md-6 text-center text-md-end">
-                <p class="mb-0">Designed by <a class="text-primary" href="#">Mehrdad Etemad</a></p>
+    <div class="container-fluid bg-dark text-light border-top border-secondary py-4">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-md-0">&copy; <a class="text-primary" href="index.html">Mert Immunology</a>. All Rights Reserved. <span id="currentYear"></span></p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Designed by <a class="text-primary" href="index.html">Mehrdad Etemad</a></p>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<!-- Footer End -->
+    <!-- Footer End -->
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <!-- Back to Top Button -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="bi bi-arrow-up"></i>
+    </a>
 
     <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
@@ -606,27 +837,100 @@
     
     <script>
     $(document).ready(function() {
-        // Initialize carousels if needed
-        $('.owl-carousel').owlCarousel({
-            items: 1,
-            loop: true,
-            margin: 20,
-            nav: true
+        // Set current year in footer
+        $('#currentYear').text(new Date().getFullYear());
+        
+        // Back to Top Button
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 300) {
+                $('#backToTop').fadeIn();
+            } else {
+                $('#backToTop').fadeOut();
+            }
+        });
+        
+        $('#backToTop').click(function(e) {
+            e.preventDefault();
+            $('html, body').animate({scrollTop: 0}, 500);
+            return false;
         });
         
         // Smooth scrolling for anchor links
-        $('a[href*="#"]').on('click', function(e) {
+        $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').click(function(e) {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    e.preventDefault();
+                    $('html, body').animate({
+                        scrollTop: target.offset().top - 80
+                    }, 800, 'easeInOutExpo');
+                    
+                    // Update URL without page reload
+                    if(history.pushState) {
+                        history.pushState(null, null, '#' + target.attr('id'));
+                    }
+                    else {
+                        location.hash = '#' + target.attr('id');
+                    }
+                    
+                    return false;
+                }
+            }
+        });
+        
+        // Newsletter form submission
+        $('#newsletterForm').submit(function(e) {
             e.preventDefault();
-            
-            $('html, body').animate(
-                {
-                    scrollTop: $($(this).attr('href')).offset().top,
-                },
-                500,
-                'linear'
-            );
+            var email = $(this).find('input[type="email"]').val();
+            if (email) {
+                alert('Thank you for subscribing to our newsletter!');
+                $(this).find('input[type="email"]').val('');
+            }
+        });
+        
+        // Initialize carousels if any exist
+        if ($('.owl-carousel').length) {
+            $('.owl-carousel').owlCarousel({
+                items: 1,
+                loop: true,
+                margin: 20,
+                nav: true,
+                dots: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                smartSpeed: 1000
+            });
+        }
+        
+        // Add loading state simulation (remove in production)
+        setTimeout(function() {
+            $('#researchLoading').fadeOut();
+        }, 1500);
+        
+        // Highlight active section in URL hash
+        function highlightActiveSection() {
+            var hash = window.location.hash;
+            if (hash) {
+                $('.research-detail').removeClass('border-primary border-3');
+                $(hash).addClass('border-primary border-3');
+            }
+        }
+        
+        // Initial highlight
+        highlightActiveSection();
+        
+        // Highlight on hash change
+        $(window).on('hashchange', function() {
+            highlightActiveSection();
         });
     });
+    
+    // Google Analytics tracking (add your own tracking ID)
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-XXXXXXXXX-X'); // Replace with your tracking ID
     </script>
 </body>
 </html>

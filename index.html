@@ -261,6 +261,12 @@
             padding-top: 3rem !important;
             padding-bottom: 3rem !important;
         }
+        
+        /* Fix for appointment form date input */
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            opacity: 1;
+            cursor: pointer;
+        }
     </style>
 </head>
 
@@ -279,19 +285,19 @@
                 </div>
                 <div class="col-md-6 text-center text-lg-end">
                     <div class="d-inline-flex align-items-center">
-                        <a class="text-body px-2" href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                        <a class="text-body px-2" href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a class="text-body px-2" href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+                        <a class="text-body px-2" href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
                             <i class="fab fa-twitter"></i>
                         </a>
-                        <a class="text-body px-2" href="https://www.linkedin.com/in/mehrdad-etemad-713359358" target="_blank" rel="noopener noreferrer">
+                        <a class="text-body px-2" href="https://www.linkedin.com/in/mehrdad-etemad-713359358" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
-                        <a class="text-body px-2" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                        <a class="text-body px-2" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a class="text-body ps-2" href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+                        <a class="text-body ps-2" href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
                             <i class="fab fa-youtube"></i>
                         </a>
                     </div>
@@ -308,7 +314,7 @@
                 <a href="index.html" class="navbar-brand">
                     <h1 class="m-0 text-uppercase text-primary"><i class="fa fa-microscope me-2"></i>Mehrdad Etemad, PhD</h1>
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -350,7 +356,7 @@
             <div class="row gx-5">
                 <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 500px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute w-100 h-100 rounded" src="img/about.jpg" style="object-fit: cover;" alt="PhD. Mehrdad Etemad">
+                        <img class="position-absolute w-100 h-100 rounded" src="img/about.jpg" style="object-fit: cover;" alt="PhD. Mehrdad Etemad - Immunology Researcher">
                     </div>
                 </div>
                 <div class="col-lg-7">
@@ -407,7 +413,7 @@
                         </div>
                         <h4 class="mb-3">Immunogenetics</h4>
                         <p class="m-0">Exploring the genetic basis of immune responses and autoimmune disorders through advanced genomic technologies.</p>
-                        <a class="btn btn-lg btn-primary rounded-pill mt-3" href="research.html">
+                        <a class="btn btn-lg btn-primary rounded-pill mt-3" href="research.html#immunogenetics">
                             <i class="bi bi-arrow-right"></i>
                         </a>
                     </div>
@@ -419,7 +425,7 @@
                         </div>
                         <h4 class="mb-3">Vaccine Development</h4>
                         <p class="m-0">Researching novel vaccine technologies and delivery systems for emerging infectious diseases.</p>
-                        <a class="btn btn-lg btn-primary rounded-pill mt-3" href="research.html">
+                        <a class="btn btn-lg btn-primary rounded-pill mt-3" href="research.html#vaccine">
                             <i class="bi bi-arrow-right"></i>
                         </a>
                     </div>
@@ -431,7 +437,7 @@
                         </div>
                         <h4 class="mb-3">Biomedical Research</h4>
                         <p class="m-0">Investigating molecular mechanisms of disease and immunity at cellular and molecular levels.</p>
-                        <a class="btn btn-lg btn-primary rounded-pill mt-3" href="research.html">
+                        <a class="btn btn-lg btn-primary rounded-pill mt-3" href="research.html#biomedical">
                             <i class="bi bi-arrow-right"></i>
                         </a>
                     </div>
@@ -455,7 +461,7 @@
                 <!-- Research Item 1 -->
                 <div class="card research-card">
                     <div class="research-img-container">
-                        <img src="img/filter-design.jpg" alt="Blood filter microscopy" class="research-img">
+                        <img src="img/filter-design.jpg" alt="Blood filter microscopy research by Mehrdad Etemad" class="research-img" loading="lazy">
                     </div>
                     <div class="research-content">
                         <h3 class="research-title">Development of Blood-Endothelium-Resistant Filters</h3>
@@ -464,13 +470,14 @@
                             <span><i class="far fa-calendar-alt me-1"></i> June 2023</span>
                             <span><span class="research-category">Biomedical</span></span>
                         </div>
+                        <a href="research.html#blood-filter" class="stretched-link"></a>
                     </div>
                 </div>
 
                 <!-- Research Item 2 -->
                 <div class="card research-card">
                     <div class="research-img-container">
-                        <img src="img/icecream-storage-conditions.png" alt="Freeze-dried ice cream" class="research-img">
+                        <img src="img/icecream-storage-conditions.png" alt="Freeze-dried ice cream safety research by Mehrdad Etemad" class="research-img" loading="lazy">
                     </div>
                     <div class="research-content">
                         <h3 class="research-title">Pathogenic Risks in Returned Freeze-Dried Ice Cream</h3>
@@ -479,13 +486,14 @@
                             <span><i class="far fa-calendar-alt me-1"></i> March 2023</span>
                             <span><span class="research-category">Microbiology</span></span>
                         </div>
+                        <a href="research.html#freeze-dried" class="stretched-link"></a>
                     </div>
                 </div>
 
                 <!-- Research Item 3 -->
                 <div class="card research-card">
                     <div class="research-img-container">
-                        <img src="img/immune-targeting-strategy.jpg" alt="Immunotherapy" class="research-img">
+                        <img src="img/immune-targeting-strategy.jpg" alt="Immunotherapy research by Mehrdad Etemad" class="research-img" loading="lazy">
                     </div>
                     <div class="research-content">
                         <h3 class="research-title">Novel Immunotherapy Approaches for Autoimmune Disorders</h3>
@@ -494,6 +502,7 @@
                             <span><i class="far fa-calendar-alt me-1"></i> January 2023</span>
                             <span><span class="research-category">Immunology</span></span>
                         </div>
+                        <a href="research.html#immunotherapy" class="stretched-link"></a>
                     </div>
                 </div>
             </div>
@@ -580,9 +589,9 @@
             <div class="row g-5">
                 <div class="col-xl-4 col-lg-6">
                     <div class="bg-light rounded overflow-hidden blog-post">
-                        <img class="img-fluid w-100" src="img/blog-1.jpg" alt="Immunotherapy Research">
+                        <img class="img-fluid w-100" src="img/blog-1.jpg" alt="Immunotherapy Research by Mehrdad Etemad" loading="lazy">
                         <div class="p-4">
-                            <a class="h3 d-block mb-3" href="">Advances in Immunotherapy Research</a>
+                            <a class="h3 d-block mb-3" href="blog.html#immunotherapy">Advances in Immunotherapy Research</a>
                             <p class="m-0">Exploring the latest developments in cancer immunotherapy and immune checkpoint inhibitors.</p>
                         </div>
                         <div class="d-flex justify-content-between border-top p-4">
@@ -595,13 +604,14 @@
                                 <small class="ms-3"><i class="far fa-comment text-primary me-1"></i>123</small>
                             </div>
                         </div>
+                        <a href="blog.html#immunotherapy" class="stretched-link"></a>
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-6">
                     <div class="bg-light rounded overflow-hidden blog-post">
-                        <img class="img-fluid w-100" src="img/blog-2.jpg" alt="Genomic Immunology">
+                        <img class="img-fluid w-100" src="img/blog-2.jpg" alt="Genomic Immunology research by Mehrdad Etemad" loading="lazy">
                         <div class="p-4">
-                            <a class="h3 d-block mb-3" href="">Genomic Approaches to Immunology</a>
+                            <a class="h3 d-block mb-3" href="blog.html#genomics">Genomic Approaches to Immunology</a>
                             <p class="m-0">How next-generation sequencing is revolutionizing our understanding of immune system diversity.</p>
                         </div>
                         <div class="d-flex justify-content-between border-top p-4">
@@ -614,13 +624,14 @@
                                 <small class="ms-3"><i class="far fa-comment text-primary me-1"></i>123</small>
                             </div>
                         </div>
+                        <a href="blog.html#genomics" class="stretched-link"></a>
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-6">
                     <div class="bg-light rounded overflow-hidden blog-post">
-                        <img class="img-fluid w-100" src="img/blog-3.jpg" alt="Infectious Diseases">
+                        <img class="img-fluid w-100" src="img/blog-3.jpg" alt="Infectious Diseases research by Mehrdad Etemad" loading="lazy">
                         <div class="p-4">
-                            <a class="h3 d-block mb-3" href="">Emerging Infectious Diseases</a>
+                            <a class="h3 d-block mb-3" href="blog.html#infectious">Emerging Infectious Diseases</a>
                             <p class="m-0">Strategies for rapid vaccine development in response to emerging viral threats.</p>
                         </div>
                         <div class="d-flex justify-content-between border-top p-4">
@@ -633,6 +644,7 @@
                                 <small class="ms-3"><i class="far fa-comment text-primary me-1"></i>123</small>
                             </div>
                         </div>
+                        <a href="blog.html#infectious" class="stretched-link"></a>
                     </div>
                 </div>
             </div>
@@ -664,12 +676,12 @@
                 <div class="col-lg-3 col-md-6">
                     <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">Research Areas</h4>
                     <div class="d-flex flex-column justify-content-start footer-links">
-                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Immunology</a>
-                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Medical Genetics</a>
-                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Vaccine Development</a>
-                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Drug Formulation</a>
-                        <a class="text-light mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Agricultural Biotech</a>
-                        <a class="text-light" href="#"><i class="fa fa-angle-right me-2"></i>Scientific Education</a>
+                        <a class="text-light mb-2" href="research.html#immunogenetics"><i class="fa fa-angle-right me-2"></i>Immunology</a>
+                        <a class="text-light mb-2" href="research.html#genetics"><i class="fa fa-angle-right me-2"></i>Medical Genetics</a>
+                        <a class="text-light mb-2" href="research.html#vaccine"><i class="fa fa-angle-right me-2"></i>Vaccine Development</a>
+                        <a class="text-light mb-2" href="research.html#biomedical"><i class="fa fa-angle-right me-2"></i>Drug Formulation</a>
+                        <a class="text-light mb-2" href="research.html#agricultural"><i class="fa fa-angle-right me-2"></i>Agricultural Biotech</a>
+                        <a class="text-light" href="research.html#education"><i class="fa fa-angle-right me-2"></i>Scientific Education</a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
@@ -682,19 +694,19 @@
                     </form>
                     <h6 class="text-primary text-uppercase mt-4 mb-3">Follow Me</h6>
                     <div class="d-flex">
-                        <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
                             <i class="fab fa-twitter"></i>
                         </a>
-                        <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="https://www.linkedin.com/in/mehrdad-etemad-713359358" target="_blank" rel="noopener noreferrer">
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="https://www.linkedin.com/in/mehrdad-etemad-713359358" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
-                        <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a class="btn btn-lg btn-primary btn-lg-square rounded-circle" href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded-circle" href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
                             <i class="fab fa-youtube"></i>
                         </a>
                     </div>
@@ -706,10 +718,10 @@
         <div class="container">
             <div class="row g-5">
                 <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-md-0">&copy; <a class="text-primary" href="#">Mehrdad Etemad, PhD</a>. All Rights Reserved.</p>
+                    <p class="mb-md-0">&copy; <a class="text-primary" href="index.html">Mehrdad Etemad, PhD</a>. All Rights Reserved.</p>
                 </div>
                 <div class="col-md-6 text-center text-md-end">
-                    <p class="mb-0">Designed by <a class="text-primary" href="#">Mehrdad Etemad, PhD</a></p>
+                    <p class="mb-0">Designed by <a class="text-primary" href="index.html">Mehrdad Etemad, PhD</a></p>
                 </div>
             </div>
         </div>
@@ -717,11 +729,11 @@
     <!-- Footer End -->
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></a>
 
     <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
@@ -734,14 +746,48 @@
     
     <script>
     $(document).ready(function() {
-        // Set minimum date to today
+        // Set minimum date to today for appointment form
         const today = new Date().toISOString().split('T')[0];
         $('input[name="Date"]').attr('min', today);
+
+        // Back to Top Button
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 300) {
+                $('.back-to-top').fadeIn();
+            } else {
+                $('.back-to-top').fadeOut();
+            }
+        });
+        
+        $('.back-to-top').click(function(e) {
+            e.preventDefault();
+            $('html, body').animate({scrollTop: 0}, 500);
+            return false;
+        });
+
+        // Smooth scrolling for anchor links
+        $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').not('[data-toggle="tab"]').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html, body').animate({
+                        scrollTop: target.offset().top - 80
+                    }, 1000, 'easeInOutExpo');
+                    return false;
+                }
+            }
+        });
 
         // Form submission handler
         $('#appointmentForm').on('submit', function(e) {
             e.preventDefault();
             var form = $(this);
+            
+            // Show loading state
+            var submitBtn = form.find('button[type="submit"]');
+            var originalText = submitBtn.html();
+            submitBtn.html('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Sending...').prop('disabled', true);
             
             // Track form submission in Google Analytics
             gtag('event', 'appointment_request', {
@@ -754,9 +800,12 @@
                 method: form.attr('method'),
                 data: form.serialize(),
                 dataType: 'json',
-                success: function() {
+                success: function(response) {
                     alert('Your appointment request has been sent successfully! I will contact you soon.');
                     form.trigger('reset');
+                    
+                    // Reset button
+                    submitBtn.html(originalText).prop('disabled', false);
                     
                     // Track successful submission
                     gtag('event', 'appointment_success', {
@@ -765,7 +814,10 @@
                     });
                 },
                 error: function() {
-                    alert('There was an error submitting your request. Please try again or contact me directly.');
+                    alert('There was an error submitting your request. Please try again or contact me directly at info@mertimmunology.com');
+                    
+                    // Reset button
+                    submitBtn.html(originalText).prop('disabled', false);
                     
                     // Track form error
                     gtag('event', 'appointment_error', {
@@ -779,7 +831,8 @@
         // Newsletter form handler
         $('#newsletterForm').on('submit', function(e) {
             e.preventDefault();
-            const email = $(this).find('input[type="email"]').val();
+            var form = $(this);
+            var email = form.find('input[type="email"]').val();
             
             // Track newsletter subscription
             gtag('event', 'newsletter_signup', {
@@ -787,25 +840,45 @@
                 'event_label': 'Newsletter Subscription'
             });
             
-            alert('Thank you for subscribing to our newsletter!');
-            $(this).trigger('reset');
+            alert('Thank you for subscribing to our newsletter! You will receive updates from Mehrdad Etemad, PhD.');
+            form.trigger('reset');
         });
 
         // Track social media clicks
         $('a[target="_blank"]').on('click', function() {
-            const platform = $(this).attr('href').split('.')[1];
+            var url = $(this).attr('href');
+            var platform = 'unknown';
+            
+            if (url.includes('facebook.com')) platform = 'facebook';
+            else if (url.includes('twitter.com')) platform = 'twitter';
+            else if (url.includes('linkedin.com')) platform = 'linkedin';
+            else if (url.includes('instagram.com')) platform = 'instagram';
+            else if (url.includes('youtube.com')) platform = 'youtube';
+            
             gtag('event', 'social_click', {
                 'event_category': 'social',
                 'event_label': platform
             });
         });
 
-        $(window).on('load', function() {
-            // Track page view
-            gtag('event', 'page_view', {
-                'page_title': document.title,
-                'page_location': window.location.href
+        // Image lazy loading fallback
+        if ('loading' in HTMLImageElement.prototype) {
+            const images = document.querySelectorAll('img[loading="lazy"]');
+            images.forEach(img => {
+                img.src = img.dataset.src;
             });
+        }
+
+        // Set current year in footer
+        $('#currentYear').text(new Date().getFullYear());
+    });
+    
+    // Track page load
+    window.addEventListener('load', function() {
+        gtag('event', 'page_view', {
+            'page_title': document.title,
+            'page_location': window.location.href,
+            'page_path': window.location.pathname
         });
     });
     </script>
